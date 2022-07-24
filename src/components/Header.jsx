@@ -1,26 +1,128 @@
 import React from 'react';
-import logo from '../images/logo.jpg'
-import elem_1 from '../images/button_elem_1.jpg'
-import elem_2 from '../images/button_elem_2.jpg'
+import { useState } from 'react';
+import Loader from './loader/Loader';
+
+import elem1_icon from '../images/button_elem_1.jpg'
+import elem2_icon from '../images/button_elem_2.jpg'
+import basket_icon from '../images/basket.jpg'
+import logo_icon from '../images/Silpo_logo.svg'
+
+import { ReactComponent as LocationIcon } from '../images/location.svg'
+import { ReactComponent as UserIcon } from '../images/user_icon.svg'
+import { ReactComponent as SearchIcon } from '../images/search_icon.svg'
+import { useRef } from 'react';
+
+
 
 const Header = () => {
+
+    const [locationColor, setLocationColor] = useState('#494c4e');
+    const [userColor, setUserColor] = useState('#494c4e');
+    const [SearchColor, setSearchColor] = useState('#494c4e');
+    const [isInputFocused, setIsInputFocused] = useState(false);
+    const [inputValue, setInputValue] = useState('');
+
+    const inputEl = useRef(null);
+    const backdropEl = useRef(null);
+    const dropdownEl = useRef(null);
+
+    const inputFocused = () => {
+        setIsInputFocused(true);
+        inputEl.current.focus();
+        backdropEl.current.className = 'backdrop visible'
+    }
+
+    const inputUnFocused = () => {
+        backdropEl.current.className = 'backdrop';
+        setIsInputFocused(false);
+        dropdownEl.current.className = 'header-search-dropdown';
+    }
+
+    const handlerInputValue = (e) => {
+        setInputValue(e.target.value);
+        dropdownEl.current.className = e.target.value ? 'header-search-dropdown visible' : 'header-search-dropdown'
+    }
+
+
     return (
         <div className='header__wrapper'>
             <div className='header-top content'>
-                <div className='header-top logo' ><img alt='Logo' src={logo}></img></div>
+                <div className='header-top logo' title='Онлайн замовлення товарів з «Сільпо»' >
+                    <img alt='Logo' src={logo_icon} />
+                </div>
                 <div className='header-top button-product'>
-                    <img alt='btn1' src={elem_1}></img>
+                    <img alt='btn1' src={elem1_icon} />
                     Всі товари
-                    <img alt='btn2' src={elem_2}></img>
+                    <img alt='btn2' src={elem2_icon} />
                 </div>
-                <div className='header-top search'>
-                    {/* <div className='header-top search-field'> */}
-                        <input type="text" placeholder='Пошук на сайті' />
-                    {/* </div> */}
+                <div className='header-top search-field'>
+                    <div
+                        ref={backdropEl}
+                        onMouseDown={inputUnFocused}
+                        className='backdrop'
+                    >
+                    </div>
+                    <div
+                        className={`header-top search ${isInputFocused ? 'focused' : ''}`}
+                        onMouseOver={() => setSearchColor('#ff8522')}
+                        onMouseOut={() => setSearchColor('#494c4e')}
+                        onClick={inputFocused}
+                    >
+                        <SearchIcon fill={SearchColor} />
+                        <input
+                            type="text"
+                            placeholder='Пошук на сайті'
+                            // value={inputValue}
+                            ref={inputEl}
+                            onMouseDown={inputFocused}
+                            onChange={handlerInputValue}
+                        />
+                        <div
+                            className="header-search-dropdown"
+                            ref={dropdownEl}>
+                            <div className="loader"></div>
+                            {inputValue}
+                        </div>
+                    </div>
                 </div>
-                <div className='header-top userReg'></div>
-                <div className='header-top location'></div>
-                <div className='header-top button-basket'></div>
+                <ul className='header-top-info'>
+                    <li title='Вхід/Реєстрація'>
+                        <div
+                            className='userReg'
+                            onMouseOver={() => setUserColor('#ff8522')}
+                            onMouseOut={() => setUserColor('#494c4e')}
+                        >
+                            <UserIcon fill={userColor} />
+                            <span >
+                                Вхід/
+                                <br />
+                                Реєстрація
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div
+                            className='location'
+                            onMouseOver={() => setLocationColor('#ff8522')}
+                            onMouseOut={() => setLocationColor('#494c4e')}
+                        >
+                            <LocationIcon fill={locationColor} />
+                            <span>
+                                <b>Доставка</b>
+                                <br />
+                                <mark style={{ color: '#ff8522', background: 'transparent' }}>
+                                    <b>Вкажіть адресу достав...</b>
+                                </mark>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+                <div className='header-top button-basket' title='Перейти в кошик'>
+                    <img alt='btn2' src={basket_icon} />
+                    <div style={{ margin: '0 auto' }}>
+                        Кошик
+                    </div>
+                </div>
             </div>
             <div className='header-bottom__wrapper'>
                 <nav className='header-bottom'>
@@ -42,17 +144,7 @@ const Header = () => {
                         <li></li>
                     </ul>
                 </nav>
-                <div style={{display: 'flex'}}>
-                    <img alt='Logo' src={logo} className='loader-logo'  ></img>
-                    <div className='loader'>
-                        <div id='el1'></div>
-                        <div id='el2'></div>
-                        <div id='el3'></div>
-                        <div id='el4'></div>
-                        <div id='el5'></div>
-                    </div>
-                </div>
-
+                <Loader />
             </div>
         </div>
     )
