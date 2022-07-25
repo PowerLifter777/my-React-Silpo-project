@@ -340,3 +340,20 @@ li {
     width: 0px;
   }
 }
+
+.header__input__dellBtn {
+  padding: 4px;
+  margin: 0; 
+  margin-left: 10px;
+  border: 1px solid rgb(255, 199, 96); 
+  background-color: #ffebdb;
+  border-radius: 50%; 
+  display: none;
+  /* visibility: hidden; */
+}
+
+.header__input__dellBtn img {
+  display: block; 
+  height: 8px; 
+  width: 8px;
+} 

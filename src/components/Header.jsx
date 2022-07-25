@@ -1,16 +1,17 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+
 import Loader from './loader/Loader';
 
 import elem1_icon from '../images/button_elem_1.jpg'
 import elem2_icon from '../images/button_elem_2.jpg'
 import basket_icon from '../images/basket.jpg'
 import logo_icon from '../images/Silpo_logo.svg'
+import clear_input_button from '../images/clear_input_button.svg'
 
 import { ReactComponent as LocationIcon } from '../images/location.svg'
 import { ReactComponent as UserIcon } from '../images/user_icon.svg'
 import { ReactComponent as SearchIcon } from '../images/search_icon.svg'
-import { useRef } from 'react';
 
 
 
@@ -72,11 +73,14 @@ const Header = () => {
                         <input
                             type="text"
                             placeholder='Пошук на сайті'
-                            // value={inputValue}
+                            value={inputValue}
                             ref={inputEl}
                             onMouseDown={inputFocused}
                             onChange={handlerInputValue}
                         />
+                        <div className='header__input__dellBtn active'  onClick={()=> setInputValue('')} >
+                            <img alt='button' src={clear_input_button} />
+                        </div>
                         <div
                             className="header-search-dropdown"
                             ref={dropdownEl}>
