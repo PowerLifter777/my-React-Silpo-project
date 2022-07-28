@@ -1,0 +1,52 @@
+.userInfo {
+    display: flex;
+    height: 48px;
+    justify-content: flex-end;
+    margin-left: auto;
+    font-size: 14px;
+    line-height: 1.2;
+    margin-left: 8px;
+}
+
+.userReg,
+.userLocation {
+    color: #383838;
+    max-width: 140px;
+    box-sizing: border-box;
+    align-items: center;
+    border-radius: 24px;
+    display: flex;
+    font-family: ProximaNova, Helvetica, Arial, sans-serif;
+    height: 48px;
+    margin-left: 15px;
+    padding: 0 15px;
+    position: relative;
+    transition: all .35s;
+    background-color: #e6e6e6;
+    cursor: pointer;
+}
+
+.userLocation {
+    max-width: 230px;
+}
+
+.userReg:hover,
+.userLocation:hover {
+    background-color: #deddd4;
+}
+
+.userReg span {
+    margin-left: 8px;
+    text-align: left;
+}
+
+.userLocation span {
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 8px;
+    text-align: left;
+}
+
+

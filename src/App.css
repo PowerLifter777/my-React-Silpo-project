@@ -15,11 +15,10 @@ body {
   justify-content: flex-start;
   margin: 0 auto;
   max-width: 1920px;
-
 }
 
 
-.header-top,
+.header_top,
 .content {
   /* visibility: hidden; */
   align-items: center;
@@ -37,11 +36,10 @@ body {
   /* padding: 0px; */
 }
 
-.header-top,
+.header_top,
 .header__wrapper {
   background-color: #fff;
   /* width: 100%; */
-
 }
 
 li {
@@ -98,60 +96,6 @@ li {
   overflow: hidden;
 }
 
-.search-field {
-  padding: 0px;
-  width: 665px;
-  height: 48px;
-  position: relative;
-}
-
-.search {
-  position: relative;
-  display: flex;
-  align-items: center;
-  background-color: #e6e6e6;
-  border-radius: 8px;
-  display: inline-flex;
-  height: 48px;
-  justify-content: flex-start;
-  padding: 0 15px;
-  transition: all .25s, height 0s;
-  width: 100%;
-  border: none;
-  cursor: pointer;
-}
-
-.search:hover {
-  background-color: #deddd4;
-}
-
-.search input {
-  margin-left: 7px;
-  width: 100%;
-  outline: none;
-  border: none;
-  background-color: transparent;
-  font-size: 14px;
-  height: 20px;
-}
-
-/* .search input:focus {
-  background-color: white;
-} */
-
-
-.search img {
-  width: 18px;
-  height: 18px;
-
-}
-
-/* .button-basket img {
-  height: 32px;
-  width: 32px;
-  display: block;
-} */
-
 .button-basket {
   display: flex;
   min-width: 232px;
@@ -160,200 +104,10 @@ li {
   margin-left: 15px;
 }
 
-
-.header-top-info {
-  display: flex;
-  height: 48px;
-  justify-content: flex-end;
-  margin-left: auto;
-  font-size: 14px;
-  line-height: 1.2;
-  margin-left: 8px;
-
-}
-
-.header-top-info img,
 .button-basket img {
   width: 32px;
   height: 32px;
 }
 
-.userReg:hover,
-.location:hover {
-  background-color: #deddd4;
-}
-
-.userReg,
-.location {
-  color: #383838;
-  max-width: 140px;
-  box-sizing: border-box;
-  align-items: center;
-  border-radius: 24px;
-  display: flex;
-  font-family: ProximaNova, Helvetica, Arial, sans-serif;
-  height: 48px;
-  margin-left: 15px;
-  padding: 0 15px;
-  position: relative;
-  transition: all .35s;
-  background-color: #e6e6e6;
-  cursor: pointer;
-}
-
-.location {
-  max-width: 230px;
-}
-
-.location span {
-  max-width: 160px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  margin-left: 8px;
-  text-align: left;
-}
-
-.userReg span {
-  margin-left: 8px;
-  text-align: left;
-}
-
-.search svg {
-  height: 24px;
-  width: 24px;
-}
-
-.backdrop {
-  background-color: rgba(0, 0, 0, .7);
-  height: 100%;
-  left: 0;
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  transition: visibility 0s, opacity .35s ease;
-  visibility: hidden;
-  width: 100%;
-  z-index: 3;
-}
-
-.backdrop.visible {
-  opacity: 1;
-  visibility: visible;
-}
-
-.search.focused {
-  border: none;
-  background-color: #fff;
-  left: 0;
-  padding: 0 15px;
-  position: absolute;
-  top: -2px;
-  /*---------------------------<<<<<<---------------------*/
-  transition: width .25s, border-radius .25s .15s;
-  width: 580px;
-  z-index: 3;
-}
-
-.search.focused:hover {
-  background-color: #fff;
-}
-
-.header-search-dropdown {
-  box-sizing: border-box;
-  text-align: left;
-  background-color: #fff;
-  border-radius: 8px;
-  font-size: 14px;
-  left: 0;
-  line-height: 22px;
-  margin-top: 4px;
-  opacity: 0;
-  overflow: hidden;
-  padding: 15px 10px 15px 45px;
-  position: absolute;
-  top: 100%;
-  transition: opacity 0s ease-in;
-  visibility: hidden;
-  width: 100%;
-  z-index: 3;
-}
-
-.header-search-dropdown.visible {
-  opacity: 1;
-  transition: opacity 0s ease-in .25s;
-  visibility: visible;
 
 
-  overflow: hidden;
-  text-overflow: ellipsis;
-  /* white-space: nowrap; */
-  height: 100px;
-}
-
-.loader:before {
-  animation: LOADER 2.5s linear infinite;
-  background: #ff8522;
-  border-radius: 4px;
-  content: "";
-  height: 5px;
-  left: 50%;
-  /* margin: 1px 0; */
-  position: absolute;
-  right: 100%;
-  top: 0;
-}
-
-@keyframes LOADER {
-  from {
-    left: 0px;
-    width: 0px;
-  }
-
-  10% {
-    left: 0px;
-    width: 115px;
-  }
-
-  40% {
-    left: 540px;
-    width: 115px;
-  }
-
-  50% {
-    left: 655px;
-    width: 0px;
-  }
-
-  60% {
-    left: 540px;
-    width: 115px;
-  }
-
-  90% {
-    left: 0px;
-    width: 115px;
-  }
-
-  to {
-    left: 0px;
-    width: 0px;
-  }
-}
-
-.header__input__dellBtn {
-  padding: 4px;
-  margin: 0; 
-  margin-left: 10px;
-  border: 1px solid rgb(255, 199, 96); 
-  background-color: #ffebdb;
-  border-radius: 50%; 
-  display: none;
-  /* visibility: hidden; */
-}
-
-.header__input__dellBtn img {
-  display: block; 
-  height: 8px; 
-  width: 8px;
-} 
