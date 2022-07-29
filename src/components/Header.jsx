@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import { React, Fragment } from 'react';
 
 import LoaderMain from './loader_main/LoaderMain';
 
@@ -10,58 +9,66 @@ import logo_icon from '../images/Silpo_logo.svg'
 
 
 
-import HeaderSearch from './headerSearch/HesderSearch';
+import HeaderSearch from './headerSearch/HeaderSearch';
 import UserInfo from './userInfo/UserInfo';
+import { useState } from 'react';
 
 
-const Header = () => {
+const Header = ({ visible, ...props }) => {
 
-     return (
-        <div className='header__wrapper'>
-            <div className='header_top content'>
-                <div className='header_top logo' title='Онлайн замовлення товарів з «Сільпо»' >
-                    <img alt='Logo' src={logo_icon} />
-                </div>
-                <div className='header_top button-product'>
-                    <img alt='btn1' src={elem1_icon} />
-                    Всі товари
-                    <img alt='btn2' src={elem2_icon} />
-                </div>
 
-                <HeaderSearch />
 
-                <UserInfo />
-
-                <div className='header_top button-basket' title='Перейти в кошик'>
-                    <img alt='btn2' src={basket_icon} />
-                    <div style={{ margin: '0 auto' }}>
-                        Кошик
+    return (
+        <Fragment>
+            <div className="header" onClick={() =>console.log(visible)}>
+                <div className='header__wrapper'>
+                    <div className='header_top content'>
+                        <div className='header_top logo' title='Онлайн замовлення товарів з «Сільпо»' >
+                            <img alt='Logo' src={logo_icon} />
+                        </div>
+                        <div className='header_top button-product'>
+                            <img alt='btn1' src={elem1_icon} />
+                            Всі товари
+                            <img alt='btn2' src={elem2_icon} />
+                        </div>
+                        <HeaderSearch />
+                        <UserInfo />
+                        <div className='header_top button-basket' title='Перейти в кошик'>
+                            <img alt='btn2' src={basket_icon} />
+                            <div style={{ margin: '0 auto' }}>
+                                Кошик
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div className='header-bottom__wrapper'>
-                <nav className='header-bottom'>
-                    <ul className="nav-list">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+            <div
+                className={`header__bottom__wrapper ${!visible? 'hide' : ''}`}
+            >
+                <nav className='header__bottom'>
+                    <ul className="nav_list">
+                        <li><a href="">Акції</a></li>
+                        <li><a href="">Суші</a></li>
+                        <li><a href="">Піца</a></li>
+                        <li><a href="">Готові страви</a></li>
+                        <li><a href="">Свіжий врожай</a></li>
+                        <li><a href="">Акція вино та ігристе</a></li>
+                        <li><a href="">Акція ковбасні вироби</a></li>
+                        <li><a href="">Акція сири</a></li>
+                        <li><a href="">Акція товари для дітей</a></li>
                     </ul>
-                    <ul className="additional-pages">
+                    <ul className="additional_pages">
                         <li></li>
                         <li></li>
                     </ul>
                 </nav>
-                <LoaderMain />
             </div>
-        </div>
+
+
+
+            <LoaderMain />
+
+        </Fragment>
     )
 }
 

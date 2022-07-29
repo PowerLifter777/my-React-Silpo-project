@@ -8,6 +8,7 @@
     width: 665px;
     height: 48px;
     position: relative;
+    
 }
 
 .search {
@@ -24,6 +25,7 @@
     transition: all .25s, height 0s;
     border: none;
     cursor: pointer;
+    
 }
 
 .search:hover {
