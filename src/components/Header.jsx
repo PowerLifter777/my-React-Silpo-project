@@ -20,7 +20,9 @@ const Header = ({ visible, ...props }) => {
 
     return (
         <Fragment>
-            <div className="header" onClick={() =>console.log(visible)}>
+            <div className="header"
+                onClick={() => console.log(visible)}
+                style = { !visible ? { boxShadow: '0 0 20px rgba(0, 0, 0, .2)' } : {boxShadow: 'none'} }>
                 <div className='header__wrapper'>
                     <div className='header_top content'>
                         <div className='header_top logo' title='Онлайн замовлення товарів з «Сільпо»' >
@@ -43,7 +45,7 @@ const Header = ({ visible, ...props }) => {
                 </div>
             </div>
             <div
-                className={`header__bottom__wrapper ${!visible? 'hide' : ''}`}
+                className={`header__bottom__wrapper ${!visible ? 'hide' : ''}`}
             >
                 <nav className='header__bottom'>
                     <ul className="nav_list">

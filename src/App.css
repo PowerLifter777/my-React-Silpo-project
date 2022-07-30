@@ -6,13 +6,13 @@
 
 body {
   width: 100%;
-  height: 3000px;
+  height: 1000px;
 }
 
 .header {
   align-items: center;
   background-color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, .2); ******************************************************** */
   color: #373737;
   display: flex;
   flex-direction: column;
@@ -148,6 +148,7 @@ li {
   transition: all .5s;
   width: 100%;
   z-index: 1;
+  position: relative;
 }
 
 .header__bottom {
@@ -164,6 +165,7 @@ li {
   padding: 0 20px;
   transition: all .5s;
   width: 100%;
+  /* position: fixed; */
 }
 
 .nav_list,

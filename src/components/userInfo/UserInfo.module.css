@@ -36,6 +36,26 @@
     background-color: #deddd4;
 }
 
+
+
+
+
+
+
+.userReg:hover > .userIcon {
+    fill:green;
+    transition: all .5s;
+}
+
+
+
+
+
+
+
+
+
+
 .userReg span {
     margin-left: 8px;
     text-align: left;
@@ -49,5 +69,3 @@
     margin-left: 8px;
     text-align: left;
 }
-
-

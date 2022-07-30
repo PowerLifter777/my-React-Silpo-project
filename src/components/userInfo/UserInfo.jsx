@@ -10,17 +10,17 @@ import { ReactComponent as UserIcon } from '../../images/user_icon.svg'
 const UserInfo = () => {
 
     const [locationColor, setLocationColor] = useState('#494c4e');
-    const [userColor, setUserColor] = useState('#494c4e');
+    // const [userColor, setUserColor] = useState('#494c4e');
 
     return (
         <ul className={classes.userInfo}>
             <li title='Вхід/Реєстрація'>
                 <div
                     className={classes.userReg}
-                    onMouseOver={() => setUserColor('#ff8522')}
-                    onMouseOut={() => setUserColor('#494c4e')}
+                    // onMouseOver={() => setUserColor('#ff8522')}
+                    // onMouseOut={() => setUserColor('#494c4e')}
                 >
-                    <UserIcon fill={userColor} />
+                    <UserIcon className={classes.userIcon}/>
                     <span >
                         Вхід/
                         <br />
