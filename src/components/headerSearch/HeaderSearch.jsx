@@ -10,7 +10,6 @@ import LoaderSearch from "../loader_search/LoaderSearch";
 
 const HeaderSearch = () => {
 
-    const [SearchColor, setSearchColor] = useState('#494c4e');
     const [isInputFocused, setIsInputFocused] = useState(false);
     const [inputValue, setInputValue] = useState('');
 
@@ -48,11 +47,9 @@ const HeaderSearch = () => {
             </div>
             <div
                 className={`header_top ${classes.search} ${isInputFocused ? classes.focused : ''}`}
-                onMouseOver={() => setSearchColor('#ff8522')}
-                onMouseOut={() => setSearchColor('#494c4e')}
                 onClick={inputFocused}
             >
-                <SearchIcon fill={SearchColor} />
+                <SearchIcon className={classes.searchIcon}/>
                 <input
                     type="text"
                     placeholder='Пошук на сайті'

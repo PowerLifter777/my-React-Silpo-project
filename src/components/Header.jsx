@@ -22,7 +22,7 @@ const Header = ({ visible, ...props }) => {
         <Fragment>
             <div className="header"
                 onClick={() => console.log(visible)}
-                style = { !visible ? { boxShadow: '0 0 20px rgba(0, 0, 0, .2)' } : {boxShadow: 'none'} }>
+                style={!visible ? { boxShadow: '0 0 20px rgba(0, 0, 0, .2)' } : { boxShadow: 'none' }}>
                 <div className='header__wrapper'>
                     <div className='header_top content'>
                         <div className='header_top logo' title='Онлайн замовлення товарів з «Сільпо»' >
@@ -47,30 +47,32 @@ const Header = ({ visible, ...props }) => {
             <div
                 className={`header__bottom__wrapper ${!visible ? 'hide' : ''}`}
             >
-                <nav className='header__bottom'>
-                    <ul className="nav_list">
-                        <li><a href="">Акції</a></li>
-                        <li><a href="">Суші</a></li>
-                        <li><a href="">Піца</a></li>
-                        <li><a href="">Готові страви</a></li>
-                        <li><a href="">Свіжий врожай</a></li>
-                        <li><a href="">Акція вино та ігристе</a></li>
-                        <li><a href="">Акція ковбасні вироби</a></li>
-                        <li><a href="">Акція сири</a></li>
-                        <li><a href="">Акція товари для дітей</a></li>
-                    </ul>
-                    <ul className="additional_pages">
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </nav>
+           
+                    <nav className='header__bottom'>
+                        <ul className="nav_list">
+                            <li><a href="">Акції</a></li>
+                            <li><a href="">Суші</a></li>
+                            <li><a href="">Піца</a></li>
+                            <li><a href="">Готові страви</a></li>
+                            <li><a href="">Свіжий врожай</a></li>
+                            <li><a href="">Акція вино та ігристе</a></li>
+                            <li><a href="">Акція ковбасні вироби</a></li>
+                            <li><a href="">Акція сири</a></li>
+                            <li><a href="">Акція товари для дітей</a></li>
+                        </ul>
+                        <ul className="additional_pages">
+                            <li><a href="">Акція сири</a></li>
+                            <li><a href="">Акція товари для дітей</a></li>
+                        </ul>
+                    </nav>
+      
             </div>
 
 
 
             <LoaderMain />
 
-        </Fragment>
+        </Fragment >
     )
 }
 

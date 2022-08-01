@@ -1,6 +1,12 @@
 .search svg {
     height: 24px;
     width: 24px;
+    fill: #494c4e;
+}
+
+.search:hover>.searchIcon {
+    fill: #ff8522;
+    transition: all .5s;
 }
 
 .search_field {
@@ -8,7 +14,7 @@
     width: 665px;
     height: 48px;
     position: relative;
-    
+
 }
 
 .search {
@@ -25,7 +31,7 @@
     transition: all .25s, height 0s;
     border: none;
     cursor: pointer;
-    
+
 }
 
 .search:hover {
@@ -126,4 +132,11 @@
 
 .inputClearBtn.visible {
     display: block;
+}
+
+
+@media (max-width: 1720px) {
+    .search_field {
+        width: 413px;
+    }
 }

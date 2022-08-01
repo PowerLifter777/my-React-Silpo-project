@@ -12,7 +12,7 @@
 .userReg,
 .userLocation {
     color: #383838;
-    min-width: 140px;
+    width: 140px;
     box-sizing: border-box;
     align-items: center;
     border-radius: 24px;
@@ -36,25 +36,10 @@
     background-color: #deddd4;
 }
 
-
-
-
-
-
-
-.userReg:hover > .userIcon {
-    fill:green;
-    transition: all .5s;
+.userReg:hover>.userIcon {
+    fill: #ff8522;
+    transition: all .35s;
 }
-
-
-
-
-
-
-
-
-
 
 .userReg span {
     margin-left: 8px;
@@ -68,4 +53,21 @@
     white-space: nowrap;
     margin-left: 8px;
     text-align: left;
+}
+
+@media (max-width: 1720px) {
+    .userReg {
+        width: 48px;
+        padding: 0;
+        justify-content: center;
+    }
+    .description {
+        display: none;
+    }
+    .userReg > .userIcon {
+
+        width: 28px;
+        height: 28px;
+    }
+
 }

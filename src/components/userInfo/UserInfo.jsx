@@ -21,7 +21,7 @@ const UserInfo = () => {
                     // onMouseOut={() => setUserColor('#494c4e')}
                 >
                     <UserIcon className={classes.userIcon}/>
-                    <span >
+                    <span className={classes.description} >
                         Вхід/
                         <br />
                         Реєстрація
