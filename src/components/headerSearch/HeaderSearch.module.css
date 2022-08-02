@@ -81,6 +81,8 @@
 
 .search.focused:hover {
     background-color: #fff;
+    transition: all .35s;
+
 }
 
 .dropdownMenu {
