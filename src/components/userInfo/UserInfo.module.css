@@ -56,10 +56,13 @@
 }
 
 @media (max-width: 1720px) {
+    
     .userReg {
         width: 48px;
         padding: 0;
         justify-content: center;
+        
+
     }
     .description {
         display: none;

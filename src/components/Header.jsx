@@ -6,6 +6,8 @@ import elem1_icon from '../images/button_elem_1.jpg'
 import elem2_icon from '../images/button_elem_2.jpg'
 import basket_icon from '../images/basket.jpg'
 import logo_icon from '../images/Silpo_logo.svg'
+import { ReactComponent as PhoneIcon } from '../images/phone_icon.svg'
+
 
 
 
@@ -47,25 +49,37 @@ const Header = ({ visible, ...props }) => {
             <div
                 className={`header__bottom__wrapper ${!visible ? 'hide' : ''}`}
             >
-           
-                    <nav className='header__bottom'>
-                        <ul className="nav_list">
-                            <li><a href="">Акції</a></li>
-                            <li><a href="">Суші</a></li>
-                            <li><a href="">Піца</a></li>
-                            <li><a href="">Готові страви</a></li>
-                            <li><a href="">Свіжий врожай</a></li>
-                            <li><a href="">Акція вино та ігристе</a></li>
-                            <li><a href="">Акція ковбасні вироби</a></li>
-                            <li><a href="">Акція сири</a></li>
-                            <li><a href="">Акція товари для дітей</a></li>
-                        </ul>
-                        <ul className="additional_pages">
-                            <li><a href="">Акція сири</a></li>
-                            <li><a href="">Акція товари для дітей</a></li>
-                        </ul>
-                    </nav>
-      
+
+                <nav className='header__bottom'>
+                    <ul className="nav_list">
+                        <li><a href="">Акції</a></li>
+                        <li><a href="">Суші</a></li>
+                        <li><a href="">Піца</a></li>
+                        <li><a href="">Готові страви</a></li>
+                        <li><a href="">Свіжий врожай</a></li>
+                        <li><a href="">Акція вино та ігристе</a></li>
+                        <li><a href="">Акція ковбасні вироби</a></li>
+                        <li><a href="">Акція сири</a></li>
+                        <li><a href="">Акція товари для дітей</a></li>
+                    </ul>
+                    <ul className="additional_pages">
+                        <li><a href="">
+                            <span>
+                                Поширені питання
+                            </span>
+                        </a></li>
+                        <li>
+                            <a href="">
+                                <PhoneIcon className='PhoneIcon' />
+                                <div className="phone_holder">
+                                    <div className="phone_holder_text">Гаряча лінія</div>
+                                    <div className="phone_holder_phone">0 800 301 707</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
             </div>
 
 
