@@ -1,6 +1,8 @@
-import { React, useState } from 'react';
+import { Fragment, React, useState } from 'react';
 import './App.css';
+import Content from './components/content/Content';
 import Header from './components/Header';
+import LoaderMain from './components/loader_main/LoaderMain';
 
 function App() {
 
@@ -44,12 +46,16 @@ function App() {
   }
 
   return (
-    <div
-      className="App"
-      onWheel={hide}
-    >
-      <Header visible={isHeaderVisible} />
-    </div>
+    <Fragment>
+      <div
+        className="App"
+        onWheel={hide}
+      >
+        <Header visible={isHeaderVisible} />
+      </div>
+      <Content />
+      <LoaderMain />
+    </Fragment>
   )
 }
 

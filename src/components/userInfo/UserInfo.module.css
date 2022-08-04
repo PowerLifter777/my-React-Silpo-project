@@ -61,11 +61,14 @@
         width: 48px;
         padding: 0;
         justify-content: center;
+        
+
     }
     .description {
         display: none;
     }
     .userReg > .userIcon {
+
         width: 28px;
         height: 28px;
     }
