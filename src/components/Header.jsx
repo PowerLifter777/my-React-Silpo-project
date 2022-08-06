@@ -1,10 +1,16 @@
 import { React, Fragment } from 'react';
 
+import LoaderMain from './loader_main/LoaderMain';
+
 import elem1_icon from '../images/button_elem_1.jpg'
 import elem2_icon from '../images/button_elem_2.jpg'
 import basket_icon from '../images/basket.jpg'
 import logo_icon from '../images/Silpo_logo.svg'
+import flag from '../images/flag.png'
 import { ReactComponent as PhoneIcon } from '../images/phone_icon.svg'
+
+
+
 
 import HeaderSearch from './headerSearch/HeaderSearch';
 import UserInfo from './userInfo/UserInfo';
@@ -12,6 +18,8 @@ import { useState } from 'react';
 
 
 const Header = ({ visible, ...props }) => {
+
+
 
     return (
         <Fragment>
@@ -45,11 +53,15 @@ const Header = ({ visible, ...props }) => {
 
                 <nav className='header__bottom'>
                     <ul className="nav_list">
+                        <li className="item_flag" >
+                            <img src={flag} alt="Ukraine flag" />
+                        </li>
                         <li><a href="">Акції</a></li>
                         <li><a href="">Суші</a></li>
                         <li><a href="">Піца</a></li>
                         <li><a href="">Готові страви</a></li>
                         <li><a href="">Свіжий врожай</a></li>
+                        <li><a href="">Барбекю</a></li>
                         <li><a href="">Акція вино та ігристе</a></li>
                         <li><a href="">Акція ковбасні вироби</a></li>
                         <li><a href="">Акція сири</a></li>
@@ -62,11 +74,11 @@ const Header = ({ visible, ...props }) => {
                             </span>
                         </a></li>
                         <li>
-                            <a href="">
+                            <a href="tel:0800 301 707" className='hot_line_phone' aria-label='Телефон гарячої лінії: 0800 301 707'>
                                 <PhoneIcon className='PhoneIcon' />
                                 <div className="phone_holder">
                                     <div className="phone_holder_text">Гаряча лінія</div>
-                                    <div className="phone_holder_phone">0 800 301 707</div>
+                                    <div className="phone_holder_tel">0 800 301 707</div>
                                 </div>
                             </a>
                         </li>
@@ -74,10 +86,10 @@ const Header = ({ visible, ...props }) => {
                 </nav>
 
             </div>
-
-
-
-     
+            
+            <h1 className='category_page_heading'>
+                 «Cільпо» Resto
+            </h1>
 
         </Fragment >
     )

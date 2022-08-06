@@ -3,11 +3,12 @@ import React from "react";
 import classes from './Content.module.css';
 
 import { ReactComponent as StarHolder } from '../../images/star_holder.svg'
+import product_img_01 from '../../images/sushi_roll.png'
 
 
 const Content = () => {
     return (
-        <div className='container' style={{ marginTop: '150px' }}>
+        <div className={classes.container} style={{ marginTop: '150px' }}>
             <div className={classes.content}>
                 <div className={`${classes.category_page_wrapper} ${classes.page}`}>
                     <h1 className={classes.category_page_heading}>«Сільпо» Resto</h1>
@@ -22,7 +23,7 @@ const Content = () => {
                                             <div className={classes.product_list_item_header}></div>
                                             <a className={classes.image_content_wrapper} href="">
                                                 <div className={classes.product_list_item__image}>
-                                                    <img src="" alt="Макі-рол з лососем"/>
+                                                    <img src={product_img_01} alt="Макі-рол з лососем"/>
                                                 </div>
                                                 <div className={classes.product_list_item__content}>
                                                     <div className={classes.product_title}>Макі-рол з лососем</div>
@@ -36,13 +37,14 @@ const Content = () => {
                                                         </div>
                                                         <div className={classes.rating_count}>5</div>
                                                         <div className={classes.rating_text}><span>1 оцінка</span></div>
-
                                                     </div>
                                                     <hr/>
                                                     <div className={classes.product_weight}>155г</div>
                                                 </div>
                                             </a>
-                                            <div className={classes.product_list_item_controls}></div>
+                                            <div className={classes.product_list_item_controls}>
+
+                                            </div>
                                         </div>
                                     </li>
                                 </div>

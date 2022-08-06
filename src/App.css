@@ -1,9 +1,7 @@
- 
 @font-face {
   font-family: 'ProximaNova';
   src: url('../public/fonts/proximanova_regular.ttf');
-  src: url('../public/fonts/proximanova_bold.otf'), format('otf'),
-
+  src: url('../public/fonts/proximanova_bold.otf') format('otf'),
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -11,13 +9,13 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-family: ProximaNova,  Georgia, Helvetica, sans-serif;
+  font-family: ProximaNova, Georgia, Helvetica, sans-serif;
   box-sizing: border-box;
 }
 
 body {
   width: 100%;
-
+  height: 1000px;
 }
 
 .header {
@@ -61,7 +59,7 @@ body {
   /* justify-content: space-around; */
   /* text-align: center; */
   /* width: max-content; */
-  transition: all .35s;
+  transition: all .25s;
 }
 
 /* .header_top.button-product {
@@ -148,12 +146,12 @@ body {
 
 
 .header__bottom__wrapper {
-  font-family: proximanova, Helvetica, Arial, sans-serif;
+  font-family: ProximaNova, Georgia, Helvetica, sans-serif;
   background-color: #f9f9f9;
   box-shadow: 0 0 20px rgba(0, 0, 0, .2);
   max-height: 50px;
   top: 100px;
-  transition: all .35s;
+  transition: all .5s;
   width: 100%;
   z-index: 1;
   position: absolute;
@@ -165,7 +163,7 @@ body {
 
   display: flex;
   justify-content: space-between;
-  font-family: proximanova, Helvetica, Arial, sans-serif;
+  font-family: ProximaNova, Georgia, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 700;
   height: 50px;
@@ -173,10 +171,10 @@ body {
   margin: 0 auto;
   max-width: 1700px;
   padding: 0 20px;
-  transition: all 0.35s;
+  transition: all .5s;
   width: 100%;
   /* position: fixed; */
-  
+  color: #373737;
 }
 
 .nav_list,
@@ -199,7 +197,6 @@ li {
   height: 100%;
 }
 
-
 li a {
   align-items: center;
   display: flex;
@@ -212,6 +209,18 @@ li a {
   color: inherit;
 }
 
+li.item_flag {
+  align-items: center;
+  display: flex;
+  min-width: 35px;
+}
+
+li.item_flag img {
+  width: 35px;
+}
+
+
+
 /* .hide {
   height: 0;
   margin: 0 auto;
@@ -222,11 +231,13 @@ li a {
   background-color: #f9f9f9;
   max-height: 50px;
   position: absolute;
-  transition: all 0.1s;
+  transition: all .5s;
   top: 50px;
   width: 100%;
   z-index: 1;
   position: relative;
+  /* color:#3e3e3e33; */
+  opacity: 0;
 }
 
 .additional_pages {
@@ -246,24 +257,42 @@ li a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: all .5s;
 }
 
 .phone_holder_text {
   display: block;
-  font-size: .1px;
-  line-height: .1px;
+  font-size: 0.1px;
+  line-height: 0.1px;
   opacity: 0;
   transition: all .5s;
   font-weight: 300;
   text-transform: none;
 }
 
-.phone_holder_phone {
+.hot_line_phone:hover>.phone_holder .phone_holder_text {
+  display: block;
+  font-size: 12px;
+  line-height: 12px;
+  opacity: 1;
+  transition: all .5s;
+  font-weight: 300;
+  text-transform: none;
+}
+
+.phone_holder_tel {
   font-size: 16px;
   font-weight: 900;
 }
 
+/* ------------------------------------------------------------- */
 
+.category_page_heading {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 0.67em;
+  margin-top: 0.67em;
+}
 
 
 
@@ -271,9 +300,13 @@ li a {
 @media (max-width: 1720px) {
 
   .header_top,
-  .content,
+  .content {
+    max-width: 1366px;
+    transition: all 0.25s;
+  }
+
   .header__bottom {
     max-width: 1366px;
-    transition: all 0.35s;
+    transition: all 0.5s;
   }
 }

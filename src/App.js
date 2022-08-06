@@ -1,4 +1,5 @@
-import { Fragment, React, useState } from 'react';
+import { Fragment } from 'react';
+import { React, useState } from 'react';
 import './App.css';
 import Content from './components/content/Content';
 import Header from './components/Header';
@@ -54,7 +55,7 @@ function App() {
         <Header visible={isHeaderVisible} />
       </div>
       <Content />
-      <LoaderMain />
+      {/* <LoaderMain /> */}
     </Fragment>
   )
 }
