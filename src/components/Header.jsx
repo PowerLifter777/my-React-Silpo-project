@@ -10,16 +10,12 @@ import flag from '../images/flag.png'
 import { ReactComponent as PhoneIcon } from '../images/phone_icon.svg'
 
 
-
-
 import HeaderSearch from './headerSearch/HeaderSearch';
 import UserInfo from './userInfo/UserInfo';
 import { useState } from 'react';
 
 
 const Header = ({ visible, ...props }) => {
-
-
 
     return (
         <Fragment>
@@ -87,10 +83,6 @@ const Header = ({ visible, ...props }) => {
 
             </div>
             
-            <h1 className='category_page_heading'>
-                 «Cільпо» Resto
-            </h1>
-
         </Fragment >
     )
 }

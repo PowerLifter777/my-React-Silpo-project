@@ -1,6 +1,14 @@
 .loader_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    margin: 70px 0;
+    position: relative;
 
-    position: absolute;
+    
+
+    /* position: absolute; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, 0);

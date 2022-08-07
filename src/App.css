@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'ProximaNova';
   src: url('../public/fonts/proximanova_regular.ttf');
+  font-family: 'ProximaNova_B';
   src: url('../public/fonts/proximanova_bold.otf') format('otf'),
 }
 
@@ -15,7 +16,15 @@
 
 body {
   width: 100%;
-  height: 1000px;
+  /* height: 1000px; */
+}
+
+.layout {
+  background: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
 }
 
 .header {
@@ -154,7 +163,7 @@ body {
   transition: all .5s;
   width: 100%;
   z-index: 1;
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: center;
 }
@@ -229,13 +238,12 @@ li.item_flag img {
 
 .hide {
   background-color: #f9f9f9;
-  max-height: 50px;
+  /* max-height: 50px; */
   position: absolute;
   transition: all .5s;
   top: 50px;
-  width: 100%;
+  /* width: 100%; */
   z-index: 1;
-  position: relative;
   /* color:#3e3e3e33; */
   opacity: 0;
 }

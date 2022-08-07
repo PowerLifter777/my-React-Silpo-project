@@ -1,9 +1,10 @@
 import { Fragment } from 'react';
 import { React, useState } from 'react';
 import './App.css';
-import Content from './components/content/Content';
+import ContentWrapper from './components/content/ContentWrapper';
 import Header from './components/Header';
 import LoaderMain from './components/loader_main/LoaderMain';
+
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
       visible2 = setTimeout(display, 800);
       clear();
       flag = false;
+
     }
   }
 
@@ -42,20 +44,20 @@ function App() {
 
   function display() {
     setIsHeaderVisible(true)
-    console.log(flag);
+    // console.log(flag);
     flag = false;
   }
 
   return (
     <Fragment>
-      <div
-        className="App"
-        onWheel={hide}
-      >
-        <Header visible={isHeaderVisible} />
+      <div className='layout' onWheel={hide}>
+        <div
+          className="App">
+          <Header visible={isHeaderVisible} />
+        </div>
+        <ContentWrapper />
       </div>
-      <Content />
-      {/* <LoaderMain /> */}
+      <LoaderMain />
     </Fragment>
   )
 }
