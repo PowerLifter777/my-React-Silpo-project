@@ -68,14 +68,6 @@
                         padding: 0;
                         /* border: 1px solid teal; */
                     }
-
-                    .product_list {
-                        grid-gap: 10px;
-                        display: grid;
-                        grid-template-columns: repeat(auto-fit, minmax(324px, 324px));
-                        margin: 0 0 10px;
-
-                    }
                 }
             }
         }

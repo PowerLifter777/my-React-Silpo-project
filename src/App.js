@@ -1,16 +1,39 @@
-import { Fragment } from 'react';
 import { React, useState } from 'react';
+import { Fragment } from 'react';
 import './App.css';
-import ContentWrapper from './components/content/ContentWrapper';
 import Header from './components/Header';
+import ContentWrapper from './components/content/ContentWrapper';
 import LoaderMain from './components/loader_main/LoaderMain';
 
 
 function App() {
 
+  const [cards, setCards] = useState([
+    { id: 1, category: 'Sushi', type: 'sushi', title: "Макі-рол з лососем", value: '155г', price: { value: '250', discount: '', measure: 'грн' }, available: true, sale: false },
+    { id: 2, category: 'Sushi', type: 'sushi', title: "Рол з тунцем", value: '160г', price: { value: '170', discount: '', measure: '%' }, available: true, sale: false },
+    { id: 3, category: 'Sushi', type: 'sushi', title: "Рол філадельфія", value: '175г', price: { value: '230', discount: '', measure: '%' }, available: false, sale: false },
+    { id: 4, category: 'Sushi', type: 'sushi', title: "Сет Дракон", value: '450г', price: { value: '640', discount: '90', measure: 'грн' }, available: true, sale: false },
+    { id: 5, category: 'Sushi', type: 'sushi', title: "Рол з вугрем", value: '180г', price: { value: '273', discount: '', measure: '%' }, available: false, sale: false },
+    { id: 6, category: 'Sushi', type: 'salat', title: "Салат з креветками", value: '245г', price: { value: '249.99', discount: '', measure: '%' }, available: false, sale: false },
+    { id: 7, category: 'Sushi', type: 'salat', title: "Ламінарія", value: '200г', price: { value: '117', discount: '10', measure: '%' }, available: true, sale: false },
+    
+    { id: 8, category: 'Pizza', type: 'pizza', title: "Піца 'Маргарита'", value: '450г', price: { value: '99', discount: '', measure: '%' }, available: true, sale: false },
+    { id: 9, category: 'Pizza', type: 'pizza', title: "Піца 'Гостра'", value: '450г', price: { value: '99', discount: '', measure: '%' }, available: true, sale: false },
+    { id: 10, category: 'Pizza', type: 'pizza', title: "Піца 'Гавайська'", value: '450г', price: { value: '199', discount: '', measure: '%' }, available: true, sale: false },
+    { id: 11, category: 'Pizza', type: 'pizza', title: "Піца 'Барбекю'", value: '450г', price: { value: '199', discount: '', measure: '%' }, available: false, sale: false },
+    { id: 12, category: 'Pizza', type: 'pizza', title: "Піца 'Королівська'", value: '950г', price: { value: '399', discount: '', measure: '%' }, available: false, sale: false },
+    { id: 13, category: 'Pizza', type: 'pizza', title: "Піца 1", value: '450г', price: { value: '199', discount: '', measure: '%' }, available: false, sale: false },
+    { id: 14, category: 'Pizza', type: 'pizza', title: "Піца '2'", value: '450г', price: { value: '199', discount: '', measure: '%' }, available: false, sale: false },
+    { id: 15, category: 'Pizza', type: 'pizza', title: "Піца '3'", value: '450г', price: { value: '199', discount: '', measure: '%' }, available: false, sale: false },
+    { id: 16, category: 'Pizza', type: 'pizza', title: "Піца '4'", value: '450г', price: { value: '199', discount: '', measure: '%' }, available: false, sale: false },
+    { id: 17, category: 'Pizza', type: 'pizza', title: "Піца '5'", value: '450г', price: { value: '199', discount: '', measure: '%' }, available: false, sale: false },
+    { id: 18, category: 'Pizza', type: 'pizza', title: "Піца '6'", value: '450г', price: { value: '199', discount: '', measure: '%' }, available: false, sale: false },
+    { id: 19, category: 'Pizza', type: 'pizza', title: "Піца '7'", value: '450г', price: { value: '199', discount: '', measure: '%' }, available: false, sale: false },
+  ]);
+  
+  
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
-
-
+  
   // const hide = (e) => {
   //   setIsHeaderVisible(false);
   //   setTimeout(() => setIsHeaderVisible(true), 1500);
@@ -55,7 +78,7 @@ function App() {
           className="App">
           <Header visible={isHeaderVisible} />
         </div>
-        <ContentWrapper />
+        <ContentWrapper cards={cards} />
       </div>
       <LoaderMain />
     </Fragment>

@@ -1,14 +1,11 @@
 import { React, Fragment } from 'react';
 
-import LoaderMain from './loader_main/LoaderMain';
-
 import elem1_icon from '../images/button_elem_1.jpg'
 import elem2_icon from '../images/button_elem_2.jpg'
 import basket_icon from '../images/basket.jpg'
 import logo_icon from '../images/Silpo_logo.svg'
 import flag from '../images/flag.png'
 import { ReactComponent as PhoneIcon } from '../images/phone_icon.svg'
-
 
 import HeaderSearch from './headerSearch/HeaderSearch';
 import UserInfo from './userInfo/UserInfo';
@@ -46,7 +43,6 @@ const Header = ({ visible, ...props }) => {
             <div
                 className={`header__bottom__wrapper ${!visible ? 'hide' : ''}`}
             >
-
                 <nav className='header__bottom'>
                     <ul className="nav_list">
                         <li className="item_flag" >
@@ -80,9 +76,7 @@ const Header = ({ visible, ...props }) => {
                         </li>
                     </ul>
                 </nav>
-
             </div>
-            
         </Fragment >
     )
 }

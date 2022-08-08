@@ -1,0 +1,14 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: ProximaNova, Georgia, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+
+.product_list {
+    grid-gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(324px, 324px));
+    margin: 0 0 10px;
+}

@@ -2,11 +2,11 @@ import React from "react";
 
 import classes from './ContentWrapper.module.scss';
 
-import ContentItem from "../contentItem/ContentItem";
+import CardsList from "../cardsList/CardsList";
 
 
 
-const ContentWrapper = () => {
+const ContentWrapper = ({ cards, ...props }) => {
 
 
 
@@ -17,30 +17,9 @@ const ContentWrapper = () => {
                     <h1 className={classes.category_page_heading}>«Сільпо» Resto</h1>
                     <div className={classes.category_page_content}>
                         <div className={classes.product_list_wrapper}>
-                            <ul className={classes.product_list}>
- 
-                                <ContentItem/>
-                                <ContentItem/>
-                                <ContentItem/>
-                                <ContentItem/>
-                                <ContentItem/>
-                                <ContentItem/>
-                                <ContentItem/>
-                                <ContentItem/>
-                                <ContentItem/>
-                                <ContentItem/>
-                                <ContentItem/>
-                                <ContentItem/>
-                                <ContentItem/>
-                                <ContentItem/>
-                                <ContentItem/>
-                                <ContentItem/>
-                                <ContentItem/>
-                                <ContentItem/>
-                                <ContentItem/>
 
-                 
-                            </ul>
+                            <CardsList cards={cards} />
+
                         </div>
                     </div>
                 </div>
