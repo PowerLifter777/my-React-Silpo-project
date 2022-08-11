@@ -45,10 +45,15 @@
             .category_page_heading {
                 font-family: ProximaNova_Bold, Helvetica, Arial, sans-serif;
                 font-size: 48px;
-                font-weight: 700;
+                font-weight: 400;
                 margin-bottom: .67em;
                 margin-top: .67em;
                 /* letter-spacing: .03em; */
+            }
+
+            .category_page_header {
+                display: flex;
+                justify-content: end;
             }
 
             .category_page_content {

@@ -2,17 +2,17 @@ import React from "react";
 
 import classes from './CardsList.module.scss';
 
-import CardItem from "../cardItem/CardItem";
+import Card from "../card/Card";
 
 
 const CardsList = ({ cards, ...props }) => {
 
-    // console.log(items);
+    // console.log(cards);
 
     return (
         <ul className={classes.product_list}>
-            {cards.map((item) =>
-              <CardItem item={item}/>
+            {cards.map((card) =>
+              <Card card={card} key={card.id}/>
             )}
         </ul>
     )

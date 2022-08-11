@@ -2,7 +2,7 @@
   font-family: 'ProximaNova';
   src: url('../public/fonts/proximanova_regular.ttf');
   font-family: 'ProximaNova_B';
-  src: url('../public/fonts/proximanova_bold.otf') format('otf'),
+  src: url('../public/fonts/proximanova_bold.otf') format('otf');
 }
 
 /* -------------------------------------------------------------------------------- */
