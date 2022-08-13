@@ -3,11 +3,12 @@ import { Fragment } from 'react';
 import './App.css';
 import Header from './components/Header';
 import ContentWrapper from './components/content/ContentWrapper';
-import LoaderMain from './components/loader_main/LoaderMain';
+import LoaderMain from './components/loaderMain/LoaderMain';
 
 import sushi_img from './images/card_img/sushi.png'
 import salad_img from './images/card_img/salad.png'
 import pizza_img from './images/card_img/pizza.png'
+import { useRef } from 'react';
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
     { id: 5, category: 'Sushi', type: 'sushi', title: "Рол з вугрем", value: '180г', price: { value: '273', discount: '', measure: '%' }, available: false, sale: false, img: sushi_img },
     { id: 6, category: 'Sushi', type: 'salad', title: "Салат з креветками", value: '245г', price: { value: '249.99', discount: '', measure: '%' }, available: false, sale: false, img: salad_img },
     { id: 7, category: 'Sushi', type: 'salad', title: "Ламінарія", value: '200г', price: { value: '117', discount: '10', measure: '%' }, available: true, sale: false, img: salad_img },
-    
+
     { id: 8, category: 'Pizza', type: 'pizza', title: "Піца 'Маргарита'", value: '450г', price: { value: '99', discount: '', measure: '%' }, available: true, sale: false, img: pizza_img },
     { id: 9, category: 'Pizza', type: 'pizza', title: "Піца 'Гостра'", value: '450г', price: { value: '99', discount: '', measure: '%' }, available: true, sale: false, img: pizza_img },
     { id: 10, category: 'Pizza', type: 'pizza', title: "Піца 'Гавайська'", value: '450г', price: { value: '199', discount: '', measure: '%' }, available: true, sale: false, img: pizza_img },
@@ -33,10 +34,14 @@ function App() {
     { id: 18, category: 'Pizza', type: 'pizza', title: "Піца '6'", value: '450г', price: { value: '199', discount: '', measure: '%' }, available: false, sale: false },
     { id: 19, category: 'Pizza', type: 'pizza', title: "Піца '7'", value: '450г', price: { value: '199', discount: '', measure: '%' }, available: false, sale: false },
   ]);
-  
-  
+
+
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
-  
+
+  const [sortMenuClassActive, setSortMenuClassActive] = useState(false)
+
+
+
   // const hide = (e) => {
   //   setIsHeaderVisible(false);
   //   setTimeout(() => setIsHeaderVisible(true), 1500);
@@ -74,16 +79,26 @@ function App() {
     flag = false;
   }
 
+  const hideSortMenu = (e) => {
+    // e.stopPropagation();
+    // e.preventDefault();
+    setSortMenuClassActive(false);
+  }
+
+  const changeSortMenuClass = (e) => {
+    setSortMenuClassActive(e);
+  }
+
   return (
     <Fragment>
-      <div className='layout' onWheel={hide}>
+      <div className='App'  >
         <div
-          className="App">
+          className="layout" onMouseDown={hideSortMenu}>
           <Header visible={isHeaderVisible} />
+          <ContentWrapper cards={cards} sortMenuClassActive={sortMenuClassActive} changeCls={changeSortMenuClass} />
+          <LoaderMain />
         </div>
-        <ContentWrapper cards={cards} />
       </div>
-      <LoaderMain />
     </Fragment>
   )
 }

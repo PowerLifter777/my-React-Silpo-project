@@ -1,4 +1,5 @@
 import { React, Fragment } from 'react';
+import { useState } from 'react';
 
 import elem1_icon from '../images/button_elem_1.jpg'
 import elem2_icon from '../images/button_elem_2.jpg'
@@ -9,16 +10,14 @@ import { ReactComponent as PhoneIcon } from '../images/phone_icon.svg'
 
 import HeaderSearch from './headerSearch/HeaderSearch';
 import UserInfo from './userInfo/UserInfo';
-import { useState } from 'react';
 
 
 const Header = ({ visible, ...props }) => {
 
     return (
         <Fragment>
-            <div className="header"
-                onClick={() => console.log(visible)}
-                style={!visible ? { boxShadow: '0 0 20px rgba(0, 0, 0, .2)' } : { boxShadow: 'none' }}>
+            <div className={`header ${visible ? 'header_disabled_shadow' : '' }`}
+                onClick={() => console.log(visible)}>
                 <div className='header__wrapper'>
                     <div className='header_top content'>
                         <div className='header_top logo' title='Онлайн замовлення товарів з «Сільпо»' >

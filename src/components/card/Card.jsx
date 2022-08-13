@@ -19,7 +19,7 @@ const Card = ({ card, ...props }) => {
                 <div className={classes.product_list_item_header}></div>
                 <a className={classes.image_content_wrapper} href="wddddddddwdw">
                     <div className={classes.product_list_item__image}>
-                        {/* <img src={images.map(i => i.toString() == item.type? i : default_img )} alt={item.title} /> */}
+
                         {card.img
                             ?
                             <img src={card.img} alt={card.title} />

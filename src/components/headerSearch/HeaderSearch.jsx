@@ -5,11 +5,11 @@ import classes from './HeaderSearch.module.css';
 
 import clearBtn_Icon from '../../images/clear_input_button.svg'
 import { ReactComponent as SearchIcon } from '../../images/search_icon.svg'
-import LoaderSearch from "../loader_search/LoaderSearch";
+import LoaderSearch from "../loaderSearch/LoaderSearch";
 
 
 const HeaderSearch = () => {
-
+ 
     const [isInputFocused, setIsInputFocused] = useState(false);
     const [inputValue, setInputValue] = useState('');
 
@@ -49,7 +49,7 @@ const HeaderSearch = () => {
                 className={`header_top ${classes.search} ${isInputFocused ? classes.focused : ''}`}
                 onClick={inputFocused}
             >
-                <SearchIcon className={classes.searchIcon}/>
+                <SearchIcon className={classes.searchIcon} />
                 <input
                     type="text"
                     placeholder='Пошук на сайті'
@@ -71,7 +71,7 @@ const HeaderSearch = () => {
                 <div
                     className={classes.dropdownMenu}
                     ref={dropdownEl}>
-                    <LoaderSearch/>
+                    <LoaderSearch />
                     {inputValue}
                 </div>
             </div>

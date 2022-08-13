@@ -3,11 +3,11 @@ import React from "react";
 import classes from './ContentWrapper.module.scss';
 
 import CardsList from "../cardsList/CardsList";
-import SortMenu from "../sort/SprtMenu";
+import SortMenu from "../sort/SortMenu";
 
 
 
-const ContentWrapper = ({ cards, ...props }) => {
+const ContentWrapper = ({ cards, sortMenuClassActive, changeCls, ...props }) => {
 
 
 
@@ -18,7 +18,7 @@ const ContentWrapper = ({ cards, ...props }) => {
                     <h1 className={classes.category_page_heading}>«Сільпо» Resto</h1>
                     <div className={classes.category_page_header}>
 
-                        <SortMenu />
+                        <SortMenu sortMenuClassActive = {sortMenuClassActive} changeCls={changeCls}/>
 
                     </div>
                     <div className={classes.category_page_content}>
