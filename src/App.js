@@ -1,14 +1,12 @@
-import { React, useState } from 'react';
-import { Fragment } from 'react';
+import { React, Fragment, useState, useRef } from 'react';
 import './App.css';
-import Header from './components/Header';
 import ContentWrapper from './components/content/ContentWrapper';
+import Header from './components/Header';
 import LoaderMain from './components/loaderMain/LoaderMain';
 
-import sushi_img from './images/card_img/sushi.png'
-import salad_img from './images/card_img/salad.png'
-import pizza_img from './images/card_img/pizza.png'
-import { useRef } from 'react';
+import pizza_img from './images/card_img/pizza.png';
+import salad_img from './images/card_img/salad.png';
+import sushi_img from './images/card_img/sushi.png';
 
 function App() {
 
@@ -40,7 +38,7 @@ function App() {
 
   const [sortMenuClassActive, setSortMenuClassActive] = useState(false)
 
-
+  const ref = useRef();
 
   // const hide = (e) => {
   //   setIsHeaderVisible(false);
@@ -81,8 +79,8 @@ function App() {
 
   const hideSortMenu = (e) => {
     // e.stopPropagation();
-    // e.preventDefault();
-    setSortMenuClassActive(false);
+    e.preventDefault();
+    if (e.target.id !== "sort_widget") setSortMenuClassActive(false);
   }
 
   const changeSortMenuClass = (e) => {
@@ -91,15 +89,15 @@ function App() {
 
   return (
     <Fragment>
-      <div className='App'  >
+      <div className='App' onWheel={hide} >
         <div
           className="layout" onMouseDown={hideSortMenu}>
           <Header visible={isHeaderVisible} />
           <ContentWrapper cards={cards} sortMenuClassActive={sortMenuClassActive} changeCls={changeSortMenuClass} />
-          <LoaderMain />
+          <LoaderMain  />
         </div>
       </div>
-    </Fragment>
+    </Fragment >
   )
 }
 

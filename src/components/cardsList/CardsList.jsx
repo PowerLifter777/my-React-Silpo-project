@@ -10,7 +10,7 @@ const CardsList = ({ cards, ...props }) => {
     // console.log(cards);
 
     return (
-        <ul className={classes.product_list}>
+        <ul className={classes.product_list}> 
             {cards.map((card) =>
               <Card card={card} key={card.id}/>
             )}
