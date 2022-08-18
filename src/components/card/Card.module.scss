@@ -196,6 +196,179 @@
             justify-content: space-between;
             margin-top: auto;
             position: relative;
+
+            .btn {
+                background: none;
+                border: 1px solid transparent;
+                color: #373737;
+                cursor: pointer;
+                display: inline-block;
+                font-family: ProximaNova, Helvetica, Arial, sans-serif;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: .02px;
+                line-height: 1.666666666666667;
+                outline: none;
+                overflow: ellipsis;
+                padding: 7px 19px 8px;
+                position: relative;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                transition: all .35s;
+                transition-property: all;
+                transition-property: width, height, opacity, color, background, opacity, letter-spacing;
+                user-select: none;
+                vertical-align: middle;
+            }
+
+            .product_price_container {
+                display: flex;
+                flex-direction: row;
+
+                .current_price {
+                    color: #000;
+                    flex-direction: column;
+                    font-weight: 700;
+
+                    .price_wrapper {
+                        display: flex;
+
+                        .current_integer {
+                            font-size: 26px;
+                            line-height: 1.15;
+                        }
+                    }
+                }
+
+                .price_currency {
+                    font-size: 16px;
+                }
+
+                .current-price,
+                .old-price {
+                    align-items: flex-start;
+                    display: flex;
+                    flex-direction: row;
+                }
+            }
+
+            .add_to_cart_round,
+            .add_to_comment_wrapper {
+                bottom: 0;
+                position: absolute;
+                right: 0;
+            }
+
+            .add_to_cart_round {
+                align-items: center;
+                background: #fff;
+                border: 1px solid hsla(0, 0%, 44%, .07);
+                border-radius: 20px;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, .121);
+                cursor: pointer;
+                display: flex;
+                flex-shrink: 0;
+                height: 40px;
+                justify-content: center;
+                margin: 0;
+                position: relative;
+                transition: all .35s;
+                width: 40px;
+                z-index: 1;
+
+                .icon_basket {
+                    color: #ff8522;
+                    height: 22px;
+                    margin-right: 2px;
+                    width: 22px;
+
+                    display: inline-block;
+
+                    svg {
+                        height: 25px;
+                        width: 25px;
+
+                        display: block;
+                    }
+                }
+
+                .calc_store_qty {
+                    bottom: -10px;
+                    color: transparent;
+                    font-size: 8px;
+                    position: absolute;
+                    right: 15px;
+                    transition: color .35s;
+                    user-select: none;
+                    white-space: nowrap;
+                }
+
+            }
+
+            .add_to_comment_wrapper {
+                bottom: 0;
+                position: absolute;
+                right: 0;
+                width: fit-content;
+
+                .btn_tooltip {
+                    background: #747474 0 0 no-repeat padding-box;
+                    bottom: 50px;
+                    color: #fff;
+                    display: none;
+                    padding: 15px;
+                    position: absolute;
+                    right: 0;
+                    transition: .5s;
+                    width: 230px;
+                    z-index: 1;
+
+                    &::before {
+                        border-bottom: 8px solid transparent;
+                        border-right: 8px solid #747474;
+                        border-top: 8px solid transparent;
+                        bottom: 0;
+                        content: "";
+                        display: block;
+                        height: 0;
+                        position: absolute;
+                        right: 45px;
+                        top: 93%;
+                        -webkit-transform: rotate(-90deg);
+                        transform: rotate(-90deg);
+                        width: 0;
+                    }
+
+                    span {
+                        font-size: 14px;
+                        letter-spacing: 0;
+                        line-height: 18px;
+                        text-align: left;
+                    }
+                }
+
+                .btn_primary:not(:disabled):focus,
+                .btn_primary:not(:disabled):hover {
+                    background: #ff943d;
+                    color: #fff;
+                }
+
+                .add_to_comment_btn {
+                    background: #fff;
+                    border: 1px solid #ff8522;
+                    color: #ff8522;
+                    cursor: pointer;
+                    height: 35px;
+                    position: relative;
+                    width: 150px;
+
+                    border-radius: 40px;
+                    margin: 0;
+                }
+
+
+            }
         }
     }
 
@@ -214,4 +387,14 @@
     //     transition: .25s cubic-bezier(.47, 0, .75, .72);
     //     z-index: 9;
     // }
+}
+
+.black,
+.border_radius,
+.btn_default,
+.btn_gray,
+.btn_link,
+.btn_primary,
+.btn_white {
+    border-radius: 40px;
 }

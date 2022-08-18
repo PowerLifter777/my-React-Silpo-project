@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 
 
 import classes from './SortMenu.module.scss';
@@ -27,7 +27,7 @@ const SortMenu = ({ sortMenuClassActive, changeCls, ...props }) => {
         widgetElements.map(widgetElement => {
             if (+e.target.id === widgetElement.id) {
                 setSelected(widgetElement.name);
-                setWidgetElements(prevState =>
+                setWidgetElements(prevState => 
                     prevState.map(obj => obj.id === +e.target.id ? { ...obj, isSelected: true } : { ...obj, isSelected: false })
                 );
             } //console.log(widgetElement);

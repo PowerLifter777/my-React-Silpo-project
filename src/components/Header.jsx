@@ -4,7 +4,7 @@ import { useState } from 'react';
 import elem1_icon from '../images/button_elem_1.jpg'
 import elem2_icon from '../images/button_elem_2.jpg'
 import basket_icon from '../images/basket.jpg'
-import logo_icon from '../images/Silpo_logo.svg'
+import logo_icon from '../images/silpo_logo.svg'
 import flag from '../images/flag.png'
 import { ReactComponent as PhoneIcon } from '../images/phone_icon.svg'
 
