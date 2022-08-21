@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 import classes from './Card.module.scss';
 
@@ -38,7 +38,7 @@ const Card = ({ card, ...props }) => {
                                 <StarHolder className={classes.star_holder} />
                             </div>
                             <div className={classes.rating_count}>5</div>
-                            <div className={classes.rating_text}><span>1 оцінка</span></div>
+                            <div className={classes.rating_text}><span >1 оцінка</span></div>
                             {/* <div className={classes.rating_text_zero}><span>Оцініть першим</span></div> */}
                         </div>
                         <hr />
@@ -47,36 +47,41 @@ const Card = ({ card, ...props }) => {
                 </a>
                 <div className={classes.product_list_item_controls}>
                     {/* --------------------------------------------------------------- */}
-                    <div className={classes.product_price_container}>
-                        <div className={classes.current_price}>
-                            <div className={classes.price_wrapper}>
-                                <div className={classes.current_integer}>64.99
-                                    <span className={classes.price_currency}> грн</span>
+                    {card.available
+                        ?
+                        <Fragment>
+                            <div className={classes.product_price_container}>
+                                <div className={classes.current_price}>
+                                    <div className={classes.price_wrapper}>
+                                        <div className={classes.current_integer}>{card.price.common}
+                                            <span className={classes.price_currency}> грн</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <div className={classes.add_to_cart_round} tabIndex="0" role="button" title="Додати в кошик" aria-label="Додати в кошик">
+                                <i aria-hidden="true" className={classes.icon_basket}>
+                                    <Basket />
+                                </i>
+                                <div className={classes.calc_store_qty}>В наявності 0 одиниць</div>
+                            </div>
+                        </Fragment>
+                        :
+                        /* -------------------------------------------------------------- */
+                        < div className={classes.add_to_comment_wrapper}>
+                            <div className={`${classes.btn_tooltip} ${classes.product_list_comment_btn}`} role="tooltip" id={classes.comment_btn}>
+                                <span>Додамо до замовлення, якщо з’явиться до моменту видачі</span>
+                            </div>
+                            <button ariaDescribedby="comment-btn" type="button" className={`${classes.btn} ${classes.btn_primary} ${classes.add_to_comment_btn}`}>
+                                <span>Хочу замовити</span>
+                            </button>
                         </div>
-                    </div>
-                    <div className={classes.add_to_cart_round} tabindex="0" role="button" title="Додати в кошик" ariaLabel="Додати в кошик">
-                        <i ariaHidden="true" class={classes.icon_basket}>
-                            <Basket />
-                        </i>
-                        <div className={classes.calc_store_qty}>В наявності 0 одиниць</div>
-                    </div>
-                    {/* --------------------------------------------------------------- */}
-
-                    {/* <div className={classes.add_to_comment_wrapper}>
-                        <div className={`${classes.btn_tooltip} ${classes.product_list_comment_btn}`} role="tooltip" id={classes.comment_btn}>
-                            <span>Додамо до замовлення, якщо з’явиться до моменту видачі</span>
-                        </div>
-                        <button ariaDescribedby="comment-btn" type="button" className={`${classes.btn} ${classes.btn} ${classes.btn_primary} ${classes.add_to_comment_btn}`}>
-                            <span>Хочу замовити</span>
-                        </button>
-                    </div> */}
+                    }
 
                     {/* -------------------------------------------------------------- */}
                 </div>
             </div>
-        </li>
+        </li >
     )
 }
 

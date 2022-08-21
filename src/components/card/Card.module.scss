@@ -1,12 +1,48 @@
 @font-face {
-    font-family: 'ProximaNova';
+    font-family: ProximaNova;
     src: url('../../../public/fonts/proximanova_regular.ttf');
 }
+
+@font-face {
+    font-family: ProximaNova_bold;
+    src: url('../../../public/fonts/proximanova_bold.otf');
+}
+
+@font-face {
+    font-family: ProximaNova_black;
+    src: url('../../../public/fonts/proximanova_black.ttf');
+}
+
+
+// @font-face {
+//     // font-display: swap;
+//     font-family: ProximaNova;
+//     font-style: normal;
+//     font-weight: 400;
+//     src: url('../../../public/fonts/proximanova_regular.ttf') format("ttf")
+// }
+
+// @font-face {
+//     // font-display: swap;
+//     font-family: ProximaNova;
+//     font-style: normal;
+//     font-weight: 600;
+//     src: url('../../../public/fonts/proximanova_bold.otf')  format("otf")
+// }
+
+// @font-face {
+//     // font-display: swap;
+//     font-family: ProximaNova;
+//     font-style: normal;
+//     // font-weight: 700;
+//     src:  url('../../../public/fonts/proximanova_black.ttf') format("ttf")
+// }
 
 * {
     margin: 0px;
     padding: 0px;
-    font-family: ProximaNova, Georgia, Helvetica, sans-serif;
+    font-family: ProximaNova_black, Georgia, Helvetica, sans-serif;
+
     box-sizing: border-box;
 }
 
@@ -47,14 +83,14 @@
         position: relative;
         transition: box-shadow .35s;
 
-        // .product_list_item_header {
-        //     align-items: center;
-        //     display: flex;
-        //     left: 20px;
-        //     position: absolute;
-        //     top: 20px;
-        //     width: 60px;
-        // }
+        .product_list_item_header {
+            align-items: center;
+            display: flex;
+            left: 20px;
+            position: absolute;
+            top: 20px;
+            width: 60px;
+        }
 
         a {
             color: inherit;
@@ -144,7 +180,7 @@
                     .rating_count {
                         color: #373737;
                         font-size: 14px;
-                        font-weight: 600;
+                        font-weight: 700;
                         padding: 0 7px 0 5px;
                     }
 
@@ -159,7 +195,7 @@
                         font-size: 11px;
                         font-weight: 400;
                         justify-content: center;
-                        padding-left: 11px;
+                        padding-left: 8px;
 
                         &::before {
                             background-color: #e5e5e5;
@@ -203,7 +239,7 @@
                 color: #373737;
                 cursor: pointer;
                 display: inline-block;
-                font-family: ProximaNova, Helvetica, Arial, sans-serif;
+                font-family: ProximaNova_black, Helvetica, Arial, sans-serif;
                 font-size: 12px;
                 font-weight: 600;
                 letter-spacing: .02px;
@@ -227,6 +263,7 @@
                 flex-direction: row;
 
                 .current_price {
+                    font-family: ProximaNova_black, Georgia, Helvetica, sans-serif;
                     color: #000;
                     flex-direction: column;
                     font-weight: 700;
@@ -367,7 +404,9 @@
                     margin: 0;
                 }
 
-
+                &:hover>.btn_tooltip {
+                    display: block;
+                }
             }
         }
     }
