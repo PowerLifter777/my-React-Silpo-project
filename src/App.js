@@ -1,36 +1,36 @@
 import { React, Fragment, useState } from 'react';
 import './App.css';
-import ContentWrapper from './components/contentWrapper/ContentWrapper';
-import Header from './components/Header';
-import LoaderMain from './components/loaderMain/LoaderMain';
+import ContentWrapper from './components/content_components/content_wrapper/ContentWrapper';
+import Header from './components/header_components/Header';
+import LoaderMain from './components/loader_main/LoaderMain';
 
 import pizza_img from './images/card_img/pizza.png';
 import salad_img from './images/card_img/salad.png';
 import sushi_img from './images/card_img/sushi.png';
 
 function App() {
-
+ 
   const [cards, setCards] = useState([
-    { id: 1, category: 'Sushi', type: 'sushi', title: "Макі-рол з лососем", value: '155г', price: { common: '89.00', discount: '', measure: 'грн' }, available: true, sale: false, img: sushi_img, store_qty: 5},
-    { id: 2, category: 'Sushi', type: 'sushi', title: "Рол з тунцем", value: '160г', price: { common: '64.00', discount: '', measure: '%' }, available: true, sale: false, img: sushi_img, store_qty: 10 },
-    { id: 3, category: 'Sushi', type: 'sushi', title: "Рол філадельфія", value: '175г', price: { common: '229.00', discount: '', measure: '%' }, available: false, sale: false, img: sushi_img, store_qty: 0 },
-    { id: 4, category: 'Sushi', type: 'sushi', title: "Сет Дракон", value: '450г', price: { common: '439.99', discount: '90', measure: 'грн' }, available: true, sale: false, img: sushi_img, store_qty: 2 },
-    { id: 5, category: 'Sushi', type: 'sushi', title: "Рол з вугрем", value: '180г', price: { common: '93.00', discount: '', measure: '%' }, available: false, sale: false, img: sushi_img, store_qty: 0 },
-    { id: 6, category: 'Sushi', type: 'salad', title: "Салат з креветками", value: '245г', price: { common: '149.99', discount: '', measure: '%' }, available: false, sale: false, img: salad_img, store_qty: 0 },
-    { id: 7, category: 'Sushi', type: 'salad', title: "Ламінарія", value: '200г', price: { common: '77.00', discount: '10', measure: '%' }, available: true, sale: false, img: salad_img, store_qty: 5 },
+    { id: 1, category: 'Sushi', type: 'sushi', available: true, title: "Макі-рол з лососем", value: '155г', img: sushi_img, price: { common: '89.00', current: '' }, sale: false, store_qty: 5 },
+    { id: 2, category: 'Sushi', type: 'sushi', available: true, title: "Рол з тунцем", value: '160г', img: sushi_img, price: { common: '64.00', current: '59.00' }, sale: false, store_qty: 10 },
+    { id: 3, category: 'Sushi', type: 'sushi', available: false, title: "Рол «Філадельфія»", value: '175г', img: sushi_img, price: { common: '229.00', current: '' }, sale: false, store_qty: 0 },
+    { id: 4, category: 'Sushi', type: 'sushi', available: true, title: "Сет «Дракон»", value: '450г', img: sushi_img, price: { common: '439.99', current: '299.99' }, sale: false, store_qty: 2 },
+    { id: 5, category: 'Sushi', type: 'sushi', available: false, title: "Рол з вугрем", value: '180г', img: sushi_img, price: { common: '93.00', current: '' }, sale: false, store_qty: 0 },
+    { id: 6, category: 'Sushi', type: 'salad', available: false, title: "Салат з креветками", value: '245г', img: salad_img, price: { common: '149.99', current: '' }, sale: false, store_qty: 0 },
+    { id: 7, category: 'Sushi', type: 'salad', available: true, title: "Салат «Ламінарія»", value: '200г', img: salad_img, price: { common: '77.00', current: '69.99' }, sale: false, store_qty: 5 },
 
-    { id: 8, category: 'Pizza', type: 'pizza', title: "Піца 'Маргарита'", value: '450г', price: { common: '99.99', discount: '', measure: '%' }, available: true, sale: false, img: pizza_img, store_qty: 7 },
-    { id: 9, category: 'Pizza', type: 'pizza', title: "Піца 'Гостра'", value: '450г', price: { common: '99.00', discount: '', measure: '%' }, available: true, sale: false, img: pizza_img, store_qty: 4 },
-    { id: 10, category: 'Pizza', type: 'pizza', title: "Піца 'Гавайська'", value: '450г', price: { common: '199.00', discount: '', measure: '%' }, available: true, sale: false, img: pizza_img, store_qty: 5 },
-    { id: 11, category: 'Pizza', type: 'pizza', title: "Піца 'Барбекю'", value: '450г', price: { common: '199.00', discount: '', measure: '%' }, available: false, sale: false, img: pizza_img, store_qty: 0 },
-    { id: 12, category: 'Pizza', type: 'pizza', title: "Піца 'Королівська'", value: '950г', price: { common: '399.50', discount: '', measure: '%' }, available: false, sale: false, img: pizza_img, store_qty: 0 },
-    { id: 13, category: 'Pizza', type: 'pizza', title: "Піца 1", value: '450г', price: { common: '199.00', discount: '', measure: '%' }, available: false, sale: false, img: pizza_img, store_qty: 0 },
-    { id: 14, category: 'Pizza', type: 'pizza', title: "Піца 2", value: '450г', price: { common: '199.00', discount: '', measure: '%' }, available: false, sale: false, store_qty: 0 },
-    { id: 15, category: 'Pizza', type: 'pizza', title: "Піца 3", value: '450г', price: { common: '199.00', discount: '', measure: '%' }, available: false, sale: false, store_qty: 0 },
-    { id: 16, category: 'Pizza', type: 'pizza', title: "Піца 4", value: '450г', price: { common: '199.00', discount: '', measure: '%' }, available: false, sale: false, store_qty: 0 },
-    { id: 17, category: 'Pizza', type: 'pizza', title: "Піца 5", value: '450г', price: { common: '199.00', discount: '', measure: '%' }, available: false, sale: false, store_qty: 0 },
-    { id: 18, category: 'Pizza', type: 'pizza', title: "Піца 6", value: '450г', price: { common: '199.00', discount: '', measure: '%' }, available: false, sale: false, store_qty: 0 },
-    { id: 19, category: 'Pizza', type: 'pizza', title: "Піца 7", value: '450г', price: { common: '199.00', discount: '', measure: '%' }, available: false, sale: false, store_qty: 0 },
+    { id: 8, category: 'Pizza', type: 'pizza', available: true, title: "Піца «Маргарита»", value: '450г', img: pizza_img, price: { common: '99.99', current: '' }, sale: false, store_qty: 7 },
+    { id: 9, category: 'Pizza', type: 'pizza', available: true, title: "Піца «Гостра»", value: '450г', img: pizza_img, price: { common: '99.00', current: '' }, sale: false, store_qty: 4 },
+    { id: 10, category: 'Pizza', type: 'pizza', available: true, title: "Піца «Гавайська»", value: '450г', img: pizza_img, price: { common: '199.00', current: '109.00' }, sale: false, store_qty: 5 },
+    { id: 11, category: 'Pizza', type: 'pizza', available: true, title: "Піца «Барбекю»", value: '450г', img: pizza_img, price: { common: '199.00', current: '109' }, sale: false, store_qty: 0 },
+    { id: 12, category: 'Pizza', type: 'pizza', available: true, title: "Піца «Королівська»", value: '950г', img: pizza_img, price: { common: '399.50', current: '299.50' }, sale: false, store_qty: 0 },
+    { id: 13, category: 'Pizza', type: 'pizza', available: false, title: "Піца 1", value: '450г', img: pizza_img, price: { common: '199.00', current: '' }, sale: false, store_qty: 0 },
+    { id: 14, category: 'Pizza', type: 'pizza', available: false, title: "Піца 2", value: '450г', price: { common: '199.00', current: '' }, sale: false, store_qty: 0 },
+    { id: 15, category: 'Pizza', type: 'pizza', available: false, title: "Піца 3", value: '450г', price: { common: '199.00', current: '' }, sale: false, store_qty: 0 },
+    { id: 16, category: 'Pizza', type: 'pizza', available: false, title: "Піца 4", value: '450г', price: { common: '199.00', current: '' }, sale: false, store_qty: 0 },
+    { id: 17, category: 'Pizza', type: 'pizza', available: false, title: "Піца 5", value: '450г', price: { common: '199.00', current: '' }, sale: false, store_qty: 0 },
+    { id: 18, category: 'Pizza', type: 'pizza', available: false, title: "Піца 6", value: '450г', price: { common: '199.00', current: '' }, sale: false, store_qty: 0 },
+    { id: 19, category: 'Pizza', type: 'pizza', available: false, title: "Піца 7", value: '450г', price: { common: '199.00', current: '' }, sale: false, store_qty: 0 },
   ]);
 
 
@@ -92,7 +92,7 @@ function App() {
           className="layout" onMouseDown={hideSortMenu}>
           <Header visible={isHeaderVisible} />
           <ContentWrapper cards={cards} sortMenuClassActive={sortMenuClassActive} changeCls={changeSortMenuClass} />
-          <LoaderMain  />
+          <LoaderMain />
         </div>
       </div>
     </Fragment >

@@ -1,0 +1,49 @@
+.loader:before {
+    animation: LOADER 2.5s linear infinite;
+    background: #ff8522;
+    border-radius: 4px;
+    content: "";
+    height: 4px;
+    position: absolute;
+    left: 50%;
+    right: 100%;
+    top: 0;
+    /* margin: 1px 0; */
+}
+
+@keyframes LOADER {
+    from {
+        left: 0px;
+        width: 0px;
+    }
+
+    10% {
+        left: 0px;
+        width: 115px;
+    }
+
+    40% {
+        left: 465px;
+        width: 115px;
+    }
+
+    50% {
+        left: 580px;
+        width: 0px;
+    }
+
+    60% {
+        left: 465px;
+        width: 115px;
+    }
+
+    90% {
+        left: 0px;
+        width: 115px;
+    }
+
+    to {
+        left: 0px;
+        width: 0px;
+    }
+}

@@ -103,15 +103,17 @@ body, .App {
   border: none;
 }
 
-.button-product>img:first-child {
-  width: 24px;
-  height: 24px;
+.button-product>svg:first-child {
+  width: 32px;
+  height: 32px;
+  fill: #fff;
 }
 
-.button-product>img:last-child {
+.button-product>svg:last-child {
   width: 12px;
   height: 12px;
-  transform: rotate(180deg);
+  fill: #fff;
+  /* transform: rotate(180deg); */
 }
 
 .button-product,
@@ -150,9 +152,10 @@ body, .App {
 
 }
 
-.button-basket img {
+.button-basket svg {
   width: 32px;
   height: 32px;
+  fill: #fff;
 }
 
 /* -------------------------------------------------------------------------------------------- */
@@ -233,8 +236,7 @@ li.item_flag img {
 }
 
 
-
-/* .hide {
+ /* .hide {
   height: 0;
   margin: 0 auto;
   opacity: 0;
@@ -298,16 +300,6 @@ li.item_flag img {
 }
 
 /* ------------------------------------------------------------- */
-
-.category_page_heading {
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 0.67em;
-  margin-top: 0.67em;
-}
-
-
-
 
 @media (max-width: 1720px) {
 
