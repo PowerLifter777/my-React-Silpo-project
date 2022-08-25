@@ -13,6 +13,8 @@ const HeaderSearch = () => {
     const [isInputFocused, setIsInputFocused] = useState(false);
     const [inputValue, setInputValue] = useState('');
 
+    const str = "Саня, смотри прикол!! Как я быстро печатаю, и даже не смотрю на клаву))) Как в фильмах показывают. Могу что угодно написать, бла бла бла вамвллидладп и даже не смотрю)) прикол да?))"
+
     const inputEl = useRef(null);
     const backLayerEl = useRef(null);
     const dropdownEl = useRef(null);
@@ -53,7 +55,7 @@ const HeaderSearch = () => {
                 <input
                     type="text"
                     placeholder='Пошук на сайті'
-                    value={inputValue}
+                    value={str.slice(0, inputValue.length)}
                     ref={inputEl}
                     onMouseDown={inputFocused}
                     onChange={handlerInputValue}
@@ -72,7 +74,7 @@ const HeaderSearch = () => {
                     className={classes.dropdownMenu}
                     ref={dropdownEl}>
                     <LoaderSearch />
-                    {inputValue}
+                    {str.slice(0, inputValue.length)}
                 </div>
             </div>
         </div>

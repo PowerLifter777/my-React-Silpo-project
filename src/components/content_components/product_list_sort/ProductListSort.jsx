@@ -4,10 +4,10 @@ import classes from './ProductListSort.module.scss';
 
 import { ReactComponent as SortMenuSVG } from '../../../images/sort_menu_icon.svg'
 
-const ProductListSort = ({ sortMenuClassActive, changeCls, ...props }) => {
+const ProductListSort = ({ sortMenuClassActive, changeCls, sortedProductsAPI, getSortMethod, ...props }) => {
 
     const [widgetElements, setWidgetElements] = useState([
-        { id: 1, name: 'Спочатку популярні', isSelected: true },
+        { id: 1, name: 'Спочатку популярні', isSelected: false },
         { id: 2, name: 'За рейтингом', isSelected: false },
         { id: 3, name: 'Спочатку акційні', isSelected: false },
         { id: 4, name: 'Спочатку дешевші', isSelected: false },
@@ -16,7 +16,7 @@ const ProductListSort = ({ sortMenuClassActive, changeCls, ...props }) => {
         { id: 7, name: 'Від Я до А', isSelected: false },
     ]);
 
-    const [selected, setSelected] = useState('Спочатку популярні')
+    const [selected, setSelected] = useState('Оберіть сортування')
 
     const openSortMenu = () => {
         sortMenuClassActive ? changeCls(false) : changeCls(true)
@@ -26,29 +26,33 @@ const ProductListSort = ({ sortMenuClassActive, changeCls, ...props }) => {
         widgetElements.map(widgetElement => {
             if (+e.target.id === widgetElement.id) {
                 setSelected(widgetElement.name);
-                setWidgetElements(prevState => 
+                setWidgetElements(prevState =>
                     prevState.map(obj => obj.id === +e.target.id ? { ...obj, isSelected: true } : { ...obj, isSelected: false })
                 );
-            } //console.log(widgetElement);
+                // console.log(widgetElement.name);
+                getSortMethod(widgetElement.name);
+            }
         })
+        // getSortMethod(e.target.id);
+        changeCls(false);
     }
 
     return (
-        <div className={classes.sort_menu} >
+        <div className={classes.sort_menu} id="sort_widget">
             <div className={`${classes.sort_widget_wrapper} ${sortMenuClassActive ? classes.active : ''}`}>
-                <div className={classes.sort_widget_title} onClick={openSortMenu} id="sort_widget">
+                <div className={classes.sort_widget_title} onClick={openSortMenu} >
                     <span>{selected}</span>
                     <i className={classes.icon}>
-                        <SortMenuSVG/>
+                        <SortMenuSVG />
                     </i>
                 </div>
-                <ul className={classes.sort_widget_list}>
+                <ul className={classes.sort_widget_list} >
                     {widgetElements.map((widgetElement) =>
                         <li
                             id={widgetElement.id}
                             key={widgetElement.id}
                             className={widgetElement.isSelected ? classes.sort_widget_selected : ""}
-                            onMouseDown={select}
+                            onClick={select}
                         >
                             {widgetElement.name}
                         </li>

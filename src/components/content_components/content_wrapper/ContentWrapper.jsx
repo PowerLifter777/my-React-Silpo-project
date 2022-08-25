@@ -2,12 +2,12 @@ import React from "react";
 
 import classes from './ContentWrapper.module.scss';
 
-import ProductList from "../../product_list/ProductList";
+import ProductList from "../product_list/ProductList";
 import ProductListSort from "../product_list_sort/ProductListSort";
 
 
 
-const ContentWrapper = ({ cards, sortMenuClassActive, changeCls, ...props }) => {
+const ContentWrapper = ({ sortedProductsAPI, sortMenuClassActive, changeCls, getSortMethod, ...props }) => {
 
 
 
@@ -18,14 +18,25 @@ const ContentWrapper = ({ cards, sortMenuClassActive, changeCls, ...props }) => 
                     <h1 className={classes.category_page_heading}>«Сільпо» Resto</h1>
                     <div className={classes.category_page_header}>
 
-                        <ProductListSort sortMenuClassActive = {sortMenuClassActive} changeCls={changeCls}/>
+                        <ProductListSort
+                            sortMenuClassActive={sortMenuClassActive}
+                            changeCls={changeCls}
+                            sortedProductsAPI={sortedProductsAPI}
+                            getSortMethod={getSortMethod}
+                        />
 
                     </div>
                     <div className={classes.category_page_content}>
+
+                        <div className={`${classes.category_filter_wrapper} ${classes.category_filter_column}`} style={{alignSelf : 'flex-start'}}>
+
+                        </div>
+
+
+
+
                         <div className={classes.product_list_wrapper}>
-
-                            <ProductList cards={cards} />
-
+                            <ProductList sortedProductsAPI={sortedProductsAPI} />
                         </div>
                     </div>
                 </div>

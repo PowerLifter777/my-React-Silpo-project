@@ -4,11 +4,11 @@ import classes from './ProductListItemControls.module.scss';
 
 import { ReactComponent as BasketSVG } from '../../../../images/basket_icon.svg'
 
-const ProductListItemControls = ({ card, ...props }) => {
+const ProductListItemControls = ({ product, ...props }) => {
     return (
         <div className={classes.product_list_item_controls}>
             {/* --------------------------------------------------------------- */}
-            {card.available
+            {product.available
                 ?
                 <Fragment>
                     <div className={`${classes.product_price_container} ${classes.old_price_container}`}>
@@ -16,7 +16,7 @@ const ProductListItemControls = ({ card, ...props }) => {
                             <div className={classes.price_wrapper}>
                                 <div className={classes.current_integer}>
                                     {
-                                    card.price.current ? card.price.current : card.price.common
+                                    product.price.current ? product.price.current : product.price.common
                                     }
                                     <span className={classes.price_currency}> грн</span>
                                 </div>
@@ -25,19 +25,19 @@ const ProductListItemControls = ({ card, ...props }) => {
                         <div className={classes.old_price}>
                             <div className={classes.old_integer}>
                                 {
-                                card.price.current ? card.price.common : ''
+                                product.price.current ? product.price.common : ''
                                 }
                                 <div className={classes.old_price_cut}></div>
                             </div>
                             <div className={classes.old_price_discount}>
                                 {
-                                    card.price.current && card.price.common > 100
+                                    product.price.current && product.price.common > 100
                                 ?
-                                    `${Math.round((card.price.current - card.price.common) * 100) / 100} грн`
+                                    `${Math.round((product.price.current - product.price.common) * 100) / 100} грн`
                                 :
-                                    card.price.current && card.price.common <= 100
+                                    product.price.current && product.price.common <= 100
                                 ?
-                                    `${Math.round(100 * card.price.current / card.price.common) - 100}%`
+                                    `${Math.round(100 * product.price.current / product.price.common) - 100}%`
                                 :
                                     ''
                                 }

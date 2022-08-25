@@ -60,6 +60,19 @@
                 align-items: flex-start;
                 display: flex;
 
+                .category_filter_wrapper {
+                    background-color: #fff;
+                    max-height: max-content;
+                    padding: 22px;
+                    width: 320px;
+                }
+
+                .category_filter_column {
+                    border-radius: 15px;
+                    margin-right: 10px;
+                    min-height: 100vh;
+                }
+
                 .product_list_wrapper {
                     display: flex;
                     flex: 1 1;

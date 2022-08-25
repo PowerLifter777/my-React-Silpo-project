@@ -18,7 +18,8 @@ const Header = ({ visible, ...props }) => {
     return (
         <Fragment>
             <div className={`header ${visible ? 'header_disabled_shadow' : ''}`}
-                onClick={() => console.log(visible)}>
+                // onClick={() => console.log(visible)}
+            >
                 <div className='header__wrapper'>
                     <div className='header_top content'>
                         <div className='header_top logo' title='Онлайн замовлення товарів з «Сільпо»' >

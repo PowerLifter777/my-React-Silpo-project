@@ -1,0 +1,23 @@
+.category_filter_shield {
+    display: flex;
+    flex-direction: column;
+    min-height: inherit;
+    padding-bottom: 60px;
+}
+
+.side_shield_panel {
+    position: relative;
+    transition: all 1s;
+    width: 100%;
+
+    .filter_wrapper {
+        color: #373737;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        outline: none;
+        padding-bottom: 10px;
+        
+
+    }
+}

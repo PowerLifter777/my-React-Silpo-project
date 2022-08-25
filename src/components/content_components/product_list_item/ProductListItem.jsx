@@ -3,45 +3,58 @@ import React, { Fragment, useState } from "react";
 import classes from './ProductListItem.module.scss';
 
 import { ReactComponent as StarHolderSVG } from '../../../images/star_holder.svg'
+import { ReactComponent as StarHolderZeroSVG } from '../../../images/star_holder_zero.svg'
 
 
-import default_img from '../../../images/card_img/default.png'
+import default_img from '../../../images/product_img/default.png'
 import ProductListItemControls from "./product_list_item_controls/ProductListItemControls";
 
-const ProductListItem = ({ card, ...props }) => {
+const ProductListItem = ({ product, ...props }) => {
 
     return (
-        <li className={`${classes.product_list_item_wrapper} ${!card.available ? classes.not_available : ""}`}>
+        <li className={`${classes.product_list_item_wrapper} ${!product.available ? classes.not_available : ""}`}>
             {/* <img src="" alt="" className="flying_image" /> */}
             <div className={classes.product_list_item}>
                 <div className={classes.product_list_item_header}></div>
                 <a className={classes.image_content_wrapper} href="resto">
                     <div className={classes.product_list_item__image}>
-                        {card.img
+                        {product.img
                             ?
-                            <img src={card.img} alt={card.title} />
+                            <img src={product.img} alt={product.title} />
                             :
-                            <img src={default_img} alt={card.title} />}
+                            <img src={default_img} alt={product.title} />}
                     </div>
                     <div className={classes.product_list_item__content}>
-                        <div className={classes.product_title}>{card.title}</div>
+                        <div className={classes.product_title}>{product.title}</div>
                         <div className={classes.rating_wrapper}>
-                            <div className={classes.star_wrapper}>
-                                <div className={classes.star_progress}>
-                                    <div className={classes.star_progress_active} style={{ width: '100%' }}></div>
-                                    <div className={classes.star_progress_passive}></div>
+                            {product.rating.votes
+                                ?
+                                <div className={classes.star_wrapper}>
+                                    <div className={classes.star_progress}>
+                                        <div className={classes.star_progress_active} style={{ width: `${product.rating.rate * 100 / 5}%` }}></div>
+                                        <div className={classes.star_progress_passive}></div>
+                                    </div>
+                                    <StarHolderSVG className={classes.star_holder} />
                                 </div>
-                                <StarHolderSVG className={classes.star_holder} />
-                            </div>
-                            <div className={classes.rating_count}>5</div>
-                            <div className={classes.rating_text}><span >1 оцінка</span></div>
-                            {/* <div className={classes.rating_text_zero}><span>Оцініть першим</span></div> */}
+                                :
+                                <i className={classes.icon_ex_star}>
+                                    <StarHolderZeroSVG />
+                                </i>
+                            }
+                            {product.rating.votes
+                                ? <Fragment>
+                                    <div className={classes.rating_count}>{product.rating.rate}</div>
+                                    <div className={classes.rating_text}><span>{product.rating.votes} оцінка</span></div>
+                                </Fragment>
+                                :
+                                <div className={classes.rating_text_zero}><span>Оцініть першим</span></div>
+                            }
                         </div>
                         <hr />
-                        <div className={classes.product_weight}>{card.value}</div>
+                        <div className={classes.product_weight}>{product.value}</div>
                     </div>
                 </a>
-                <ProductListItemControls card={card}/>
+                <ProductListItemControls product={product} />
             </div>
         </li >
     )
