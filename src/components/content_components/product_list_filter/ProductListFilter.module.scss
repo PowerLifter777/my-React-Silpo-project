@@ -17,7 +17,30 @@
         margin-bottom: 15px;
         outline: none;
         padding-bottom: 10px;
-        
 
+        .filter_wrapper_title {
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            font-weight: 700;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            .icon {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+        .filter_wrapper_cover.active {
+            display: block;
+        }
+
+        .filter_wrapper_cover {
+            display: none;
+        }
     }
 }

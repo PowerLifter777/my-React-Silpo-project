@@ -1,21 +1,27 @@
 import React from "react"
 
+import classes from './ProductListFilter.module.scss';
+
 const ProductListFilter = () => {
     return (
 
-        <div className={`${classes.side_shield_panel} ${category_filter_shield}`}>
+        <div className={`${classes.side_shield_panel} ${classes.category_filter_shield}`}>
             <article className={classes.filter_wrapper}>
-                <div className={filter_wrapper_title}>
+                <div className={classes.filter_wrapper_title}>
                     Кулінарія
-                    <i class="icon icon-chevron-down">
+                    <i className={`${classes.icon} ${classes.icon_chevron_down}`}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 8" width="14" height="8">
                             <path d="M14 1.4 7 8 0 1.4 1.4 0 7 5.3 12.6 0z">
                             </path>
                         </svg>
+                        {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
+                            <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z">
+                            </path>
+                        </svg> */}
                     </i>
                 </div>
-                <div class="filter-wrapper__cover filter-wrapper__cover-active">
-                    <ul class="checkbox-list-vertical">
+                <div className={`${classes.filter_wrapper_cover} ${classes.active}`}>
+                    {/* <ul class="checkbox-list-vertical">
                         <li class="block-checkbox-item">
                             <div class="block-checkbox-item_title">
                                 <div class="block-checkbox">
@@ -67,7 +73,7 @@ const ProductListFilter = () => {
                             <div class="rc-slider-handle rc-slider-handle-2" tabindex="0" role="slider" aria-valuemin="70" aria-valuemax="229" aria-valuenow="229" aria-disabled="false" style="left: 100%; transform: translateX(-50%);">
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </article>
         </div>

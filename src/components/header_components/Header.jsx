@@ -7,7 +7,7 @@ import flag from '../../images/flag.png'
 import { ReactComponent as PhoneSVG } from '../../images/phone_icon.svg'
 import { ReactComponent as BasketSVG } from '../../images/basket_icon.svg'
 import { ReactComponent as CategoriesSVG } from '../../images/categories_icon.svg'
-import { ReactComponent as ArrowDownSVG } from '../../images/arrow_down_icon.svg'
+import { ReactComponent as ArrowDownSVG } from '../../images/chevron_down_icon.svg'
 
 import HeaderSearch from './header_search/HeaderSearch';
 import UserInfo from './header_user_Info/UserInfo';

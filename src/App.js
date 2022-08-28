@@ -40,7 +40,7 @@ function App() {
 
 
   useEffect(() => {
-    setSortedProductsAPI(JSON.parse(JSON.stringify(productsAPI)).sort((obj1, obj2) => obj1.available > obj2.available ? -1 : 1));
+    setSortedProductsAPI(JSON.parse(JSON.stringify(productsAPI)).sort((obj1, obj2) => obj1.available > obj2.available ? -1 : obj1.available < obj2.available ? 1 : 0));
     // console.log(sortedProductsAPI);
     // console.log(productsAPI);
   }, [productsAPI])
@@ -59,7 +59,7 @@ function App() {
           .sort((a, b) => a.available && (b.rating.rate - a.rating.rate)));
         break;
       case 'Спочатку акційні':
-        setSortedProductsAPI(sortedProductsAPI.sort((obj1, obj2) => obj1.available && obj1.price.current > obj2.price.current? -1:1 ));
+        setSortedProductsAPI(sortedProductsAPI.sort((obj1, obj2) => obj1.available && obj1.price.current > obj2.price.current ? -1 : 1));
         break;
       case 'Спочатку дешевші':
         setSortedProductsAPI(sortedProductsAPI.sort((obj1, obj2) =>
@@ -77,6 +77,9 @@ function App() {
         setSortedProductsAPI(sortedProductsAPI.sort((obj1, obj2) =>
           obj1.available && (obj1.price.current || obj1.price.common) - (obj2.price.current || obj2.price.common)).sort((a, b) => a.available && b.title.localeCompare(a.title)));
         break;
+      // default:
+      //   setSortedProductsAPI(sortedProductsAPI.sort((obj1, obj2) => obj1.available > obj2.available ? -1 : obj1.available < obj2.available ? 1 : 0));
+      //   break;
     }
   }
 
