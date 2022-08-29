@@ -35,12 +35,75 @@
             }
         }
 
-        .filter_wrapper_cover.active {
-            display: block;
-        }
-
         .filter_wrapper_cover {
             display: none;
+
+            &.filter_wrapper_cover_active {
+                display: block;
+            }
+
+            li,
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .block_checkbox_item {
+                cursor: pointer;
+                display: flex;
+                font-size: 16px;
+                font-weight: 100;
+                justify-content: space-between;
+                justify-items: center;
+                margin-bottom: 14px;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+
+                .block_checkbox_item_title {
+                    display: flex;
+                    justify-items: center;
+
+                    .block_checkbox {
+                        border: 1px solid #a8a7a7;
+                        border-radius: 5px;
+                        display: inline-block;
+                        height: 18px;
+                        margin-right: 14px;
+                        min-width: 18px;
+                        padding: 2px;
+                        width: 18px;
+                    }
+                }
+
+                &:hover .block_checkbox {
+                    border-color: #ff8522;
+                }
+
+
+                .block_checkbox_item_count {
+                    color: #a8a7a7;
+                    font-size: 12px;
+                }
+
+                &.hover .block_checkbox_item_count {
+                    color: #ff8522;
+                }
+            }
+
+            .block_checkbox_item_active {
+                color: #ff8522;
+
+                .block_checkbox:after {
+                    background-color: #ff8522;
+                    border-radius: 5px;
+                    content: "";
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
         }
     }
 }
