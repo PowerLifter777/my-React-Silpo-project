@@ -1,35 +1,46 @@
 import React from "react"
+import { useState } from "react";
 
 import classes from './ProductListFilter.module.scss';
 
-const ProductListFilter = () => {
+import { ReactComponent as ChevronRightSVG } from '../../../images/chevron_right_icon.svg'
+import { ReactComponent as ChevronDownSVG } from '../../../images/chevron_down_icon.svg'
+import CheckboxListItem from "./CheckboxListItem";
+
+const ProductListFilter = ({ sortedProductsAPI }) => {
+
+
+    const [isFilterOpen, setIsFilterOpen] = useState(false);
+
+
+
+
     return (
 
         <div className={`${classes.side_shield_panel} ${classes.category_filter_shield}`}>
             <article className={classes.filter_wrapper}>
-                <div className={classes.filter_wrapper_title}>
+                <div
+                    className={classes.filter_wrapper_title}
+                    onClick={() => !isFilterOpen ? setIsFilterOpen(true) : setIsFilterOpen(false)}
+                >
                     Кулінарія
                     <i className={`${classes.icon} ${classes.icon_chevron_down}`}>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 8" width="14" height="8">
-                            <path d="M14 1.4 7 8 0 1.4 1.4 0 7 5.3 12.6 0z">
-                            </path>
-                        </svg>
-                        {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
-                            <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z">
-                            </path>
-                        </svg> */}
+                        {isFilterOpen
+                            ?
+                            <ChevronDownSVG />
+                            :
+                            <ChevronRightSVG />
+                        }
                     </i>
                 </div>
-                <div className={`${classes.filter_wrapper_cover} ${classes.filter_wrapper_cover_active}`}>
+                <div className={`${classes.filter_wrapper_cover} ${isFilterOpen ? classes.filter_wrapper_cover_active : ''}`}>
+
                     <ul className={classes.checkbox_list_vertical}>
-                        <li className={`${classes.block_checkbox_item} ${classes.block_checkbox_item_active}`}>
-                            <div className={classes.block_checkbox_item_title}>
-                                <div className={classes.block_checkbox}></div>
-                                Піца
-                            </div>
-                            <div className={classes.block_checkbox_item_count}>29</div>
-                        </li>
+                        {sortedProductsAPI.map(product =>
+                            <CheckboxListItem key={product.id} product={product} />
+                        )}
                     </ul>
+
                 </div>
             </article>
             {/* <article class="filter-wrapper">

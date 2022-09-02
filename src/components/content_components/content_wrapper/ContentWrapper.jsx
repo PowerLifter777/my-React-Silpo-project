@@ -30,7 +30,7 @@ const ContentWrapper = ({ sortedProductsAPI, sortMenuClassActive, changeCls, get
                     <div className={classes.category_page_content}>
                         <div className={`${classes.category_filter_wrapper} ${classes.category_filter_column}`} style={{ alignSelf: 'flex-start' }}>
    
-                            <ProductListFilter />
+                            <ProductListFilter sortedProductsAPI={sortedProductsAPI} />
    
                         </div>
                         <div className={classes.product_list_wrapper}>
