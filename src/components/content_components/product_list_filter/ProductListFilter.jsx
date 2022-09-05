@@ -36,9 +36,9 @@ const ProductListFilter = ({ sortedProductsAPI }) => {
                 <div className={`${classes.filter_wrapper_cover} ${isFilterOpen ? classes.filter_wrapper_cover_active : ''}`}>
 
                     <ul className={classes.checkbox_list_vertical}>
-                        {sortedProductsAPI.map(product =>
-                            <CheckboxListItem key={product.id} product={product} />
-                        )}
+
+
+                        <CheckboxListItem sortedProductsAPI={sortedProductsAPI}  />
                     </ul>
 
                 </div>

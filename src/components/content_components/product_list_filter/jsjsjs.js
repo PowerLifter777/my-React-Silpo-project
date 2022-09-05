@@ -49,6 +49,7 @@
 
 
 // let sortedArr = arr.map((obj, ind) => obj.type === 'Cалати'? console.log(ind): null)
-let sortedArr = new Set (arr.map(obj => obj.type ))
+// let sortedArr = new Set (arr.map(obj => obj.type ))
 // let sortedArr = (arr.map(obj => obj.type)).filter((el, ind) => arr.map(obj => obj.type).indexOf(el) === ind)
-console.log(sortedArr);
+(arr.map(obj => obj.type)).filter((el, ind) => arr.map(obj => obj.type).indexOf(el) === ind).forEach(el => console.log(el))
+// console.log(sortedArr);

@@ -7,7 +7,7 @@ import ProductListItem from "../product_list_item/ProductListItem";
 
 
 const ProductList = ({ sortedProductsAPI, ...props }) => {
-
+ 
     // console.log(cards);
 
     return (

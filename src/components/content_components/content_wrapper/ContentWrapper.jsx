@@ -1,5 +1,5 @@
 import React from "react";
-
+ 
 import classes from './ContentWrapper.module.scss';
 
 import ProductList from "../product_list/ProductList";
