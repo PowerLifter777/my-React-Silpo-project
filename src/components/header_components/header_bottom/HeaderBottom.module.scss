@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('../../../../public/fonts/proximanova_regular.ttf');
+    font-family: 'ProximaNova_B';
+    src: url('../../../../public/fonts/proximanova_bold.otf') format('otf');
+}
+
+.header__bottom {
+
+    display: flex;
+    justify-content: space-between;
+    font-family: ProximaNova, Georgia, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    height: 50px;
+    line-height: 1;
+    margin: 0 auto;
+    max-width: 1700px;
+    padding: 0 20px;
+    transition: all .5s;
+    width: 100%;
+    /* position: fixed; */
+    color: #373737;
+
+    .nav_list,
+    .additional_pages {
+        align-items: center;
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        ul,
+        li {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            flex: 0 1 auto;
+            height: 100%;
+
+            a {
+                align-items: center;
+                display: flex;
+                height: 100%;
+                padding: 0 18px;
+                transition: none;
+                width: 100%;
+                text-decoration: none;
+                cursor: pointer;
+                color: inherit;
+            }
+        }
+
+        .item_flag {
+            align-items: center;
+            display: flex;
+            min-width: 35px;
+
+            & img {
+                width: 35px;
+            }
+        }
+    }
+
+    .additional_pages {
+        font-size: 14px;
+        text-transform: uppercase;
+
+        svg {
+            fill: #ff8522;
+            height: 35px;
+            padding-right: 5px;
+            width: 35px;
+        }
+
+        .phone_holder {
+            align-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: all .5s;
+
+            .phone_holder_text {
+                display: block;
+                font-size: 0.1px;
+                line-height: 0.1px;
+                opacity: 0;
+                transition: all .5s;
+                font-weight: 300;
+                text-transform: none;
+            }
+
+            .phone_holder_tel {
+                font-size: 16px;
+                font-weight: 900;
+            }
+        }
+
+        .hot_line_phone:hover>.phone_holder .phone_holder_text {
+            display: block;
+            font-size: 12px;
+            line-height: 12px;
+            opacity: 1;
+            transition: all .5s;
+            font-weight: 300;
+            text-transform: none;
+        }
+    }
+
+}
+
+@media (max-width: 1720px) {
+
+    // .header_top,
+    // .content {
+    //   max-width: 1366px;
+    //   transition: all 0.25s;
+    // }
+
+    .header__bottom {
+        max-width: 1366px;
+        transition: all 0.5s;
+    }
+}

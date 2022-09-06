@@ -12,7 +12,8 @@ const ProductListFilter = ({ sortedProductsAPI }) => {
 
     const [isFilterOpen, setIsFilterOpen] = useState(false);
 
-
+    // const categoriesForFilter = sortedProductsAPI.map(obj => obj.type).filter((el, ind) => sortedProductsAPI.map(product => product.type).indexOf(el) === ind);
+    const categoriesForFilter = sortedProductsAPI.reduce((result, product) => (result[product.type] ? result[product.type]++ : result[product.type] = 1, result), {});
 
 
     return (
@@ -23,7 +24,7 @@ const ProductListFilter = ({ sortedProductsAPI }) => {
                     className={classes.filter_wrapper_title}
                     onClick={() => !isFilterOpen ? setIsFilterOpen(true) : setIsFilterOpen(false)}
                 >
-                    Кулінарія
+                    «Сільпо» Resto
                     <i className={`${classes.icon} ${classes.icon_chevron_down}`}>
                         {isFilterOpen
                             ?
@@ -36,9 +37,9 @@ const ProductListFilter = ({ sortedProductsAPI }) => {
                 <div className={`${classes.filter_wrapper_cover} ${isFilterOpen ? classes.filter_wrapper_cover_active : ''}`}>
 
                     <ul className={classes.checkbox_list_vertical}>
-
-
-                        <CheckboxListItem sortedProductsAPI={sortedProductsAPI}  />
+                        {Object.entries(categoriesForFilter).map(products => 
+                            <CheckboxListItem sortedProductsAPI={sortedProductsAPI} category={products[0]} amount={products[1]}/>
+                        )}
                     </ul>
 
                 </div>
