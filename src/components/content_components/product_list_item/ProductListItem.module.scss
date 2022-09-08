@@ -8,24 +8,10 @@
     src: url('../../../../public/fonts/proximanova_bold.otf');
 }
 
-@font-face {
-    font-family: ProximaNova_black;
-    src: url('../../../../public/fonts/proximanova_black.ttf');
-}
-
-// @font-face {
-//     // font-display: swap;
-//     font-family: ProximaNova;
-//     font-style: normal;
-//     font-weight: 400;
-//     src: url('../../../public/fonts/proximanova_regular.ttf') format("ttf")
-// }
-
 * {
+    // font-family: ProximaNova, Georgia, Helvetica, sans-serif;
     margin: 0px;
     padding: 0px;
-    font-family: ProximaNova_bold, Georgia, Helvetica, sans-serif;
-
     box-sizing: border-box;
 }
 
@@ -111,6 +97,8 @@
                 margin-top: auto;
 
                 .product_title {
+
+                    font-family: ProximaNova_bold, Georgia, Helvetica, sans-serif;
                     /* -webkit-line-clamp: 2;
                     -webkit-box-orient: vertical; */
                     display: -webkit-box;

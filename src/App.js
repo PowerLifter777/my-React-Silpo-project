@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import './App.css';
 import ContentWrapper from './components/content_components/content_wrapper/ContentWrapper';
-import Header from './components/header_components/Header';
+import Header from './components/header_components/header_top/Header';
 import LoaderMain from './components/loader_main/LoaderMain';
 
 import pizza_img from './images/product_img/pizza_1.png';

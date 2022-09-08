@@ -1,8 +1,11 @@
 @font-face {
-  font-family: 'ProximaNova';
+  font-family: ProximaNova;
   src: url('../public/fonts/proximanova_regular.ttf');
-  font-family: 'ProximaNova_B';
-  src: url('../public/fonts/proximanova_bold.otf') format('otf');
+}
+
+@font-face {
+  font-family: ProximaNova_bold;
+  src: url('../public/fonts/proximanova_bold.otf');
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -10,7 +13,6 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-family: ProximaNova, Georgia, Helvetica, sans-serif;
   box-sizing: border-box;
 }
 
@@ -25,6 +27,7 @@ body, .App {
   flex-direction: column;
   min-height: 100%;
   width: 100%;
+  font-family: ProximaNova, Georgia, Helvetica, sans-serif;
 }
 
 .header {
@@ -80,6 +83,7 @@ body, .App {
 .header_top,
 .header__wrapper {
   background-color: #fff;
+  /* font-family: ProximaNova_bold, Georgia, Helvetica, sans-serif; */
   /* width: 100%; */
 }
 
@@ -112,6 +116,9 @@ body, .App {
 
 .button-product,
 .button-basket {
+  font-family: ProximaNova_bold, Georgia, Helvetica, sans-serif;
+  letter-spacing: .02em;
+  
   border: none;
   min-width: 184px;
   height: 48px;
@@ -121,9 +128,10 @@ body, .App {
   color: #fff;
   cursor: pointer;
   display: flex;
-  /* font: ProximaNova, Helvetica, Arial, sans-serif; */
+  
   font-size: 16px;
-  font-weight: 700;
+  /* font-weight: 700; */
+  display: flex;
   justify-content: space-between;
   margin-right: 15px;
   padding: 0 18px;
@@ -136,23 +144,33 @@ body, .App {
 }
 
 .button-basket {
+  font-family: ProximaNova_bold, Georgia, Helvetica, sans-serif;
   display: flex;
   min-width: 232px;
   align-items: center;
   margin-right: 0px;
   margin-left: 15px;
+  letter-spacing: .02em;
 }
 
 .button-basket svg {
   width: 32px;
   height: 32px;
   fill: #fff;
+  margin-right: 10px;
+}
+
+.button-basket del {
+  color: transparent;
+  height: 12px;
+  margin-left: 10px;
+  width: 12px;
 }
 
 /* -------------------------------------------------------------------------------------------- */
 
 .header__bottom__wrapper {
-  font-family: ProximaNova, Georgia, Helvetica, sans-serif;
+  /* font-family: ProximaNova_bold, Georgia, Helvetica, sans-serif; */
   background-color: #f9f9f9;
   box-shadow: 0 0 20px rgba(0, 0, 0, .2);
   max-height: 50px;

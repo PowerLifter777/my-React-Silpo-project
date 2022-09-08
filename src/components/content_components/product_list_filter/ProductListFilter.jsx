@@ -13,7 +13,7 @@ const ProductListFilter = ({ sortedProductsAPI }) => {
     const [isFilterOpen, setIsFilterOpen] = useState(false);
 
     // const categoriesForFilter = sortedProductsAPI.map(obj => obj.type).filter((el, ind) => sortedProductsAPI.map(product => product.type).indexOf(el) === ind);
-    const categoriesForFilter = sortedProductsAPI.reduce((result, product) => (result[product.type] ? result[product.type]++ : result[product.type] = 1, result), {});
+    const categoriesForFilter = sortedProductsAPI.reduce((result, product) => (result[product.category] ? result[product.category]++ : result[product.category] = 1, result), {});
 
 
     return (

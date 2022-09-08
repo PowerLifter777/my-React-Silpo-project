@@ -1,26 +1,28 @@
 @font-face {
-    font-family: 'ProximaNova';
+    font-family: ProximaNova;
     src: url('../../../../public/fonts/proximanova_regular.ttf');
-    font-family: 'ProximaNova_B';
-    src: url('../../../../public/fonts/proximanova_bold.otf') format('otf');
+}
+
+@font-face {
+    font-family: ProximaNova_bold;
+    src: url('../../../../public/fonts/proximanova_bold.otf');
 }
 
 .header__bottom {
-
     display: flex;
     justify-content: space-between;
-    font-family: ProximaNova, Georgia, Helvetica, sans-serif;
     font-size: 16px;
-    font-weight: 700;
     height: 50px;
     line-height: 1;
     margin: 0 auto;
     max-width: 1700px;
     padding: 0 20px;
+    font-weight: bold;
     transition: all .5s;
     width: 100%;
     /* position: fixed; */
     color: #373737;
+    font-family: ProximaNova_bold, Georgia, Helvetica, sans-serif; 
 
     .nav_list,
     .additional_pages {
@@ -50,6 +52,7 @@
                 text-decoration: none;
                 cursor: pointer;
                 color: inherit;
+                font-family: ProximaNova_bold, Georgia, Helvetica, sans-serif;
             }
         }
 
@@ -83,6 +86,7 @@
             transition: all .5s;
 
             .phone_holder_text {
+                font-family: ProximaNova, Georgia, Helvetica, sans-serif;
                 display: block;
                 font-size: 0.1px;
                 line-height: 0.1px;

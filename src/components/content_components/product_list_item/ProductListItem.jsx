@@ -7,7 +7,7 @@ import { ReactComponent as StarHolderZeroSVG } from '../../../images/star_holder
 
 
 import default_img from '../../../images/product_img/default.png'
-import ProductListItemControls from "./product_list_item_controls/ProductListItemControls";
+import ProductListItemControls from "../product_list_item_controls/ProductListItemControls";
 
 const ProductListItem = ({ product, ...props }) => {
 
