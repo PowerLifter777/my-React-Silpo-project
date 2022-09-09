@@ -56,7 +56,8 @@
                 .current_integer {
                     font-size: 26px;
                     line-height: 1.15;
-                    font-family: ProximaNova_bold, Georgia, Helvetica, sans-serif;
+                    // font-family: ProximaNova_bold, Georgia, Helvetica, sans-serif;
+                    font-family: Helvetica, sans-serif;
                 }
             }
         }
@@ -92,7 +93,8 @@
 
             .old_price_discount {
 
-                font-family: ProximaNova_bold, Georgia, Helvetica, sans-serif;
+                font-family: Helvetica, sans-serif;
+                // font-family: ProximaNova_bold, Georgia, Helvetica, sans-serif;
                 background-color: #a3c46e;
                 border-radius: 4px;
                 color: #fff;

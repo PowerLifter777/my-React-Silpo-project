@@ -22,7 +22,7 @@
     width: 100%;
     /* position: fixed; */
     color: #373737;
-    font-family: ProximaNova_bold, Georgia, Helvetica, sans-serif; 
+    font-family: Helvetica, sans-serif; 
 
     .nav_list,
     .additional_pages {
@@ -52,7 +52,8 @@
                 text-decoration: none;
                 cursor: pointer;
                 color: inherit;
-                font-family: ProximaNova_bold, Georgia, Helvetica, sans-serif;
+                // font-family: ProximaNova_bold, Georgia, Helvetica, sans-serif;
+                font-family: ProximaNova, Georgia, Helvetica, sans-serif;
             }
         }
 

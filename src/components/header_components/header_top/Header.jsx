@@ -30,7 +30,7 @@ const Header = ({ visible, ...props }) => {
                             <CategoriesSVG />
                             Всі товари
                             <ArrowDownSVG />
-                            <AllProductsDropMenu/>
+                            {/* <AllProductsDropMenu/> */}
                         </div>
                         <HeaderSearch />
                         <UserInfo />
