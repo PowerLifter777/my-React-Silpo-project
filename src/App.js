@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import './App.css';
 import ContentWrapper from './components/content_components/content_wrapper/ContentWrapper';
 import Header from './components/header_components/header_top/Header';
@@ -90,6 +90,8 @@ function App() {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [sortMenuClassActive, setSortMenuClassActive] = useState(false)
 
+  const [isVisibleAllProductsMenu, setIsVisibleAllProductsMenu] = useState(false);
+
 
   useEffect(() => {
     setSortedProductsAPI(JSON.parse(JSON.stringify(productsAPI)).sort((obj1, obj2) => obj1.available > obj2.available ? -1 : obj1.available < obj2.available ? 1 : 0));
@@ -134,7 +136,6 @@ function App() {
         break;
     }
   }
-
 
   // const hide = (e) => {
   //   setIsHeaderVisible(false);
@@ -189,12 +190,35 @@ function App() {
     setSortMenuClassActive(e);
   }
 
+  const contentEl = useRef(null);
+  const scrollToTop = (allProdMenu) => {
+    if (allProdMenu) {
+      contentEl.current.scrollIntoView();
+      setIsVisibleAllProductsMenu(true);
+    }
+  }
+
+  const handlerHideAllProductsMenu = (e) => {
+    if (e.target.closest('#allProductMenu') === null && isVisibleAllProductsMenu) setIsVisibleAllProductsMenu(false);
+  }
+
   return (
     <Fragment>
-      <div className='App' onWheel={hideHeaderMenu} >
+      <div
+        className='App'
+        onWheel={hideHeaderMenu}
+      >
         <div
-          className="layout" onMouseDown={hideSortMenu}>
-          <Header visible={isHeaderVisible} />
+          className="layout"
+          onMouseDown={hideSortMenu}
+          ref={contentEl}
+          onClick={handlerHideAllProductsMenu}
+        >
+          <Header
+            isHeaderVisible={isHeaderVisible}
+            isAllProductsMenuOpen={scrollToTop}
+            isVisibleAllProductsMenu={isVisibleAllProductsMenu}
+          />
           <ContentWrapper
             sortedProductsAPI={sortedProductsAPI}
             sortMenuClassActive={sortMenuClassActive}

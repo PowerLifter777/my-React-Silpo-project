@@ -5,12 +5,11 @@ import classes from './ContentWrapper.module.scss';
 import ProductList from "../product_list/ProductList";
 import ProductListSort from "../product_list_sort/ProductListSort";
 import ProductListFilter from "../product_list_filter/ProductListFilter";
+import { useRef } from "react";
 
 
 
 const ContentWrapper = ({ sortedProductsAPI, sortMenuClassActive, changeCls, getSortMethod, ...props }) => {
-
-
 
     return (
         <div className={classes.container} style={{ marginTop: '150px' }}>

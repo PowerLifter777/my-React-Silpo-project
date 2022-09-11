@@ -32,6 +32,7 @@ const HeaderSearch = () => {
         setIsInputFocused(false);
         dropdownEl.current.className = classes.dropdownMenu;
         inputDellBtn.current.className = classes.inputClearBtn;
+        inputEl.current.blur();
     }
 
     const handlerInputValue = (e) => {

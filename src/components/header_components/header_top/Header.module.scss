@@ -1,0 +1,148 @@
+@font-face {
+    font-family: ProximaNova;
+    src: url('../../../../public/fonts/proximanova_regular.ttf');
+}
+
+@font-face {
+    font-family: ProximaNova_bold;
+    src: url('../../../../public/fonts/proximanova_bold.otf');
+}
+
+
+.header {
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    color: #373737;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+
+    .shadow_layer {
+        background-color: rgba(0, 0, 0, .3);
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .header_content,
+    .header_content_wrapper {
+        background-color: #fff;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .header_content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0 auto;
+        max-width: 1920px;
+
+        .header_top {
+            align-items: center;
+            display: flex;
+            height: 100px;
+            max-width: 1700px;
+            padding: 0 20px;
+
+            transition: all .25s;
+
+            .header_logo {
+                width: max-content;
+                padding: 0px;
+
+                &>img {
+                    width: 144px;
+                    height: 56px;
+                    cursor: pointer;
+                    margin-right: 15px;
+                    border: none;
+                }
+            }
+
+            .all_products_btn,
+            .basket_btn {
+                font-family: ProximaNova_bold, Georgia, Helvetica, sans-serif;
+                letter-spacing: .02em;
+
+                border: none;
+                min-width: 184px;
+                height: 48px;
+                align-items: center;
+                background-color: #ff8522;
+                border-radius: 24px;
+                color: #fff;
+                cursor: pointer;
+                display: flex;
+
+                font-size: 16px;
+                font-weight: 700;
+                display: flex;
+                justify-content: space-between;
+                margin-right: 15px;
+                padding: 0 18px;
+                position: relative;
+                transition: all .35s;
+                /* width: max-content; */
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                /* overflow: hidden; */
+            }
+
+            .basket_btn {
+                font-family: ProximaNova_bold, Georgia, Helvetica, sans-serif;
+                display: flex;
+                min-width: 232px;
+                align-items: center;
+                margin-right: 0px;
+                margin-left: 15px;
+                letter-spacing: .02em;
+            }
+
+            .basket_btn svg {
+                width: 32px;
+                height: 32px;
+                fill: #fff;
+                margin-right: 10px;
+            }
+
+            .basket_btn del {
+                color: transparent;
+                height: 12px;
+                margin-left: 10px;
+                width: 12px;
+            }
+
+            .all_products_btn>svg:first-child {
+                width: 32px;
+                height: 32px;
+                fill: #fff;
+            }
+
+            .all_products_btn>svg:nth-child(2) {
+                width: 12px;
+                height: 12px;
+                fill: #fff;
+            }
+        }
+    }
+}
+
+.scrollable_catalog {
+    align-items: flex-start;
+    background: none;
+    box-shadow: none;
+    position: absolute;
+}
+
+.header_disabled_shadow {
+    box-shadow: none;
+}

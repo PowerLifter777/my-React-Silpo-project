@@ -7,7 +7,7 @@ import { ReactComponent as PhoneSVG } from '../../../images/phone_icon.svg'
 
 const HeaderBottom = () => {
     return (
-        <nav className={`${classes.header__bottom} header__bottom`}>
+        <nav className={classes.header__bottom}>
             <ul className={classes.nav_list}>
                 <li className={classes.item_flag} >
                     <img src={flag} alt="Ukraine flag" />
@@ -19,7 +19,7 @@ const HeaderBottom = () => {
                 <li><a href="">Свіжий врожай</a></li>
                 <li><a href="">Барбекю</a></li>
                 <li><a href="">Акція вино та ігристе</a></li>
-                <li><a href="">Акція ковбасні вироби</a></li>
+                <li><a href="">Акція ковбасні вироби</a></li> 
                 <li><a href="">Акція сири</a></li>
                 <li><a href="">Акція товари для дітей</a></li>
             </ul>

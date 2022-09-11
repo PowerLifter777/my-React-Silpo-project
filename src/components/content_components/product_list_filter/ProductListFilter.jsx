@@ -37,13 +37,13 @@ const ProductListFilter = ({ sortedProductsAPI }) => {
                 <div className={`${classes.filter_wrapper_cover} ${isFilterOpen ? classes.filter_wrapper_cover_active : ''}`}>
 
                     <ul className={classes.checkbox_list_vertical}>
-                        {Object.entries(categoriesForFilter).map(products => 
-                            <CheckboxListItem sortedProductsAPI={sortedProductsAPI} category={products[0]} amount={products[1]}/>
+                        {Object.entries(categoriesForFilter).map(products =>
+                            <CheckboxListItem key={products[0]} sortedProductsAPI={sortedProductsAPI} category={products[0]} amount={products[1]} />
                         )}
                     </ul>
-
                 </div>
             </article>
+
             {/* <article class="filter-wrapper">
                 <div class="filter-wrapper__title">«Сільпо» Resto<i class="icon icon-chevron-down">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 8" width="14" height="8">
