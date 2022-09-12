@@ -32,36 +32,304 @@ const AllProductsDropMenu = ({ isVisibleAllProductsMenu }) => {
 
 
     const [widgetElements, setWidgetElements] = useState([
-        { id: 1, img: icon_1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false },
-        { id: 2, img: icon_2, path: "", name: "М'ясо, риба, птиця", isSelected: false },
-        { id: 3, img: icon_3, path: "", name: "М'ясо-ковбасні вироби", isSelected: false },
-        { id: 4, img: icon_4, path: "", name: "Сири", isSelected: false },
-        { id: 5, img: icon_5, path: "", name: "Хліб та хлібобулочні вироби", isSelected: false },
-        { id: 6, img: icon_6, path: "", name: "«Сільпо» Resto", isSelected: false },
-        { id: 7, img: icon_7, path: "", name: "Кулінарія", isSelected: false },
-        { id: 8, img: icon_8, path: "", name: "Молочні продукти та яйця", isSelected: false },
-        { id: 9, img: icon_9, path: "", name: "Заморожена продукція", isSelected: false },
-        { id: 10, img: icon_10, path: "", name: "Бакалія", isSelected: false },
-        { id: 11, img: icon_11, path: "", name: "Консерви, соуси, приправи", isSelected: false },
-        { id: 12, img: icon_12, path: "", name: "Солодощі", isSelected: false },
-        { id: 13, img: icon_13, path: "", name: "Снеки", isSelected: false },
-        { id: 14, img: icon_14, path: "", name: "Кава, чай", isSelected: false },
-        { id: 15, img: icon_15, path: "", name: "Напої", isSelected: false },
-        { id: 16, img: icon_16, path: "", name: "Алкоголь", isSelected: false },
-        { id: 17, img: icon_17, path: "", name: "Квіти, товари для саду та городу", isSelected: false },
-        { id: 18, img: icon_18, path: "", name: "Тютюнові вироби та аксесуари", isSelected: false },
-        { id: 19, img: icon_19, path: "", name: "Гігієна", isSelected: false },
-        { id: 20, img: icon_20, path: "", name: "Для дому", isSelected: false },
-        { id: 21, img: icon_21, path: "", name: "Дитячі товари", isSelected: false },
-        { id: 22, img: icon_22, path: "", name: "Для тварин", isSelected: false },
+        {
+            id: 1, img: icon_1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 2, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 3, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 4, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 5, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 6, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 7, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 8, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+            }
+        },
+        {
+            id: 2, img: icon_2, path: "m-iaso-ryba-ptytsia", name: "М'ясо, риба, птиця", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 2, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 3, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 4, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+            }
+        },
+        {
+            id: 3, img: icon_3, path: "m-iaso-kovbasni-vyroby", name: "М'ясо-ковбасні вироби", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 2, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 3, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 4, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 5, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 6, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
 
+            }
+        },
+        {
+            id: 4, img: icon_4, path: "syry", name: "Сири", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 2, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 3, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 4, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 5, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+            }
+        },
+        {
+            id: 5, img: icon_5, path: "khlib-ta-khlibobulochni-vyroby", name: "Хліб та хлібобулочні вироби", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 2, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 3, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 4, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 5, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 6, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+
+            }
+        },
+        {
+            id: 6, img: icon_6, path: "silpo-resto", name: "«Сільпо» Resto", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 2, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 3, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 4, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+
+            }
+        },
+        {
+            id: 7, img: icon_7, path: "kulinariia", name: "Кулінарія", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 2, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 3, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 4, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 5, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 6, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 7, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 8, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 9, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 10, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 11, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 12, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 13, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 14, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+            }
+        },
+        {
+            id: 8, img: icon_8, path: "molochni-produkty-ta-iaitsia", name: "Молочні продукти та яйця", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 2, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 3, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 4, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 5, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 6, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 7, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 8, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+            }
+        },
+        {
+            id: 9, img: icon_9, path: "zamorozhena-produktsiia", name: "Заморожена продукція", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 2, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 3, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 4, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 5, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 6, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 7, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 8, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 9, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 10, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 11, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 12, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+            }
+        },
+        {
+            id: 10, img: icon_10, path: "bakaliia", name: "Бакалія", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 2, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 3, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 4, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 5, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 6, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 7, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 8, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 9, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 10, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 11, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+            }
+        },
+        {
+            id: 11, img: icon_11, path: "konservy-sousy-prypravy", name: "Консерви, соуси, приправи", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 2, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 3, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 4, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 5, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 6, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 7, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 8, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 9, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 10, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 11, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 12, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 13, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 14, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 15, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 16, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 17, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+            }
+        },
+        {
+            id: 12, img: icon_12, path: "solodoshchi", name: "Солодощі", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 2, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 3, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 4, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 5, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 6, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 7, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 8, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 9, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 10, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 11, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+            }
+        },
+        {
+            id: 13, img: icon_13, path: "sneky", name: "Снеки", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 2, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 3, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 4, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 5, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 6, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 7, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+            }
+        },
+        {
+            id: 14, img: icon_14, path: "kava-chai", name: "Кава, чай", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 2, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 3, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 4, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 5, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 6, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 7, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 8, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 9, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 10, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 11, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 12, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 13, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+            }
+        },
+        {
+            id: 15, img: icon_15, path: "napoi", name: "Напої", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 2, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 3, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 4, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 5, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 6, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 7, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 8, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 9, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 10, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 11, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 12, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 13, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+            }
+        },
+        {
+            id: 16, img: icon_16, path: "alkohol", name: "Алкоголь", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 2, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 3, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 4, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 5, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 6, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 7, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 8, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 9, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 10, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 11, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 12, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 13, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+            }
+        },
+        {
+            id: 17, img: icon_17, path: "kvity-tovary-dlia-sadu-ta-gorodu", name: "Квіти, товари для саду та городу", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+            }
+        },
+        {
+            id: 18, img: icon_18, path: "tiutiunovi-vyroby-ta-aksesuary", name: "Тютюнові вироби та аксесуари", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 2, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 3, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 4, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+            }
+        },
+        {
+            id: 19, img: icon_19, path: "gigiiena", name: "Гігієна", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 2, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 3, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 4, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 5, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+            }
+        },
+        {
+            id: 20, img: icon_20, path: "dlia-domu", name: "Для дому", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 2, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 3, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 4, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 5, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 6, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 7, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 8, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+
+            }
+        },
+        {
+            id: 21, img: icon_21, path: "dytiachi-tovary", name: "Дитячі товари", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 2, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 3, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 4, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+            }
+        },
+        {
+            id: 22, img: icon_22, path: "dlia-tvaryn", name: "Для тварин", isSelected: false,
+            menu_level_2: {
+                id: 1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 2, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+                id: 3, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
+            }
+        },
     ]);
 
     const handleChangeCategory = (e) => {
-        // e.preventDefault();
+        e.preventDefault();
         //  console.log(e.target.closest('li').id)
         setWidgetElements(prevState =>
-            prevState.map((obj, i) => e.target.closest('li').id == i + 1 ? { ...obj, isSelected: true } : { ...obj, isSelected: false })
+            prevState.map((obj, i) => +e.target.closest('li').id === i + 1 ? { ...obj, isSelected: true } : { ...obj, isSelected: false })
         )
     }
 
@@ -71,12 +339,14 @@ const AllProductsDropMenu = ({ isVisibleAllProductsMenu }) => {
                 <div className={classes.main_menu}>
                     <ul className={`${classes.main_menu_levels} ${classes.level_1}`} id='allProductMenu'>
                         {widgetElements.map(el =>
-                            <li onMouseOver={handleChangeCategory} className={el.isSelected ? classes.active : ""} role="link" tabIndex="0" key={el.id} id={el.id}>
-                                {/* // <li className={classes.active} role="link" tabIndex="0" key={el.id}> */}
+                            <li
+                                className={el.isSelected ? classes.active : ""}
+                                role="link" tabIndex="0" key={el.id} id={el.id}
+                                onMouseOver={handleChangeCategory}
+                            >
                                 <div>
-                                    <a href="/category/frukty-ovochi-solinnia-374">
+                                    <a href={`/category/${el.path}`}>
                                         <img className={classes.menu_item_icon} src={el.img} alt="" title={el.name} aria-hidden="true" />
-                                        {/* <img className={classes.menu_item_icon} src={Icon_1} alt="" title={el.name} aria-hidden="true" /> */}
                                         {el.name}
                                     </a>
                                     <i className={classes.icon_chevron_right}>
@@ -97,249 +367,109 @@ const AllProductsDropMenu = ({ isVisibleAllProductsMenu }) => {
 
 export default AllProductsDropMenu;
 
-
-
-
-
-{/* <li class="" role="link" tabindex="0">
-                        <div>
-                            <a href="/category/m-iaso-ryba-ptytsia-277">
-                                <img class="menu-item-icon" src="https://content.silpo.ua/ecom/categoryclassifier/iconsforsite/277.svg" alt="" title="М'ясо, риба, птиця" aria-hidden="true" />М'ясо, риба, птиця</a>
-                            <i class="icon icon-chevron-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12"><path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z">
-                                </path>
-                                </svg>
-                            </i>
-                        </div>
-                    </li>
-                    <li class="" role="link" tabindex="0">
-                        <div>
-                            <a href="/category/m-iaso-kovbasni-vyroby-316">
-                                <img class="menu-item-icon" src="https://content.silpo.ua/ecom/categoryclassifier/iconsforsite/316.svg" alt="" title="М'ясо-ковбасні вироби" aria-hidden="true" />М'ясо-ковбасні вироби</a>
-                            <i class="icon icon-chevron-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
-                                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z"></path>
-                                </svg>
-                            </i>
-                        </div>
-                    </li>
-                    <li class="" role="link" tabindex="0">
-                        <div>
-                            <a href="/category/syry-1468">
-                                <img class="menu-item-icon" src="https://content.silpo.ua/ecom/categoryclassifier/iconsforsite/1468.svg" alt="" title="Сири" aria-hidden="true" />Сири
-                            </a>
-                            <i class="icon icon-chevron-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
-                                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z">
-                                    </path>
-                                </svg>
-                            </i>
-                        </div>
-                    </li>
-                    <li class="" role="link" tabindex="0">
-                        <div>
-                            <a href="/category/khlib-ta-khlibobulochni-vyroby-486">
-                                <img class="menu-item-icon" src="https://content.silpo.ua/ecom/categoryclassifier/iconsforsite/486.svg" alt="" title="Хліб та хлібобулочні вироби" aria-hidden="true" />Хліб та хлібобулочні вироби</a>
-                            <i class="icon icon-chevron-right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12"><path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z">
-                            </path>
-                            </svg>
-                            </i>
-                        </div>
-                    </li>
-                    <li class="" role="link" tabindex="0">
-                        <div>
-                            <a href="/category/silpo-resto-3601">
-                                <img class="menu-item-icon" src="https://content.silpo.ua/ecom/categoryclassifier/iconsforsite/3601.svg" alt="" title="«Сільпо» Resto" aria-hidden="true" />«Сільпо» Resto</a>
-                            <i class="icon icon-chevron-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
-                                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z">
-                                    </path>
-                                </svg>
-                            </i>
-                        </div>
-                    </li>
-                    <li class="" role="link" tabindex="0">
-                        <div>
-                            <a href="/category/kulinariia-433">
-                                <img class="menu-item-icon" src="https://content.silpo.ua/ecom/categoryclassifier/iconsforsite/433.svg" alt="" title="Кулінарія" aria-hidden="true" />Кулінарія</a>
-                            <i class="icon icon-chevron-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
-                                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z">
-                                    </path>
-                                </svg>
-                            </i>
-                        </div>
-                    </li>
-                    <li class="" role="link" tabindex="0">
-                        <div>
-                            <a href="/category/molochni-produkty-ta-iaitsia-234">
-                                <img class="menu-item-icon" src="https://content.silpo.ua/ecom/categoryclassifier/iconsforsite/234.svg" alt="" title="Молочні продукти та яйця" aria-hidden="true" />Молочні продукти та яйця</a>
-                            <i class="icon icon-chevron-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
-                                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z">
-                                    </path>
-                                </svg>
-                            </i>
-                        </div>
-                    </li>
-                    <li class="" role="link" tabindex="0">
-                        <div>
-                            <a href="/category/zamorozhena-produktsiia-264">
-                                <img class="menu-item-icon" src="https://content.silpo.ua/ecom/categoryclassifier/iconsforsite/264.svg" alt="" title="Заморожена продукція" aria-hidden="true" />Заморожена продукція</a>
-                            <i class="icon icon-chevron-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
-                                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z"></path>
-                                </svg>
-                            </i>
-                        </div>
-                    </li>
-                    <li class="" role="link" tabindex="0">
-                        <div>
-                            <a href="/category/bakaliia-65">
-                                <img class="menu-item-icon" src="https://content.silpo.ua/ecom/categoryclassifier/iconsforsite/65.svg" alt="" title="Бакалія" aria-hidden="true" />Бакалія</a>
-                            <i class="icon icon-chevron-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
-                                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z">
-                                    </path>
-                                </svg>
-                            </i>
-                        </div>
-                    </li>
-                    <li class="" role="link" tabindex="0">
-                        <div>
-                            <a href="/category/konservy-sousy-prypravy-130">
-                                <img class="menu-item-icon" src="https://content.silpo.ua/ecom/categoryclassifier/iconsforsite/130.svg" alt="" title="Консерви, соуси, приправи" aria-hidden="true" />Консерви, соуси, приправи</a>
-                            <i class="icon icon-chevron-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
-                                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z"></path>
-                                </svg>
-                            </i>
-                        </div>
-                    </li>
-                    <li class="" role="link" tabindex="0">
-                        <div>
-                            <a href="/category/solodoshchi-498">
-                                <img class="menu-item-icon" src="https://content.silpo.ua/ecom/categoryclassifier/iconsforsite/498.svg" alt="" title="Солодощі" aria-hidden="true" />Солодощі</a>
-                            <i class="icon icon-chevron-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
-                                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z"></path>
-                                </svg>
-                            </i>
-                        </div>
-                    </li>
-                    <li class="" role="link" tabindex="0">
-                        <div>
-                            <a href="/category/sneky-308">
-                                <img class="menu-item-icon" src="https://content.silpo.ua/ecom/categoryclassifier/iconsforsite/308.svg" alt="" title="Снеки" aria-hidden="true" />Снеки</a>
-                            <i class="icon icon-chevron-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
-                                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z"></path>
-                                </svg>
-                            </i>
-                        </div>
-                    </li>
-                    <li class="" role="link" tabindex="0">
-                        <div>
-                            <a href="/category/kava-chai-359">
-                                <img class="menu-item-icon" src="https://content.silpo.ua/ecom/categoryclassifier/iconsforsite/359.svg" alt="" title="Кава, чай" aria-hidden="true" />Кава, чай</a>
-                            <i class="icon icon-chevron-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
-                                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z"></path>
-                                </svg>
-                            </i>
-                        </div>
-                    </li>
-                    <li class="" role="link" tabindex="0">
-                        <div>
-                            <a href="/category/napoi-52">
-                                <img class="menu-item-icon" src="https://content.silpo.ua/ecom/categoryclassifier/iconsforsite/52.svg" alt="" title="Напої" aria-hidden="true" />Напої</a>
-                            <i class="icon icon-chevron-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
-                                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z"></path>
-                                </svg>
-                            </i>
-                        </div>
-                    </li>
-                    <li class="" role="link" tabindex="0">
-                        <div>
-                            <a href="/category/alkogol-22">
-                                <img class="menu-item-icon" src="https://content.silpo.ua/ecom/categoryclassifier/iconsforsite/22.svg" alt="" title="Алкоголь" aria-hidden="true" />Алкоголь</a>
-                            <i class="icon icon-chevron-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
-                                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z">
-                                    </path>
-                                </svg>
-                            </i>
-                        </div>
-                    </li>
-                    <li class="" role="link" tabindex="0">
-                        <div>
-                            <a href="/category/kvity-tovary-dlia-sadu-ta-gorodu-476">
-                                <img class="menu-item-icon" src="https://content.silpo.ua/ecom/categoryclassifier/iconsforsite/476.svg" alt="" title="Квіти, товари для саду та городу" aria-hidden="true" />Квіти, товари для саду та городу</a>
-                            <i class="icon icon-chevron-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
-                                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z"></path>
-                                </svg>
-                            </i>
-                        </div>
-                    </li>
-                    <li class="" role="link" tabindex="0">
-                        <div>
-                            <a href="/category/tiutiunovi-vyroby-ta-aksesuary-470">
-                                <img class="menu-item-icon" src="https://content.silpo.ua/ecom/categoryclassifier/iconsforsite/470.svg" alt="" title="Тютюнові вироби та аксесуари" aria-hidden="true" />Тютюнові вироби та аксесуари</a>
-                            <i class="icon icon-chevron-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
-                                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z"></path>
-                                </svg>
-                            </i>
-                        </div>
-                    </li>
-                    <li class="" role="link" tabindex="0">
-                        <div>
-                            <a href="/category/gigiiena-535">
-                                <img class="menu-item-icon" src="https://content.silpo.ua/ecom/categoryclassifier/iconsforsite/535.svg" alt="" title="Гігієна" aria-hidden="true" />Гігієна</a>
-                            <i class="icon icon-chevron-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
-                                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z"></path>
-                                </svg>
-                            </i>
-                        </div>
-                    </li>
-                    <li class="" role="link" tabindex="0">
-                        <div>
-                            <a href="/category/dlia-domu-567">
-                                <img class="menu-item-icon" src="https://content.silpo.ua/ecom/categoryclassifier/iconsforsite/567.svg" alt="" title="Для дому" aria-hidden="true" />Для дому</a>
-                            <i class="icon icon-chevron-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
-                                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z">
-                                    </path>
-                                </svg>
-                            </i>
-                        </div>
-                    </li>
-                    <li class="" role="link" tabindex="0">
-                        <div>
-                            <a href="/category/dytiachi-tovary-449">
-                                <img class="menu-item-icon" src="https://content.silpo.ua/ecom/categoryclassifier/iconsforsite/449.svg" alt="" title="Дитячі товари" aria-hidden="true" />Дитячі товари</a>
-                            <i class="icon icon-chevron-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
-                                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z">
-                                    </path>
-                                </svg>
-                            </i>
-                        </div>
-                    </li>
-                    <li class="" role="link" tabindex="0">
-                        <div>
-                            <a href="/category/dlia-tvaryn-653">
-                                <img class="menu-item-icon" src="https://content.silpo.ua/ecom/categoryclassifier/iconsforsite/653.svg" alt="" title="Для тварин" aria-hidden="true" />Для тварин</a>
-                            <i class="icon icon-chevron-right">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
-                                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z"></path>
-                                </svg>
-                            </i>
-                        </div>
-                    </li> */}
-
-
-
+{/* <ul class="main-menu-levels level_2">
+    <li class="capital">
+        <a href="/category/frukty-ovochi-solinnia-374">
+            <span>Все у&nbsp;</span>
+            Фрукти, овочі, соління
+        </a>
+    </li>
+    <li class="" role="link" tabindex="0">
+        <div>
+            <a href="/category/gryby-svizhi-376">
+                Гриби свіжі
+            </a>
+            <i class="icon icon-chevron-right">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
+                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z">
+                    </path>
+                </svg>
+            </i>
+        </div>
+    </li>
+    <li class="" role="link" tabindex="0">
+        <div>
+            <a href="/category/zelen-377">
+                Зелень
+            </a>
+            <i class="icon icon-chevron-right">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
+                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z">
+                    </path>
+                </svg>
+            </i>
+        </div>
+    </li>
+    <li class="" role="link" tabindex="0">
+        <div>
+            <a href="/category/salat-379">
+                Салат
+            </a>
+            <i class="icon icon-chevron-right">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
+                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z">
+                    </path>
+                </svg>
+            </i>
+        </div>
+    </li>
+    <li class="" role="link" tabindex="0">
+        <div>
+            <a href="/category/ovochi-378">
+                Овочі
+            </a>
+            <i class="icon icon-chevron-right">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
+                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z">
+                    </path>
+                </svg>
+            </i>
+        </div>
+    </li>
+    <li class="" role="link" tabindex="0">
+        <div>
+            <a href="/category/frukty-381">
+                Фрукти
+            </a>
+            <i class="icon icon-chevron-right">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
+                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z">
+                    </path>
+                </svg>
+            </i>
+        </div>
+    </li>
+    <li class="" role="link" tabindex="0">
+        <div>
+            <a href="/category/fruktovi-delikatesy-380">
+                Фруктові делікатеси
+            </a>
+        </div>
+    </li>
+    <li class="" role="link" tabindex="0">
+        <div>
+            <a href="/category/solinnia-marynovani-stravy-375">
+                Соління, мариновані страви
+            </a>
+            <i class="icon icon-chevron-right">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
+                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z">
+                    </path>
+                </svg>
+            </i>
+        </div>
+    </li>
+    <li class="" role="link" tabindex="0">
+        <div>
+            <a href="/category/susheni-frukty-gryby-gorikhy-382">
+                Сушені фрукти, гриби, горіхи
+            </a>
+            <i class="icon icon-chevron-right">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 12" width="7" height="12">
+                    <path d="M1.2 12 0 10.8 4.6 6 0 1.2 1.2 0 7 6l-5.8 6z">
+                    </path>
+                </svg>
+            </i>
+        </div>
+    </li>
+</ul> */}

@@ -19,8 +19,10 @@ const HeaderBottom = () => {
                 <li><a href="">Свіжий врожай</a></li>
                 <li><a href="">Барбекю</a></li>
                 <li><a href="">Акція вино та ігристе</a></li>
+                <li><a href="">Знижки від МК Ювілейний</a></li>
                 <li><a href="">Акція ковбасні вироби</a></li> 
                 <li><a href="">Акція сири</a></li>
+                <li><a href="">Акція морозиво</a></li>
                 <li><a href="">Акція товари для дітей</a></li>
             </ul>
             <ul className={classes.additional_pages}>

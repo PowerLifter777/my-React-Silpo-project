@@ -70,8 +70,9 @@
 
             .all_products_btn,
             .basket_btn {
-                font-family: ProximaNova_bold, Georgia, Helvetica, sans-serif;
-                letter-spacing: .02em;
+                // font-family: ProximaNova_bold, Georgia, Helvetica, sans-serif;
+                // letter-spacing: .02em;
+                font-family: ProximaNova, Georgia, Helvetica, sans-serif;
 
                 border: none;
                 min-width: 184px;
@@ -98,13 +99,14 @@
             }
 
             .basket_btn {
-                font-family: ProximaNova_bold, Georgia, Helvetica, sans-serif;
+                font-family: ProximaNova, Georgia, Helvetica, sans-serif;
+                // font-family: ProximaNova_bold, Georgia, Helvetica, sans-serif;
+                // letter-spacing: .02em;
                 display: flex;
                 min-width: 232px;
                 align-items: center;
                 margin-right: 0px;
                 margin-left: 15px;
-                letter-spacing: .02em;
             }
 
             .basket_btn svg {
