@@ -4,23 +4,24 @@ import classes from './AllProductsDropMenu.module.scss';
 import allProductCategories from '../../../assets/allProductCategoies';
 
 import { ReactComponent as ChevronRightSVG } from '../../../images/chevron_right_icon.svg';
+import DropMenuLvl_2 from "./DropMenuLvl_2";
 
 const AllProductsDropMenu = ({ isVisibleAllProductsMenu }) => {
 
     const [widgetElements, setWidgetElements] = useState([...allProductCategories])
 
-
-
     const handleChangeCategory = (e) => {
         e.preventDefault();
         //  console.log(e.target.closest('li').id)
+        let iD = e.target.closest('li').id;
         setWidgetElements(prevState =>
-            prevState.map((obj, i) => +e.target.closest('li').id === i + 1 ? { ...obj, isSelected: true } : { ...obj, isSelected: false })
+            prevState.map((obj, i) => iD === `${i + 1}` || iD.indexOf(`${i + 1}-`) === 0 ? { ...obj, isSelected: true } : { ...obj, isSelected: false })
         )
     }
 
     return (
-        isVisibleAllProductsMenu ?
+        isVisibleAllProductsMenu
+            ?
             <div className={classes.menu_wrapper} >
                 <div className={classes.main_menu}>
                     <ul className={`${classes.main_menu_levels} ${classes.level_1}`} id='allProductMenu'>
@@ -33,13 +34,21 @@ const AllProductsDropMenu = ({ isVisibleAllProductsMenu }) => {
                                 <div>
                                     <a href={`/category/${el.path}`}>
                                         <img className={classes.menu_item_icon} src={el.img} alt="" title={el.name} aria-hidden="true" />
-                                        {el.name}
+                                        {el.name}+"fbnff fgffg fgfgn ffgnfgn fgff"
                                     </a>
-                                    <i className={classes.icon_chevron_right}>
-                                        <ChevronRightSVG />
-                                    </i>
-                                    <div className="main_menu_levels_wrapper">
-                                    </div>
+                                    {el.hasOwnProperty('menu_level_2') && el.isSelected
+                                        ?
+                                        <DropMenuLvl_2
+                                            list={el.menu_level_2}
+                                            path={el.path}
+                                            name={el.name}
+                                            id={el.id}
+                                        />
+                                        :
+                                        <i className={classes.icon_chevron_right}>
+                                            <ChevronRightSVG />
+                                        </i>
+                                    }
                                 </div>
                             </li>
                         )}
@@ -48,9 +57,9 @@ const AllProductsDropMenu = ({ isVisibleAllProductsMenu }) => {
             </div>
             :
             <></>
-            )
-        }
-        
-        export default AllProductsDropMenu;
-        
-        
+    )
+}
+
+export default AllProductsDropMenu;
+
+

@@ -21,6 +21,9 @@
 //     font-weight: 700;
 //     src: url(ProximaNova-Bold.woff) format("woff")
 // }
+* {
+    box-sizing: border-box;
+}
 
 .menu_wrapper {
     display: block;
@@ -48,12 +51,27 @@
         margin: 0 auto;
         max-width: 1660px;
 
+
         li,
         ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
             // background-color: aquamarine;
+
+        }
+
+        .level_1 {
+            background: #fff;
+            display: block;
+
+            li {
+                color: #000;
+
+                &.active {
+                    background: #ff8522;
+                }
+            }
         }
 
         .main_menu_levels {
@@ -108,6 +126,7 @@
                     align-items: center;
                     cursor: pointer;
                     display: flex;
+
                     font-family: ProximaNova, Helvetica, Arial, sans-serif;
                     font-size: 14px;
                     height: 100%;
@@ -115,6 +134,7 @@
                     transition: none 0s ease 0s;
                     transition: initial;
                     width: 100%;
+
                 }
             }
 
@@ -126,17 +146,39 @@
             }
         }
 
-        .level_1 {
-            background: #fff;
-            display: block;
+        .level_2,
+        .level_3 {
+            background: #f9f9f9;
+            text-transform: none;
+            width: 25%;
+
+            .capital {
+                color: #000;
+                font-weight: 700;
+            }
 
             li {
-                color: #000;
+                font-weight: 400;
+            }
 
-                &.active {
-                    background: #ff8522;
-                }
+            .active {
+                background: #ff8522;
+                font-weight: 500;
             }
         }
     }
+}
+
+.menu_wrapper .main_menu .main_menu_levels>li>a,
+.menu_wrapper .main_menu .main_menu_levels>li>div {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-family: ProximaNova, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    height: 100%;
+    padding: 10px 20px 10px 10px;
+    transition: none 0s ease 0s;
+    transition: initial;
+    width: 100%;
 }
