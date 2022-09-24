@@ -4,7 +4,7 @@ import classes from './AllProductsDropMenu.module.scss';
 import allProductCategories from '../../../assets/allProductCategoies';
 
 import { ReactComponent as ChevronRightSVG } from '../../../images/chevron_right_icon.svg';
-import DropMenuLvl_2 from "./DropMenuLvl_2";
+import AllProductsDropMenu_Lv2 from "./AllProductsDropMenu_Lv2";
 
 const AllProductsDropMenu = ({ isVisibleAllProductsMenu }) => {
 
@@ -15,7 +15,7 @@ const AllProductsDropMenu = ({ isVisibleAllProductsMenu }) => {
         //  console.log(e.target.closest('li').id)
         let iD = e.target.closest('li').id;
         setWidgetElements(prevState =>
-            prevState.map((obj, i) => iD === `${i + 1}` || iD.indexOf(`${i + 1}-`) === 0 ? { ...obj, isSelected: true } : { ...obj, isSelected: false })
+            prevState.map((obj, i) => iD === `${i + 1}` || iD.indexOf(`${i + 1}-`) === 0 || iD.slice(iD.indexOf('-') + 1).slice(iD.indexOf('-') + 1) === `${i + 1}` ? { ...obj, isSelected: true } : { ...obj, isSelected: false })
         )
     }
 
@@ -34,11 +34,11 @@ const AllProductsDropMenu = ({ isVisibleAllProductsMenu }) => {
                                 <div>
                                     <a href={`/category/${el.path}`}>
                                         <img className={classes.menu_item_icon} src={el.img} alt="" title={el.name} aria-hidden="true" />
-                                        {el.name}+"fbnff fgffg fgfgn ffgnfgn fgff"
+                                        {el.name}
                                     </a>
-                                    {el.hasOwnProperty('menu_level_2') && el.isSelected
+                                    {el.isSelected
                                         ?
-                                        <DropMenuLvl_2
+                                        <AllProductsDropMenu_Lv2
                                             list={el.menu_level_2}
                                             path={el.path}
                                             name={el.name}

@@ -100,6 +100,7 @@
                     text-decoration: none;
                     cursor: pointer;
                     transition: all .35s;
+                    // flex-shrink: 1;
 
                     .menu_item_icon {
                         height: 20px;
@@ -169,16 +170,3 @@
     }
 }
 
-.menu_wrapper .main_menu .main_menu_levels>li>a,
-.menu_wrapper .main_menu .main_menu_levels>li>div {
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    font-family: ProximaNova, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    height: 100%;
-    padding: 10px 20px 10px 10px;
-    transition: none 0s ease 0s;
-    transition: initial;
-    width: 100%;
-}
