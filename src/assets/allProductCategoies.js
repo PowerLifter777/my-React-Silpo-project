@@ -21,53 +21,77 @@ import icon_20 from "../images/drop_down_menu_icons/20.svg";
 import icon_21 from "../images/drop_down_menu_icons/21.svg";
 import icon_22 from "../images/drop_down_menu_icons/22.svg";
 
+<ul class="main-menu-levels level_3 visible">
+    <li class="capital"><a href="/category/salat-379"><span>Все у&nbsp;</span> Салат</a></li>
+    <li class="" role="link" tabindex="0"><div><a href="/category/rostky-399">Ростки</a></div></li>
+    <li class="" role="link" tabindex="0"><div><a href="/category/salat-svizhyi-400">Салат свіжий</a></div></li>
+    <li class="" role="link" tabindex="0"><div><a href="/category/salaty-gotovi-do-vzhyvannia-401">Салати, готові до вживання</a></div></li>
+</ul>
+
 const allProductCategories = [
     {
         id: '1', img: icon_1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
         menu_level_2: [
             {
                 id: '1-1', path: "gryby-svizhi", name: "Гриби свіжі", isSelected: false, menu_level_3: [
-                    { id: '1-1-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-1-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '1-1-1', path: "glyvy-svizhi", name: "Гливи свіжі", isSelected: false },
+                    { id: '1-1-2', path: "pecherytsi-svizhi", name: "Печериці свіжі", isSelected: false },
+                    { id: '1-1-3', path: "ekzotychni-gryby-svizhi", name: "Екзотичні гриби свіжі", isSelected: false },
                 ]
             },
             {
                 id: '1-2', path: "zelen", name: "Зелень", isSelected: false, menu_level_3: [
-                    { id: '1-2-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2-3', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2-4', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2-5', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2-6', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2-7', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2-8', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2-9', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2-10', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2-11', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '1-2-1', path: "bazylik", name: "Базилік", isSelected: false },
+                    { id: '1-2-2', path: "zelena-tsybulia", name: "Зелена цибуля", isSelected: false },
+                    { id: '1-2-3', path: "zelen-miks", name: "Зелень мікс", isSelected: false },
+                    { id: '1-2-4', path: "kinza", name: "Кінза", isSelected: false },
+                    { id: '1-2-5', path: "krip", name: "Кріп", isSelected: false },
+                    { id: '1-2-6', path: "m-iata", name: "М'ята", isSelected: false },
+                    { id: '1-2-7', path: "petrushka", name: "Петрушка", isSelected: false },
+                    { id: '1-2-8', path: "priani-travy", name: "Пряні трави", isSelected: false },
+                    { id: '1-2-9', path: "selera", name: "Селера", isSelected: false },
+                    { id: '1-2-10', path: "shpynat", name: "Шпинат", isSelected: false },
+                    { id: '1-2-11', path: "shchavel", name: "Щавель", isSelected: false },
                 ]
             },
             {
                 id: '1-3', path: "salat", name: "Салат", isSelected: false, menu_level_3: [
-                    { id: '1-3-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-3-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-3-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '1-3-1', path: "rostky", name: "Ростки", isSelected: false },
+                    { id: '1-3-2', path: "salat-svizhyi", name: "Салат свіжий", isSelected: false },
+                    { id: '1-3-3', path: "salaty-gotovi-do-vzhyvannia", name: "Салати, готові до вживання", isSelected: false },
                 ]
             },
+
+
+            <ul class="main-menu-levels level_3 visible">
+                <li class="capital"><a href="/category/ovochi-378"><span>Все у&nbsp;</span> Овочі</a></li>
+                <li class="" role="link" tabindex="0"><div><a href="/category/baklazhan-403">Баклажан</a></div></li>
+                <li class="" role="link" tabindex="0"><div><a href="/category/garbuz-404">Гарбуз</a></div></li>
+                <li class="" role="link" tabindex="0"><div><a href="/category/kabachok-406">Кабачок</a></div></li>
+                <li class="" role="link" tabindex="0"><div><a href="/category/kapusta-407">Капуста</a></div></li>
+                <li class="" role="link" tabindex="0"><div><a href="/category/kvasolia-sparzheva-408">Квасоля спаржева</a></div></li>
+                <li class="" role="link" tabindex="0"><div><a href="/category/koreneplody-409">Коренеплоди</a></div></li>
+                <li class="" role="link" tabindex="0"><div><a href="/category/kukurudza-svizha-410">Кукурудза свіжа</a></div></li>
+                <li class="" role="link" tabindex="0"><div><a href="/category/ogirky-411">Огірки</a></div></li>
+                <li class="" role="link" tabindex="0"><div><a href="/category/perets-412">Перець</a></div></li>
+                <li class="" role="link" tabindex="0"><div><a href="/category/pomidory-413">Помідори</a></div></li>
+                <li class="" role="link" tabindex="0"><div><a href="/category/sparzha-414">Спаржа</a></div></li>
+                <li class="" role="link" tabindex="0"><div><a href="/category/tsybulia-chasnyk-415">Цибуля, часник</a></div></li>
+            </ul>
             {
                 id: '1-4', path: "ovochi", name: "Овочі", isSelected: false, menu_level_3: [
-                    { id: '1-4-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-4-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-4-3', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-4-4', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-4-5', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-4-6', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-4-7', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-4-8', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-4-9', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-4-10', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-4-11', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-4-12', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '1-4-1', path: "baklazhan", name: "Баклажан", isSelected: false },
+                    { id: '1-4-2', path: "garbuz", name: "Гарбуз", isSelected: false },
+                    { id: '1-4-3', path: "kabachok", name: "Кабачок", isSelected: false },
+                    { id: '1-4-4', path: "kapusta", name: "Капуста", isSelected: false },
+                    { id: '1-4-5', path: "kvasolia-sparzheva", name: "Квасоля спаржева", isSelected: false },
+                    { id: '1-4-6', path: "koreneplody", name: "Коренеплоди", isSelected: false },
+                    { id: '1-4-7', path: "kukurudza-svizha", name: "Кукурудза свіжа", isSelected: false },
+                    { id: '1-4-8', path: "ogirky", name: "Огірки", isSelected: false },
+                    { id: '1-4-9', path: "zelen", name: "Перець", isSelected: false },
+                    { id: '1-4-10', path: "zelen", name: "Помідори", isSelected: false },
+                    { id: '1-4-11', path: "zelen", name: "Спаржа", isSelected: false },
+                    { id: '1-4-12', path: "zelen", name: "Цибуля, часник", isSelected: false },
                 ]
             },
             {
@@ -123,21 +147,21 @@ const allProductCategories = [
             },
             {
                 id: '2-2', path: "prygotovlena-ryba-ta-moreprodukty", name: "Приготовлена риба та морепродукти", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '2-2-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '2-2-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '2-2-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '2-2-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '2-2-5', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '2-2-6', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '2-2-7', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             { id: '2-3', path: "zhyva-ta-okholodzhena-ryba-ta-moreprodukty", name: "Жива та охолоджена риба та морепродукти", isSelected: false },
             {
                 id: '2-4', path: "zamorozhena-ryba-moreprodukty-i-moliusky", name: "Заморожена риба, морепродукти і молюски", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '2-4-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '2-4-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '2-4-3', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
         ]
@@ -148,46 +172,46 @@ const allProductCategories = [
             { id: '3-1', path: "buterbrodni-namazky", name: "Бутербродні намазки", isSelected: false },
             {
                 id: '3-2', path: "vareni-kovbasni-vyroby", name: "Варені ковбасні вироби", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-2-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-2-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-2-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-2-4', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '3-3', path: "kopcheni-kovbasni-vyroby", name: "Копчені ковбасні вироби", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-3-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-3-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-3-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-3-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-3-5', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-3-6', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-3-7', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-3-8', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-3-9', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '3-4', path: "tsilnom-iasni-vyroby", name: "Цільном'ясні вироби", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-4-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-4-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-4-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-4-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-4-5', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-4-6', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-4-7', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-4-8', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-4-9', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-4-10', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-4-11', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '3-5', path: "gotovi-vyroby-z-m-iasnykh-subproduktiv", name: "Готові вироби з м'ясних субпродуктів", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-5-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-5-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-5-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-5-4', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             { id: '3-6', path: "m-iaso-kovbasna-narizka", name: "М'ясо-ковбасна нарізка", isSelected: false },
@@ -211,10 +235,10 @@ const allProductCategories = [
             { id: '5-3', path: "sushka-i-sukhari", name: "Сушка і сухарі", isSelected: false },
             {
                 id: '5-4', path: "khlib", name: "Хліб", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '5-4-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '5-4-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '5-4-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '5-4-4', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             { id: '5-5', path: "lavash-korzhi-ta-zagotovky", name: "Лаваш, коржі та заготовки", isSelected: false },
@@ -253,37 +277,37 @@ const allProductCategories = [
         menu_level_2: [
             {
                 id: '8-1', path: "yogurty-deserty", name: "Йогурти, десерти", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '8-1-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '8-1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '8-1-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '8-1-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '8-1-5', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '8-1-6', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '8-1-7', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '8-2', path: "kyslomolochna-produktsiia", name: "Кисломолочна продукція", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '8-2-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '8-2-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '8-2-3', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '8-3', path: "moloko-vershky", name: "Молоко, вершки", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '8-3-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '8-3-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '8-3-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '8-3-4', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '8-4', path: "syr-kyslomolochnyi", name: "Сир кисломолочний", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '8-4-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '8-4-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '8-4-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '8-4-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '8-4-5', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             { id: '8-5', path: "bezlaktozna-produktsiia", name: "Безлактозна продукція", isSelected: false },
@@ -314,64 +338,64 @@ const allProductCategories = [
         menu_level_2: [
             {
                 id: '10-1', path: "oliia", name: "Олія", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-1-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-1-3', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             { id: '10-2', path: "makarony", name: "Макарони", isSelected: false },
             {
                 id: '10-3', path: "krupy", name: "Крупи", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-3-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-3-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-3-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-3-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-3-5', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-3-6', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-3-7', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-3-8', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-3-9', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-3-10', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-3-11', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-3-12', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-3-13', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-3-14', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-3-15', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-3-16', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-3-17', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-3-18', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             { id: '10-4', path: "boroshno", name: "Борошно", isSelected: false },
             { id: '10-5', path: "tsukor-ta-tsukrozaminnyky", name: "Цукор та цукрозамінники", isSelected: false },
             {
                 id: '10-6', path: "vse-dlia-vypichky-ta-desertiv", name: "Все для випічки та десертів", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-6-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-6-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-6-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-6-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-6-5', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-6-6', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-6-7', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-6-8', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-6-9', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-6-10', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-6-11', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-6-12', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-6-13', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-6-14', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-6-15', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             { id: '10-7', path: "yizha-shvydkogo-prygotuvannia", name: "Їжа швидкого приготуваня", isSelected: false },
             {
                 id: '10-8', path: "gotovi-snidanky", name: "Готові сніданки", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-8-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-8-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-8-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-8-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-8-5', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '10-8-6', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             { id: '10-9', path: "aziatska-kukhnia-sushi", name: "Азіатська кухня, суші", isSelected: false },
@@ -387,37 +411,37 @@ const allProductCategories = [
             { id: '11-3', path: "grybna-konservatsiia", name: "Грибна консервація", isSelected: false },
             {
                 id: '11-4', path: "ovocheva-konservatsiia", name: "Овочева консервація", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-4-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-4-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-4-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-4-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-4-5', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-4-6', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-4-7', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-4-8', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-4-9', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             { id: '11-5', path: "kukurudza-ta-goroshok", name: "Кукурудза та горошок", isSelected: false },
             {
                 id: '11-6', path: "olyvky", name: "Оливки", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-6-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-6-2', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '11-7', path: "m-iasna-konservatsiia", name: "М'ясна консервація", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-7-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-7-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-7-3', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '11-8', path: "rybna-konservatsiia", name: "Рибна консервація", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-8-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-8-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-8-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-8-4', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             { id: '11-9', path: "pasty-shokoladno-gorikhovi", name: "Пасти шоколадно-горіхові", isSelected: false },
@@ -425,68 +449,68 @@ const allProductCategories = [
             { id: '11-11', path: "sil", name: "Сіль", isSelected: false },
             {
                 id: '11-12', path: "otset", name: "Оцет", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-12-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-12-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-12-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-12-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-12-5', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-12-6', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-12-7', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             { id: '11-13', path: "maionez", name: "Майонез", isSelected: false },
             {
                 id: '11-14', path: "ketchup-sous", name: "Кетчуп, соус", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-14-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-14-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-14-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-14-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-14-5', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-14-6', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-14-7', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '11-15', path: "khrin-girchytsia", name: "Хрін, гірчиця", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-15-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-15-2', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             { id: '11-16', path: "paniruvalni-sukhari", name: "Панірувальні сухарі", isSelected: false },
             {
                 id: '11-17', path: "prypravy-ta-spetsii", name: "Приправи та спеції", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-5', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-6', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-7', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-8', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-9', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-10', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-11', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-12', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-13', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-14', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-15', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-16', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-17', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-18', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-19', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-20', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-21', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-22', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-23', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-24', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-25', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-26', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-27', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-28', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-29', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-30', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-31', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '11-17-32', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
         ]
@@ -500,25 +524,25 @@ const allProductCategories = [
             { id: '12-4', path: "zefir-marmelad-pastyla", name: "Зефір, мармелад, пастила", isSelected: false },
             {
                 id: '12-5', path: "tsukerky", name: "Цукерки", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '12-5-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '12-5-2', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '12-6', path: "skhidni-solodoshchi", name: "Східні солодощі", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '12-6-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '12-6-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '12-6-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '12-6-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '12-6-5', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '12-6-6', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '12-7', path: "shokolad", name: "Шоколад", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '12-7-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '12-7-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '12-7-3', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             { id: '12-8', path: "shokoladni-vyroby-ruchnoi-roboty", name: "Шоколадні вироби ручної роботи", isSelected: false },
@@ -591,16 +615,16 @@ const allProductCategories = [
             { id: '16-11', path: "vyna-igrysti", name: "Вина ігристі", isSelected: false },
             {
                 id: '16-12', path: "pyvo", name: "Пиво", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '16-12-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '16-12-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '16-12-3', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '16-13', path: "slaboalkogolni-napoi", name: "Слабоалкогольні напої", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '16-13-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '16-13-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '16-13-3', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
         ]
@@ -625,43 +649,43 @@ const allProductCategories = [
         menu_level_2: [
             {
                 id: '19-1', path: "dogliad", name: "Догляд", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '19-1-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '19-1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '19-1-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '19-1-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '19-1-5', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '19-2', path: "dogliad-za-volossiam", name: "Догляд за волоссям", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '19-2-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '19-2-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '19-2-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '19-2-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '19-2-5', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '19-2-6', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '19-3', path: "dlia-golinnia-i-depiliatsii", name: "Для гоління й депіляції", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '19-3-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '19-3-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '19-3-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '19-3-4', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '19-4', path: "osobysta-gigiiena", name: "Особиста гігієна", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '19-4-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '19-4-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '19-4-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '19-4-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '19-4-5', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '19-5', path: "kosmetyka-i-parfumeriia", name: "Косметика і парфумерія", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '19-5-1', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
         ]
@@ -671,79 +695,79 @@ const allProductCategories = [
         menu_level_2: [
             {
                 id: '20-1', path: "pobutova-khimiia", name: "Побутова хімія", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-1-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-1-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-1-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-1-5', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-1-6', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '20-2', path: "paperovi-vyroby", name: "Паперові вироби", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-2-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-2-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-2-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-2-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-2-5', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-2-6', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '20-3', path: "gospodarchi-tovary", name: "Господарчі товари", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-3-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-3-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-3-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-3-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-3-5', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-3-6', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-3-7', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-3-8', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-3-9', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-3-10', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-3-11', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-3-12', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '20-4', path: "odnorazovyi-posud", name: "Одноразовий посуд", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-4-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-4-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-4-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-4-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-4-5', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '20-5', path: "kukhonne-pryladdia", name: "Кухонне приладдя", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-5-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-5-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-5-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-5-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-5-5', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-5-6', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-5-7', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '20-6', path: "inter-ier", name: "Інтер'єр", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-6-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-6-2', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '20-7', path: "odiag-ta-aksesuary", name: "Одяг та аксесуари", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-7-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-7-2', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '20-8', path: "khobi-ta-vidpochynok", name: "Хобі та відпочинок", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-8-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-8-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-8-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-8-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '20-8-5', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
         ]
@@ -753,21 +777,21 @@ const allProductCategories = [
         menu_level_2: [
             {
                 id: '21-1', path: "dytiache-kharchuvannia", name: "Дитяче харчування", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '21-1-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '21-1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '21-1-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '21-1-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '21-1-5', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '21-1-6', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '21-1-7', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             {
                 id: '21-2', path: "dogliad-ta-gigiiena", name: "Догляд та гігієна", isSelected: false, menu_level_3: [
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '21-2-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '21-2-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '21-2-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '21-2-4', path: "zelen", name: "Зелень", isSelected: false },
                 ]
             },
             { id: '21-3', path: "igrashky-ta-knygy", name: "Іграшки та книги", isSelected: false },

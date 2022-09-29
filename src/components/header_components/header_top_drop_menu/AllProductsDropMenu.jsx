@@ -12,10 +12,11 @@ const AllProductsDropMenu = ({ isVisibleAllProductsMenu }) => {
 
     const handleChangeCategory = (e) => {
         e.preventDefault();
-        //  console.log(e.target.closest('li').id)
+        // console.log(e.target.closest('li').id)
         let iD = e.target.closest('li').id;
         setWidgetElements(prevState =>
-            prevState.map((obj, i) => iD === `${i + 1}` || iD.indexOf(`${i + 1}-`) === 0 || iD.slice(iD.indexOf('-') + 1).slice(iD.indexOf('-') + 1) === `${i + 1}` ? { ...obj, isSelected: true } : { ...obj, isSelected: false })
+            // prevState.map((obj, i) => iD === `${i + 1}` || iD.indexOf(`${i + 1}-`) === 0 ? { ...obj, isSelected: true } : { ...obj, isSelected: false })
+            prevState.map((obj, i) => iD === `${i + 1}` || iD.startsWith(`${i + 1}-`) ? { ...obj, isSelected: true } : { ...obj, isSelected: false })
         )
     }
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 import classes from './AllProductsDropMenu.module.scss';
-
+ 
 
 
 const AllProductsDropMenu_Lv3 = ({ list, path, name, id }) => {
@@ -12,7 +12,8 @@ const AllProductsDropMenu_Lv3 = ({ list, path, name, id }) => {
         e.preventDefault();
         let iD = e.target.closest('li').id;
         setWidgetElements(prevState =>
-            prevState.map((obj, i) => iD.slice(iD.indexOf('-') + 1).slice(iD.indexOf('-') + 1) === `${i + 1}`  ? { ...obj, isSelected: true } : { ...obj, isSelected: false })
+            // prevState.map((obj, i) => iD.slice(iD.indexOf('-') + 1).slice(iD.indexOf('-') + 1) === `${i + 1}`  ? { ...obj, isSelected: true } : { ...obj, isSelected: false })
+            prevState.map((obj, i) => iD === (`${id}-${i+1}`) ? { ...obj, isSelected: true } : { ...obj, isSelected: false })
         )
     }
 

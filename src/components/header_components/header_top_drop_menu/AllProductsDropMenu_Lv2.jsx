@@ -11,10 +11,12 @@ const AllProductsDropMenu_Lv2 = ({ list, path, name, id }) => {
 
     const handleChangeCategory = (e) => {
         e.preventDefault();
-        //  console.log(e.target.closest('li').id)
+        //  console.log(`e.target = ${e.target.closest('li').id}`)
+        //  console.log(`id = ${id}`)
         let iD = e.target.closest('li').id;
         setWidgetElements(prevState =>
-            prevState.map((obj, i) => iD.slice(iD.indexOf('-') + 1) === `${i + 1}` || iD.slice(iD.indexOf('-') + 1).slice(iD.indexOf('-') + 1) === `${i + 1}`? { ...obj, isSelected: true } : { ...obj, isSelected: false })
+            // prevState.map((obj, i) => iD.slice(iD.indexOf('-') + 1) === `${i + 1}` || e.target.closest('li').id.startsWith(`${id}-${i+1}`) ? { ...obj, isSelected: true } : { ...obj, isSelected: false })
+            prevState.map((obj, i) => iD === `${id}-${i + 1}` || e.target.closest('li').id.startsWith(`${id}-${i + 1}-`) ? { ...obj, isSelected: true } : { ...obj, isSelected: false })
         )
     }
 
