@@ -1,12 +1,13 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 
-import productsAPI from'./assets/productsAPI.js';
+import productsAPI from './assets/productsAPI.js';
 
 import './App.css';
 
 import ContentWrapper from './components/content_components/content_wrapper/ContentWrapper';
 import Header from './components/header_components/header_top/Header';
 import LoaderMain from './components/loader_main/LoaderMain';
+import { SortedProductsContext } from './context/index.js';
 
 
 function App() {
@@ -113,10 +114,10 @@ function App() {
     setSortMenuClassActive(e);
   }
 
-  const contentEl = useRef(null);
-  const scrollToTop = (allProdMenu) => {
-    if (allProdMenu) {
-      contentEl.current.scrollIntoView();
+  const layoutEl = useRef(null);
+  const scrollToTop = (isPressedAllProductsBtn) => {
+    if (isPressedAllProductsBtn) {
+      layoutEl.current.scrollIntoView();
       setIsVisibleAllProductsMenu(true);
     }
   }
@@ -126,32 +127,37 @@ function App() {
   }
 
   return (
-    <Fragment>
-      <div
-        className='App'
-        onWheel={hideHeaderMenu}
-      >
+    <SortedProductsContext.Provider value={{
+      sortedProductsAPI,
+      setSortedProductsAPI,
+    }}>
+      <Fragment>
         <div
-          className="layout"
-          onMouseDown={hideSortMenu}
-          ref={contentEl}
-          onClick={handlerHideAllProductsMenu}
+          className='App'
+          onWheel={hideHeaderMenu}
         >
-          <Header
-            isHeaderVisible={isHeaderVisible}
-            isAllProductsMenuOpen={scrollToTop}
-            isVisibleAllProductsMenu={isVisibleAllProductsMenu}
-          />
-          <ContentWrapper
-            sortedProductsAPI={sortedProductsAPI}
-            sortMenuClassActive={sortMenuClassActive}
-            changeCls={changeSortMenuClass}
-            getSortMethod={sortMenuFunction}
-          />
-          <LoaderMain />
+          <div
+            className="layout"
+            onMouseDown={hideSortMenu}
+            ref={layoutEl}
+            onClick={handlerHideAllProductsMenu}
+          >
+            <Header
+              isHeaderVisible={isHeaderVisible}
+              isAllProductsMenuOpen={scrollToTop}
+              isVisibleAllProductsMenu={isVisibleAllProductsMenu}
+            />
+            <ContentWrapper
+              // sortedProductsAPI={sortedProductsAPI}
+              sortMenuClassActive={sortMenuClassActive}
+              changeCls={changeSortMenuClass}
+              getSortMethod={sortMenuFunction}
+            />
+            <LoaderMain />
+          </div>
         </div>
-      </div>
-    </Fragment >
+      </Fragment >
+    </SortedProductsContext.Provider>
   )
 }
 

@@ -7,10 +7,19 @@ import ProductListSort from "../product_list_sort/ProductListSort";
 import ProductListFilter from "../product_list_filter/ProductListFilter";
 import { useRef } from "react";
 import PromoBanner from "../promo_banner/PromoBanner";
+import { useContext } from "react";
+import { SortedProductsContext } from "../../../context";
+import { useEffect } from "react";
 
 
 
-const ContentWrapper = ({ sortedProductsAPI, sortMenuClassActive, changeCls, getSortMethod, ...props }) => {
+const ContentWrapper = ({ sortMenuClassActive, changeCls, getSortMethod, ...props }) => {
+
+    const {sortedProductsAPI, setSortedProductsAPI} = useContext(SortedProductsContext);
+    useEffect(() => {
+        console.log(sortedProductsAPI);
+    }, [sortedProductsAPI])
+    
 
     return (
         <div className={classes.container} style={{ marginTop: '150px' }}>

@@ -21,13 +21,6 @@ import icon_20 from "../images/drop_down_menu_icons/20.svg";
 import icon_21 from "../images/drop_down_menu_icons/21.svg";
 import icon_22 from "../images/drop_down_menu_icons/22.svg";
 
-<ul class="main-menu-levels level_3 visible">
-    <li class="capital"><a href="/category/salat-379"><span>Все у&nbsp;</span> Салат</a></li>
-    <li class="" role="link" tabindex="0"><div><a href="/category/rostky-399">Ростки</a></div></li>
-    <li class="" role="link" tabindex="0"><div><a href="/category/salat-svizhyi-400">Салат свіжий</a></div></li>
-    <li class="" role="link" tabindex="0"><div><a href="/category/salaty-gotovi-do-vzhyvannia-401">Салати, готові до вживання</a></div></li>
-</ul>
-
 const allProductCategories = [
     {
         id: '1', img: icon_1, path: "frukty-ovochi-solinnia", name: "Фрукти, овочі, соління", isSelected: false,
@@ -61,23 +54,6 @@ const allProductCategories = [
                     { id: '1-3-3', path: "salaty-gotovi-do-vzhyvannia", name: "Салати, готові до вживання", isSelected: false },
                 ]
             },
-
-
-            <ul class="main-menu-levels level_3 visible">
-                <li class="capital"><a href="/category/ovochi-378"><span>Все у&nbsp;</span> Овочі</a></li>
-                <li class="" role="link" tabindex="0"><div><a href="/category/baklazhan-403">Баклажан</a></div></li>
-                <li class="" role="link" tabindex="0"><div><a href="/category/garbuz-404">Гарбуз</a></div></li>
-                <li class="" role="link" tabindex="0"><div><a href="/category/kabachok-406">Кабачок</a></div></li>
-                <li class="" role="link" tabindex="0"><div><a href="/category/kapusta-407">Капуста</a></div></li>
-                <li class="" role="link" tabindex="0"><div><a href="/category/kvasolia-sparzheva-408">Квасоля спаржева</a></div></li>
-                <li class="" role="link" tabindex="0"><div><a href="/category/koreneplody-409">Коренеплоди</a></div></li>
-                <li class="" role="link" tabindex="0"><div><a href="/category/kukurudza-svizha-410">Кукурудза свіжа</a></div></li>
-                <li class="" role="link" tabindex="0"><div><a href="/category/ogirky-411">Огірки</a></div></li>
-                <li class="" role="link" tabindex="0"><div><a href="/category/perets-412">Перець</a></div></li>
-                <li class="" role="link" tabindex="0"><div><a href="/category/pomidory-413">Помідори</a></div></li>
-                <li class="" role="link" tabindex="0"><div><a href="/category/sparzha-414">Спаржа</a></div></li>
-                <li class="" role="link" tabindex="0"><div><a href="/category/tsybulia-chasnyk-415">Цибуля, часник</a></div></li>
-            </ul>
             {
                 id: '1-4', path: "ovochi", name: "Овочі", isSelected: false, menu_level_3: [
                     { id: '1-4-1', path: "baklazhan", name: "Баклажан", isSelected: false },
@@ -88,39 +64,39 @@ const allProductCategories = [
                     { id: '1-4-6', path: "koreneplody", name: "Коренеплоди", isSelected: false },
                     { id: '1-4-7', path: "kukurudza-svizha", name: "Кукурудза свіжа", isSelected: false },
                     { id: '1-4-8', path: "ogirky", name: "Огірки", isSelected: false },
-                    { id: '1-4-9', path: "zelen", name: "Перець", isSelected: false },
-                    { id: '1-4-10', path: "zelen", name: "Помідори", isSelected: false },
-                    { id: '1-4-11', path: "zelen", name: "Спаржа", isSelected: false },
-                    { id: '1-4-12', path: "zelen", name: "Цибуля, часник", isSelected: false },
+                    { id: '1-4-9', path: "perets", name: "Перець", isSelected: false },
+                    { id: '1-4-10', path: "pomidory", name: "Помідори", isSelected: false },
+                    { id: '1-4-11', path: "sparzha", name: "Спаржа", isSelected: false },
+                    { id: '1-4-12', path: "tsybulia-chasnyk", name: "Цибуля, часник", isSelected: false },
                 ]
             },
             {
                 id: '1-5', path: "frukty", name: "Фрукти", isSelected: false, menu_level_3: [
-                    { id: '1-5-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-5-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-5-3', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-5-4', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-5-5', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-5-6', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-5-7', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-5-8', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-5-9', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-5-10', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '1-5-1', path: "banan", name: "Банан", isSelected: false },
+                    { id: '1-5-2', path: "vynograd", name: "Виноград", isSelected: false },
+                    { id: '1-5-3', path: "grusha", name: "Груша", isSelected: false },
+                    { id: '1-5-4', path: "kavun-dynia", name: "Кавун, диня", isSelected: false },
+                    { id: '1-5-5', path: "kistochkovi", name: "Кісточкові", isSelected: false },
+                    { id: '1-5-6', path: "tropichni-frukty", name: "Тропічні фрукти", isSelected: false },
+                    { id: '1-5-7', path: "tsytrusovi", name: "Цитрусові", isSelected: false },
+                    { id: '1-5-8', path: "yabluka", name: "Яблука", isSelected: false },
+                    { id: '1-5-9', path: "yagody", name: "Ягоди", isSelected: false },
+                    { id: '1-5-10', path: "fruktovi-nabory", name: "Фруктові набори", isSelected: false },
                 ]
             },
             { id: '1-6', path: "fruktovi-delikatesy", name: "Фруктові делікатеси", isSelected: false },
             {
                 id: '1-7', path: "solinnia-marynovani-stravy", name: "Соління, мариновані страви", isSelected: false, menu_level_3: [
-                    { id: '1-7-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-7-2', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '1-7-1', path: "ovochevi-zakusky-khumusy", name: "Овочеві закуски, хумуси", isSelected: false },
+                    { id: '1-7-2', path: "ovochevi-ta-fruktovi-solinnia", name: "Овочеві та фруктові соління", isSelected: false },
                 ]
             },
             {
                 id: '1-8', path: "susheni-frukty-gryby-gorikhy", name: "Сушені фрукти, гриби, горіхи", isSelected: false, menu_level_3: [
-                    { id: '1-8-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-8-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-8-3', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '1-8-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '1-8-1', path: "gryby-susheni", name: "Гриби сушені", isSelected: false },
+                    { id: '1-8-2', path: "gorikhy-i-nasinnia", name: "Горіхи і насіння", isSelected: false },
+                    { id: '1-8-3', path: "sukhofrukty-i-tsukaty", name: "Сухофрукти і цукати", isSelected: false },
+                    { id: '1-8-4', path: "sumish-gorikhiv-i-sukhofruktiv", name: "Суміш горіхів і сухофруктів", isSelected: false },
                 ]
             },
         ]
@@ -130,38 +106,38 @@ const allProductCategories = [
         menu_level_2: [
             {
                 id: '2-1', path: "svizhe-m-iaso", name: "Свіже м'ясо", isSelected: false, menu_level_3: [
-                    { id: '2-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '2-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '2-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '2-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '2-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '2-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '2-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '2-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '2-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '2-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '2-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '2-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '2-1', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '2-1-1', path: "baranyna", name: "Баранина", isSelected: false },
+                    { id: '2-1-2', path: "kroliatyna", name: "Кролятина", isSelected: false },
+                    { id: '2-1-3', path: "teliatyna", name: "Телятина", isSelected: false },
+                    { id: '2-1-4', path: "yalovychyna", name: "Яловичина", isSelected: false },
+                    { id: '2-1-5', path: "svynyna", name: "Свинина", isSelected: false },
+                    { id: '2-1-6', path: "salo", name: "Сало", isSelected: false },
+                    { id: '2-1-7', path: "kachka", name: "Качка", isSelected: false },
+                    { id: '2-1-8', path: "perepilka", name: "Перепілка", isSelected: false },
+                    { id: '2-1-9', path: "kuriatyna", name: "Курятина", isSelected: false },
+                    { id: '2-1-10', path: "indychatyna", name: "Індичатина", isSelected: false },
+                    { id: '2-1-11', path: "subprodukty", name: "Субпродукти", isSelected: false },
+                    { id: '2-1-12', path: "okholodzheni-napivfabrykaty", name: "Охолоджені напівфабрикати", isSelected: false },
+                    { id: '2-1-13', path: "farsh", name: "Фарш", isSelected: false },
                 ]
             },
             {
                 id: '2-2', path: "prygotovlena-ryba-ta-moreprodukty", name: "Приготовлена риба та морепродукти", isSelected: false, menu_level_3: [
-                    { id: '2-2-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '2-2-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '2-2-3', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '2-2-4', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '2-2-5', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '2-2-6', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '2-2-7', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '2-2-1', path: "ikra", name: "Ікра", isSelected: false },
+                    { id: '2-2-2', path: "pasty-masla-buter-zakusky-z-ikry-moreproduktiv", name: "Пасти, масла, бутер. закуски з ікри/морепродуктів", isSelected: false },
+                    { id: '2-2-3', path: "salaty-ta-preservy-rybni", name: "Салати та пресерви рибні", isSelected: false },
+                    { id: '2-2-4', path: "produktsiia-z-surimi-krabovi-palychky", name: "Продукція з сурімі, крабові палички", isSelected: false },
+                    { id: '2-2-5', path: "ryba-v-ialena", name: "Риба в'ялена", isSelected: false },
+                    { id: '2-2-6', path: "ryba-kopchena-i-moreprodukty", name: "Риба копчена і морепродукти", isSelected: false },
+                    { id: '2-2-7', path: "ryba-slabosolena", name: "Риба слабосолена", isSelected: false },
                 ]
             },
             { id: '2-3', path: "zhyva-ta-okholodzhena-ryba-ta-moreprodukty", name: "Жива та охолоджена риба та морепродукти", isSelected: false },
             {
                 id: '2-4', path: "zamorozhena-ryba-moreprodukty-i-moliusky", name: "Заморожена риба, морепродукти і молюски", isSelected: false, menu_level_3: [
-                    { id: '2-4-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '2-4-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '2-4-3', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '2-4-1', path: "zamorozhena-ryba", name: "Заморожена риба", isSelected: false },
+                    { id: '2-4-2', path: "zamorozheni-moreprodukty-i-napivfabrykaty", name: "Заморожені морепродукти і напівфабрикати", isSelected: false },
+                    { id: '2-4-3', path: "zamorozheni-ravlyky-ta-zhaby", name: "Заморожені равлики та жаби", isSelected: false },
                 ]
             },
         ]
@@ -172,38 +148,38 @@ const allProductCategories = [
             { id: '3-1', path: "buterbrodni-namazky", name: "Бутербродні намазки", isSelected: false },
             {
                 id: '3-2', path: "vareni-kovbasni-vyroby", name: "Варені ковбасні вироби", isSelected: false, menu_level_3: [
-                    { id: '3-2-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '3-2-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '3-2-3', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '3-2-4', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-2-1', path: "kovbasa-varena", name: "Ковбаса варена", isSelected: false },
+                    { id: '3-2-2', path: "sosysky-vareni", name: "Сосиски варені", isSelected: false },
+                    { id: '3-2-3', path: "sardelky-vareni", name: "Сардельки варені", isSelected: false },
+                    { id: '3-2-4', path: "shynka-varena", name: "Шинка варена", isSelected: false },
                 ]
             },
             {
                 id: '3-3', path: "kopcheni-kovbasni-vyroby", name: "Копчені ковбасні вироби", isSelected: false, menu_level_3: [
-                    { id: '3-3-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '3-3-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '3-3-3', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '3-3-4', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '3-3-5', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '3-3-6', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '3-3-7', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '3-3-8', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '3-3-9', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-3-1', path: "kovbasa-zapechena", name: "Ковбаса запечена", isSelected: false },
+                    { id: '3-3-2', path: "kovbasa-vareno-kopchena", name: "Ковбаса варено-копчена", isSelected: false },
+                    { id: '3-3-3', path: "kovbasa-napivkopchena", name: "Ковбаса напівкопчена", isSelected: false },
+                    { id: '3-3-4', path: "kovbasa-syrov-ialena", name: "Ковбаса сиров'ялена", isSelected: false },
+                    { id: '3-3-5', path: "kovbasa-syrokopchena", name: "Ковбаса сирокопчена", isSelected: false },
+                    { id: '3-3-6', path: "kovbasky-vareno-kopcheni", name: "Ковбаски варено-копчені", isSelected: false },
+                    { id: '3-3-7', path: "kovbasky-napivkopcheni", name: "Ковбаски напівкопчені", isSelected: false },
+                    { id: '3-3-8', path: "kovbasky-syrov-ialeni", name: "Ковбаски сиров'ялені", isSelected: false },
+                    { id: '3-3-9', path: "kovbasky-syrokopcheni", name: "Ковбаски сирокопчені", isSelected: false },
                 ]
             },
             {
                 id: '3-4', path: "tsilnom-iasni-vyroby", name: "Цільном'ясні вироби", isSelected: false, menu_level_3: [
-                    { id: '3-4-1', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '3-4-2', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '3-4-3', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '3-4-4', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '3-4-5', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '3-4-6', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '3-4-7', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '3-4-8', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '3-4-9', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '3-4-10', path: "zelen", name: "Зелень", isSelected: false },
-                    { id: '3-4-11', path: "zelen", name: "Зелень", isSelected: false },
+                    { id: '3-4-1', path: "balyk", name: "Балик", isSelected: false },
+                    { id: '3-4-2', path: "basturma", name: "Бастурма", isSelected: false },
+                    { id: '3-4-3', path: "buzhenyna", name: "Буженина", isSelected: false },
+                    { id: '3-4-4', path: "grudynka-kopchena", name: "Грудинка копчена", isSelected: false },
+                    { id: '3-4-5', path: "kuriachi-kopchenosti", name: "Курячі копченості", isSelected: false },
+                    { id: '3-4-6', path: "m-iaso-dychyny", name: "М'ясо дичини", isSelected: false },
+                    { id: '3-4-7', path: "okist", name: "Окіст", isSelected: false },
+                    { id: '3-4-8', path: "rulet-kopchenyi", name: "Рулет копчений", isSelected: false },
+                    { id: '3-4-9', path: "rulka", name: "Рулька", isSelected: false },
+                    { id: '3-4-10', path: "shynka-delikatesna", name: "Шинка делікатесна", isSelected: false },
+                    { id: '3-4-11', path: "shyika-kopchena", name: "Шийка копчена", isSelected: false },
                 ]
             },
             {

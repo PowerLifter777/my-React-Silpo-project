@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 import classes from './AllProductsDropMenu.module.scss';
 import allProductCategories from '../../../assets/allProductCategoies';
@@ -9,6 +9,11 @@ import AllProductsDropMenu_Lv2 from "./AllProductsDropMenu_Lv2";
 const AllProductsDropMenu = ({ isVisibleAllProductsMenu }) => {
 
     const [widgetElements, setWidgetElements] = useState([...allProductCategories])
+
+    useEffect(() => {
+        setWidgetElements(prevState => prevState.map((obj, i) => obj = { ...obj, isSelected: false }))
+    }, [isVisibleAllProductsMenu])
+
 
     const handleChangeCategory = (e) => {
         e.preventDefault();

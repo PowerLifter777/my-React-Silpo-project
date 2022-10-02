@@ -39,7 +39,6 @@ const AllProductsDropMenu_Lv2 = ({ list, path, name, id }) => {
                         >
                             <div>
                                 <a href={`/category/${el.path}`}>{el.name}</a>
-
                                 {el.isSelected
                                     ?
                                     <AllProductsDropMenu_Lv3
@@ -49,7 +48,6 @@ const AllProductsDropMenu_Lv2 = ({ list, path, name, id }) => {
                                         id={el.id}
                                     />
                                     :
-
                                     <i className={classes.icon_chevron_right}>
                                         <ChevronRightSVG />
                                     </i>
