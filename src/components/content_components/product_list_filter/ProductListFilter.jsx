@@ -16,6 +16,7 @@ const ProductListFilter = ({ sortedProductsAPI }) => {
     const categoriesForFilter = sortedProductsAPI.reduce((result, product) => (result[product.category] ? result[product.category]++ : result[product.category] = 1, result), {});
 
 
+
     return (
 
         <div className={`${classes.side_shield_panel} ${classes.category_filter_shield}`}>

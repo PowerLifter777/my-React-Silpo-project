@@ -1,3 +1,4 @@
 import { createContext, useEffect } from "react";
+import productsAPI from '../assets/productsAPI.js';
 
-export const SortedProductsContext = createContext([]);
+export const AllProductsContext = createContext(productsAPI);

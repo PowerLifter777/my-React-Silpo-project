@@ -912,5 +912,21 @@ function calc(arr) {
 
 
 console.log(calc(allProductCategories));
+// ------------------------------------------------------------------------------------
+let arr1 = ['test1','test2','test3']
+
+// let res = {};
+// arr1.map((el, ind) => res[ind] = el);
+// console.log(res);
 
 
+let res = arr1.reduce((obj, el, ind) => {
+obj[ind] = el
+return obj
+}, {})
+console.log(res);
+
+// let res = arr1.reduce((obj, el, ind) => (obj[ind] = el, obj), {})
+// console.log(res);
+
+// ----------------------------------------------------------------------------------------

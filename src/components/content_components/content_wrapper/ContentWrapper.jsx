@@ -5,21 +5,10 @@ import classes from './ContentWrapper.module.scss';
 import ProductList from "../product_list/ProductList";
 import ProductListSort from "../product_list_sort/ProductListSort";
 import ProductListFilter from "../product_list_filter/ProductListFilter";
-import { useRef } from "react";
 import PromoBanner from "../promo_banner/PromoBanner";
-import { useContext } from "react";
-import { SortedProductsContext } from "../../../context";
-import { useEffect } from "react";
 
 
-
-const ContentWrapper = ({ sortMenuClassActive, changeCls, getSortMethod, ...props }) => {
-
-    const {sortedProductsAPI, setSortedProductsAPI} = useContext(SortedProductsContext);
-    useEffect(() => {
-        console.log(sortedProductsAPI);
-    }, [sortedProductsAPI])
-    
+const ContentWrapper = ({ sortedProductsAPI, sortMenuClassActive, changeCls, getSortMethod, ...props }) => {
 
     return (
         <div className={classes.container} style={{ marginTop: '150px' }}>
@@ -31,7 +20,6 @@ const ContentWrapper = ({ sortMenuClassActive, changeCls, getSortMethod, ...prop
                         <ProductListSort
                             sortMenuClassActive={sortMenuClassActive}
                             changeCls={changeCls}
-                            sortedProductsAPI={sortedProductsAPI}
                             getSortMethod={getSortMethod}
                         />
                     </div>

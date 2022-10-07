@@ -1,27 +1,31 @@
-import React, { Fragment, useEffect, useRef, useState } from 'react';
+import React, { Fragment, useContext, useEffect, useRef, useState } from 'react';
 
-import productsAPI from './assets/productsAPI.js';
+// import productsAPI from './assets/productsAPI.js';
 
 import './App.css';
 
 import ContentWrapper from './components/content_components/content_wrapper/ContentWrapper';
 import Header from './components/header_components/header_top/Header';
 import LoaderMain from './components/loader_main/LoaderMain';
-import { SortedProductsContext } from './context/index.js';
+import { AllProductsContext } from './context/index.js';
 
 
 function App() {
 
+
+  const API = useContext(AllProductsContext);
+  const [productsAPI, setProductsAPI] = useState(API);
   const [sortedProductsAPI, setSortedProductsAPI] = useState([]);
+
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [sortMenuClassActive, setSortMenuClassActive] = useState(false)
   const [isVisibleAllProductsMenu, setIsVisibleAllProductsMenu] = useState(false);
 
   useEffect(() => {
-    setSortedProductsAPI(JSON.parse(JSON.stringify(productsAPI)).sort((obj1, obj2) => obj1.available > obj2.available ? -1 : obj1.available < obj2.available ? 1 : 0));
-    // console.log(sortedProductsAPI);
-    // console.log(allProducts);
-  }, [productsAPI])
+    setSortedProductsAPI(JSON.parse(JSON.stringify(API)).sort((obj1, obj2) => obj1.available > obj2.available ? -1 : obj1.available < obj2.available ? 1 : 0));
+    // console.log(setProductsAPI);
+    // console.log(productsAPI);
+  }, [API])
 
   const sortMenuFunction = (method) => {
 
@@ -127,9 +131,9 @@ function App() {
   }
 
   return (
-    <SortedProductsContext.Provider value={{
-      sortedProductsAPI,
-      setSortedProductsAPI,
+    <AllProductsContext.Provider value={{
+      productsAPI,
+      setProductsAPI,
     }}>
       <Fragment>
         <div
@@ -148,7 +152,7 @@ function App() {
               isVisibleAllProductsMenu={isVisibleAllProductsMenu}
             />
             <ContentWrapper
-              // sortedProductsAPI={sortedProductsAPI}
+              sortedProductsAPI={sortedProductsAPI}
               sortMenuClassActive={sortMenuClassActive}
               changeCls={changeSortMenuClass}
               getSortMethod={sortMenuFunction}
@@ -157,7 +161,7 @@ function App() {
           </div>
         </div>
       </Fragment >
-    </SortedProductsContext.Provider>
+    </AllProductsContext.Provider>
   )
 }
 
