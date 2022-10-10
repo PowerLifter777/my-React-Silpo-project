@@ -8,12 +8,12 @@ import ProductListFilter from "../product_list_filter/ProductListFilter";
 import PromoBanner from "../promo_banner/PromoBanner";
 
 
-const ContentWrapper = ({ sortedProductsAPI, sortMenuClassActive, changeCls, getSortMethod, ...props }) => {
+const ContentWrapper = ({ sortMenuClassActive, changeCls, getSortMethod, ...props }) => {
 
     return (
         <div className={classes.container} style={{ marginTop: '150px' }}>
             <div className={classes.content}>
-                <PromoBanner />
+                {/* <PromoBanner /> */}
                 <div className={`${classes.category_page_wrapper} ${classes.page}`}>
                     <h1 className={classes.category_page_heading}>«Сільпо» Resto</h1>
                     <div className={classes.category_page_header}>
@@ -28,10 +28,10 @@ const ContentWrapper = ({ sortedProductsAPI, sortMenuClassActive, changeCls, get
                             className={`${classes.category_filter_wrapper} ${classes.category_filter_column}`}
                             style={{ alignSelf: 'flex-start' }}
                         >
-                            <ProductListFilter sortedProductsAPI={sortedProductsAPI} />
+                            <ProductListFilter />
                         </div>
                         <div className={classes.product_list_wrapper}>
-                            <ProductList sortedProductsAPI={sortedProductsAPI} />
+                            <ProductList />
                         </div>
                     </div>
                 </div>

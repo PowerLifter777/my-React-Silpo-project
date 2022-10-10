@@ -45,7 +45,7 @@ const Header = ({ isHeaderVisible, isAllProductsMenuOpen, isVisibleAllProductsMe
                                 Всі товари
                                 <ChevronDownSVG />
                                 <AllProductsDropMenu
-                                    isVisibleAllProductsMenu={isVisibleAllProductsMenu}
+                                    // isVisibleAllProductsMenu={isVisibleAllProductsMenu}
                                 />
                             </div>
                             <HeaderSearch />

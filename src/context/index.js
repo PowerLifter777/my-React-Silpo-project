@@ -1,4 +1,4 @@
-import { createContext, useEffect } from "react";
-import productsAPI from '../assets/productsAPI.js';
+import { createContext } from "react";
 
-export const AllProductsContext = createContext(productsAPI);
+
+export const AppContext = createContext();

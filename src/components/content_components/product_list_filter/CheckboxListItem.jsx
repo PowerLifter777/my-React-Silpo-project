@@ -3,7 +3,7 @@ import React, { Fragment, useState } from "react"
 import classes from './ProductListFilter.module.scss';
 
 
-const CheckboxListItem = ({ sortedProductsAPI, category, amount }) => {
+const CheckboxListItem = ({ category, amount }) => {
 
     const [isCheckboxActive, setIsCheckboxActive] = useState(false);
 

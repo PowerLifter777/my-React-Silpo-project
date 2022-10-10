@@ -1,15 +1,16 @@
-import React from "react"
-import { useState } from "react";
+import React, { useState, useContext } from "react"
 
 import classes from './ProductListFilter.module.scss';
 
 import { ReactComponent as ChevronRightSVG } from '../../../images/chevron_right_icon.svg'
 import { ReactComponent as ChevronDownSVG } from '../../../images/chevron_down_icon.svg'
 import CheckboxListItem from "./CheckboxListItem";
+import { AppContext } from "../../../context";
 
-const ProductListFilter = ({ sortedProductsAPI }) => {
 
+const ProductListFilter = () => {
 
+    const { sortedProductsAPI } = useContext(AppContext)
     const [isFilterOpen, setIsFilterOpen] = useState(false);
 
     // const categoriesForFilter = sortedProductsAPI.map(obj => obj.type).filter((el, ind) => sortedProductsAPI.map(product => product.type).indexOf(el) === ind);
@@ -39,7 +40,11 @@ const ProductListFilter = ({ sortedProductsAPI }) => {
 
                     <ul className={classes.checkbox_list_vertical}>
                         {Object.entries(categoriesForFilter).map(products =>
-                            <CheckboxListItem key={products[0]} sortedProductsAPI={sortedProductsAPI} category={products[0]} amount={products[1]} />
+                            <CheckboxListItem
+                                key={products[0]}
+                                category={products[0]}
+                                amount={products[1]}
+                            />
                         )}
                     </ul>
                 </div>

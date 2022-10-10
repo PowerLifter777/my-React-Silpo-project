@@ -1,69 +1,30 @@
 import React, { Fragment, useContext, useEffect, useRef, useState } from 'react';
 
-// import productsAPI from './assets/productsAPI.js';
+import API from './assets/productsAPI.js';
 
 import './App.css';
 
 import ContentWrapper from './components/content_components/content_wrapper/ContentWrapper';
 import Header from './components/header_components/header_top/Header';
 import LoaderMain from './components/loader_main/LoaderMain';
-import { AllProductsContext } from './context/index.js';
+import { AppContext } from './context/index.js';
 
 
 function App() {
 
-
-  const API = useContext(AllProductsContext);
   const [productsAPI, setProductsAPI] = useState(API);
   const [sortedProductsAPI, setSortedProductsAPI] = useState([]);
 
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [sortMenuClassActive, setSortMenuClassActive] = useState(false)
   const [isVisibleAllProductsMenu, setIsVisibleAllProductsMenu] = useState(false);
+  const [selected, setSelected] = useState('Оберіть сортування')
 
   useEffect(() => {
-    setSortedProductsAPI(JSON.parse(JSON.stringify(API)).sort((obj1, obj2) => obj1.available > obj2.available ? -1 : obj1.available < obj2.available ? 1 : 0));
+    setSortedProductsAPI(JSON.parse(JSON.stringify(productsAPI)).sort((obj1, obj2) => obj1.available > obj2.available ? -1 : obj1.available < obj2.available ? 1 : 0));
     // console.log(setProductsAPI);
     // console.log(productsAPI);
-  }, [API])
-
-  const sortMenuFunction = (method) => {
-
-    switch (method) {
-      case 'Спочатку популярні':
-        setSortedProductsAPI(sortedProductsAPI.sort((obj1, obj2) =>
-          obj1.available && (obj1.price.current || obj1.price.common) - (obj2.price.current || obj2.price.common))
-          .sort((a, b) => a.available && (b.rating.votes - a.rating.votes)));
-        break;
-      case 'За рейтингом':
-        setSortedProductsAPI(sortedProductsAPI.sort((obj1, obj2) =>
-          obj1.available && (obj1.price.current || obj1.price.common) - (obj2.price.current || obj2.price.common))
-          .sort((a, b) => a.available && (b.rating.rate - a.rating.rate)));
-        break;
-      case 'Спочатку акційні':
-        setSortedProductsAPI(sortedProductsAPI.sort((obj1, obj2) => obj1.available && obj1.price.current > obj2.price.current ? -1 : 1));
-        break;
-      case 'Спочатку дешевші':
-        setSortedProductsAPI(sortedProductsAPI.sort((obj1, obj2) =>
-          obj1.available && (obj1.price.current || obj1.price.common) - (obj2.price.current || obj2.price.common)));
-        break;
-      case 'Спочатку дорожчі':
-        setSortedProductsAPI(sortedProductsAPI.sort((obj1, obj2) =>
-          obj1.available && (obj2.price.current || obj2.price.common) - (obj1.price.current || obj1.price.common)));
-        break;
-      case 'Від А до Я':
-        setSortedProductsAPI(sortedProductsAPI.sort((obj1, obj2) =>
-          obj1.available && (obj1.price.current || obj1.price.common) - (obj2.price.current || obj2.price.common)).sort((a, b) => a.available && a.title.localeCompare(b.title)));
-        break;
-      case 'Від Я до А':
-        setSortedProductsAPI(sortedProductsAPI.sort((obj1, obj2) =>
-          obj1.available && (obj1.price.current || obj1.price.common) - (obj2.price.current || obj2.price.common)).sort((a, b) => a.available && b.title.localeCompare(a.title)));
-        break;
-      default:
-        setSortedProductsAPI(sortedProductsAPI.sort((obj1, obj2) => obj1.available > obj2.available ? -1 : obj1.available < obj2.available ? 1 : 0))
-        break;
-    }
-  }
+  }, [])
 
   // const hide = (e) => {
   //   setIsHeaderVisible(false);
@@ -122,7 +83,7 @@ function App() {
   const scrollToTop = (isPressedAllProductsBtn) => {
     if (isPressedAllProductsBtn) {
       layoutEl.current.scrollIntoView();
-      setIsVisibleAllProductsMenu(true);
+      setIsVisibleAllProductsMenu(!isVisibleAllProductsMenu);
     }
   }
 
@@ -131,37 +92,38 @@ function App() {
   }
 
   return (
-    <AllProductsContext.Provider value={{
-      productsAPI,
-      setProductsAPI,
-    }}>
-      <Fragment>
+    <AppContext.Provider
+      value={{
+        productsAPI, setProductsAPI,
+        sortedProductsAPI, setSortedProductsAPI,
+        isVisibleAllProductsMenu, setIsVisibleAllProductsMenu,
+        selected, setSelected
+       }}>
+      <div
+        className='App'
+        onWheel={hideHeaderMenu}
+      >
         <div
-          className='App'
-          onWheel={hideHeaderMenu}
+          className="layout"
+          onMouseDown={hideSortMenu}
+          ref={layoutEl}
+          onClick={handlerHideAllProductsMenu}
         >
-          <div
-            className="layout"
-            onMouseDown={hideSortMenu}
-            ref={layoutEl}
-            onClick={handlerHideAllProductsMenu}
-          >
-            <Header
-              isHeaderVisible={isHeaderVisible}
-              isAllProductsMenuOpen={scrollToTop}
-              isVisibleAllProductsMenu={isVisibleAllProductsMenu}
-            />
-            <ContentWrapper
-              sortedProductsAPI={sortedProductsAPI}
-              sortMenuClassActive={sortMenuClassActive}
-              changeCls={changeSortMenuClass}
-              getSortMethod={sortMenuFunction}
-            />
-            <LoaderMain />
-          </div>
+          <Header
+            isHeaderVisible={isHeaderVisible}
+            isAllProductsMenuOpen={scrollToTop}
+            isVisibleAllProductsMenu={isVisibleAllProductsMenu}
+          />
+          <ContentWrapper
+            // sortedProductsAPI={sortedProductsAPI}
+            sortMenuClassActive={sortMenuClassActive}
+            changeCls={changeSortMenuClass}
+            // getSortMethod={sortMenuFunction}
+          />
+          <LoaderMain />
         </div>
-      </Fragment >
-    </AllProductsContext.Provider>
+      </div>
+    </AppContext.Provider>
   )
 }
 
