@@ -2,7 +2,7 @@ import { React, Fragment } from 'react';
 import { useState } from 'react';
 
 // import elem2_icon from '../../images/button_elem_2.jpg'
-import logo_icon from '../../images/silpo_logo.svg'
+import logo_icon from '../../images/Silpo_logo.svg'
 
 import { ReactComponent as BasketSVG } from '../../images/basket_icon.svg'
 import { ReactComponent as CategoriesSVG } from '../../images/categories_icon.svg'

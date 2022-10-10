@@ -1,6 +1,6 @@
 import React from "react";
 
-import logo_icon from '../../images/silpo_logo.svg'
+import logo_icon from '../../images/Silpo_logo.svg'
 import classes from './LoaderMain.module.css';
 
 const LoaderMain = () => {
