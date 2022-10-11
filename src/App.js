@@ -14,14 +14,14 @@ function App() {
 
   const [productsAPI, setProductsAPI] = useState(API);
   const [sortedProductsAPI, setSortedProductsAPI] = useState([]);
-
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [sortMenuClassActive, setSortMenuClassActive] = useState(false)
   const [isVisibleAllProductsMenu, setIsVisibleAllProductsMenu] = useState(false);
   const [selected, setSelected] = useState('Оберіть сортування')
+  const [allProdMenuSelectedItem, setAllProdMenuSelectedItem] = useState('');
 
   useEffect(() => {
-    setSortedProductsAPI(JSON.parse(JSON.stringify(productsAPI)).sort((obj1, obj2) => obj1.available > obj2.available ? -1 : obj1.available < obj2.available ? 1 : 0));
+    setSortedProductsAPI(JSON.parse(JSON.stringify(API)).sort((obj1, obj2) => obj1.available > obj2.available ? -1 : obj1.available < obj2.available ? 1 : 0));
     // console.log(setProductsAPI);
     // console.log(productsAPI);
   }, [])
@@ -48,7 +48,6 @@ function App() {
         visible2 = setTimeout(display, 800);
         clear();
         flag = false;
-
       }
     }
 
@@ -97,8 +96,9 @@ function App() {
         productsAPI, setProductsAPI,
         sortedProductsAPI, setSortedProductsAPI,
         isVisibleAllProductsMenu, setIsVisibleAllProductsMenu,
-        selected, setSelected
-       }}>
+        selected, setSelected,
+        allProdMenuSelectedItem, setAllProdMenuSelectedItem
+      }}>
       <div
         className='App'
         onWheel={hideHeaderMenu}
@@ -118,7 +118,7 @@ function App() {
             // sortedProductsAPI={sortedProductsAPI}
             sortMenuClassActive={sortMenuClassActive}
             changeCls={changeSortMenuClass}
-            // getSortMethod={sortMenuFunction}
+          // getSortMethod={sortMenuFunction}
           />
           <LoaderMain />
         </div>

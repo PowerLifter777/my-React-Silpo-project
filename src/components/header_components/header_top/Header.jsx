@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import classes from './Header.module.scss';
 
-import logo_icon from '../../../images/Silpo_logo.svg'
+import logo_icon from '../../../images/silpo_logo.svg'
 
 import { ReactComponent as BasketSVG } from '../../../images/basket_icon.svg'
 import { ReactComponent as CategoriesSVG } from '../../../images/categories_icon.svg'

@@ -10,65 +10,68 @@ import { AppContext } from "../../../context";
 
 const ProductListFilter = () => {
 
-    const { sortedProductsAPI } = useContext(AppContext)
-    const [isFilterOpen, setIsFilterOpen] = useState(false);
+    const { sortedProductsAPI, allProdMenuSelectedItem } = useContext(AppContext)
+    const [isFilterOpen, setIsFilterOpen] = useState(true);
 
     // const categoriesForFilter = sortedProductsAPI.map(obj => obj.type).filter((el, ind) => sortedProductsAPI.map(product => product.type).indexOf(el) === ind);
-    const categoriesForFilter = sortedProductsAPI.reduce((result, product) => (result[product.category] ? result[product.category]++ : result[product.category] = 1, result), {});
+    // --------------------------------
+    // const calcProductsInCategory = sortedProductsAPI.reduce((result, product) => (result[product.menu_level_2] ? result[product.menu_level_2]++ : result[product.menu_level_2] = 1, result), {});
+    // const categoriesForFilter = Object.entries(calcProductsInCategory).sort((a, b) => b[1] - a[1]);
 
+    let calcProductsInCategory = sortedProductsAPI.reduce((result, obj) => {
+        for (const [key, value] of Object.entries(obj)) {
+            if (value === allProdMenuSelectedItem && key === 'category') {
+                result[obj.menu_level_2] ? result[obj.menu_level_2]++ : result[obj.menu_level_2] = 1
+            } else if (value === allProdMenuSelectedItem && key === 'menu_level_2' && obj.hasOwnProperty('menu_level_3')) {
+                result[obj.menu_level_3] ? result[obj.menu_level_3]++ : result[obj.menu_level_3] = 1
+            }
+        }
+        return result
+    }, {})
+
+    const categoriesForFilter = Object.entries(calcProductsInCategory).sort((a, b) => b[1] - a[1]);
+
+    console.log(allProdMenuSelectedItem);
+    console.log(calcProductsInCategory);
 
 
     return (
-
         <div className={`${classes.side_shield_panel} ${classes.category_filter_shield}`}>
-            <article className={classes.filter_wrapper}>
-                <div
-                    className={classes.filter_wrapper_title}
-                    onClick={() => !isFilterOpen ? setIsFilterOpen(true) : setIsFilterOpen(false)}
-                >
-                    «Сільпо» Resto
-                    <i className={`${classes.icon} ${classes.icon_chevron_down}`}>
-                        {isFilterOpen
-                            ?
-                            <ChevronDownSVG />
-                            :
-                            <ChevronRightSVG />
-                        }
-                    </i>
-                </div>
-                <div className={`${classes.filter_wrapper_cover} ${isFilterOpen ? classes.filter_wrapper_cover_active : ''}`}>
+            {categoriesForFilter.length ?
+                <article className={classes.filter_wrapper}>
+                    <div
+                        className={classes.filter_wrapper_title}
+                        onClick={() => !isFilterOpen ? setIsFilterOpen(true) : setIsFilterOpen(false)}
+                    >
+                        {/* «Сільпо» Resto */}
+                        {allProdMenuSelectedItem}
+                        <i className={`${classes.icon} ${classes.icon_chevron_down}`}>
+                            {isFilterOpen
+                                ?
+                                <ChevronDownSVG />
+                                :
+                                <ChevronRightSVG />
+                            }
+                        </i>
+                    </div>
+                    <div className={`${classes.filter_wrapper_cover} ${isFilterOpen ? classes.filter_wrapper_cover_active : ''}`}>
 
-                    <ul className={classes.checkbox_list_vertical}>
-                        {Object.entries(categoriesForFilter).map(products =>
-                            <CheckboxListItem
-                                key={products[0]}
-                                category={products[0]}
-                                amount={products[1]}
-                            />
-                        )}
-                    </ul>
-                </div>
-            </article>
+                        <ul className={classes.checkbox_list_vertical}>
+                            {categoriesForFilter.map(products =>
+                                <CheckboxListItem
+                                    key={products[0]}
+                                    category={products[0]}
+                                    amount={products[1]}
+                                />
+                            )}
+                        </ul>
+                    </div>
+                </article>
+                :
+                <></>
+            }
 
-            {/* <article class="filter-wrapper">
-                <div class="filter-wrapper__title">«Сільпо» Resto<i class="icon icon-chevron-down">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 8" width="14" height="8">
-                        <path d="M14 1.4 7 8 0 1.4 1.4 0 7 5.3 12.6 0z">
-                        </path>
-                    </svg>
-                </i>
-                </div>
-                <div class="filter-wrapper__cover filter-wrapper__cover-active">
-                    <ul class="checkbox-list-vertical">
-                        <li class="block-checkbox-item">
-                            <div class="block-checkbox-item_title">
-                                <div class="block-checkbox">
-                                </div>Піца</div>
-                            <div class="block-checkbox-item_count">12</div>
-                        </li>
-                    </ul>
-                </div>
-            </article>
+            {/* 
             <article class="filter-wrapper">
                 <div class="filter-wrapper__title">Ціна</div>
                 <div class="filter-wrapper__cover filter-wrapper__cover-active">
