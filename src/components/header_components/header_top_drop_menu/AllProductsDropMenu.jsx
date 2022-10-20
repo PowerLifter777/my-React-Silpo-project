@@ -12,7 +12,15 @@ const AllProductsDropMenu = () => {
 
 
     const [allProdMenuWidgetEl, setAllProdMenuWidgetEl] = useState(allProductCategories)
-    const { productsAPI, sortedProductsAPI, setSortedProductsAPI, isVisibleAllProductsMenu, setIsVisibleAllProductsMenu, selected, setAllProdMenuSelectedItem } = useContext(AppContext);
+    const {
+        productsAPI,
+        sortedProductsAPI,
+        setSortedProductsAPI,
+        isVisibleAllProductsMenu,
+        setIsVisibleAllProductsMenu,
+        selected,
+        setAllProdMenuSelectedItem
+    } = useContext(AppContext);
 
 
     useEffect(() => {

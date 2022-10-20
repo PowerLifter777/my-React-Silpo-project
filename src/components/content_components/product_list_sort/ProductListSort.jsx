@@ -38,6 +38,7 @@ const ProductListSort = ({ sortMenuClassActive, changeCls, ...props }) => {
                 // sortMenuFunction(widgetElement.name);
                 setSortedProductsAPI(sortProductsList(sortedProductsAPI, widgetElement.name));
                 // console.log(sortedProductsAPI);
+                {console.log('test9')}
             }
         })
         changeCls(false);

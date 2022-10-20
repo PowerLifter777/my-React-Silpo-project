@@ -15,7 +15,7 @@ import HeaderBottom from '../header_bottom/HeaderBottom';
 import AllProductsDropMenu from '../header_top_drop_menu/AllProductsDropMenu';
 
 
-const Header = ({ isHeaderVisible, isAllProductsMenuOpen, isVisibleAllProductsMenu, ...props }) => {
+const Header = ({ isHeaderBottomVisible, isAllProductsMenuOpen, isVisibleAllProductsMenu, ...props }) => {
 
 
     const handleOpenProductsMenu = () => {
@@ -24,7 +24,7 @@ const Header = ({ isHeaderVisible, isAllProductsMenuOpen, isVisibleAllProductsMe
 
     return (
         <Fragment>
-            <div className={`${classes.header} ${isHeaderVisible ? classes.header_disabled_shadow : ''} ${isVisibleAllProductsMenu ? classes.scrollable_catalog : ''}`}>
+            <div className={`${classes.header} ${isHeaderBottomVisible ? classes.header_disabled_shadow : ''} ${isVisibleAllProductsMenu ? classes.scrollable_catalog : ''}`}>
                 {isVisibleAllProductsMenu ?
                     <div className={classes.shadow_layer}></div>
                     :
@@ -60,7 +60,7 @@ const Header = ({ isHeaderVisible, isAllProductsMenuOpen, isVisibleAllProductsMe
                         </div>
                     </div>
                 </div>
-                <div className={`header__bottom__wrapper ${!isHeaderVisible ? 'hide' : ''}`}>
+                <div className={`header__bottom__wrapper ${!isHeaderBottomVisible ? 'hide' : ''}`}>
                     <HeaderBottom />
                 </div>
             </div>

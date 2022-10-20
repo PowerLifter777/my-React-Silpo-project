@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react"
+import React, { useState, useContext, useMemo } from "react"
 
 import classes from './ProductListFilter.module.scss';
 
@@ -15,10 +15,10 @@ const ProductListFilter = () => {
 
     // const categoriesForFilter = sortedProductsAPI.map(obj => obj.type).filter((el, ind) => sortedProductsAPI.map(product => product.type).indexOf(el) === ind);
     // --------------------------------
-    // const calcProductsInCategory = sortedProductsAPI.reduce((result, product) => (result[product.menu_level_2] ? result[product.menu_level_2]++ : result[product.menu_level_2] = 1, result), {});
-    // const categoriesForFilter = Object.entries(calcProductsInCategory).sort((a, b) => b[1] - a[1]);
+    // const calcProductsForCategory = sortedProductsAPI.reduce((result, product) => (result[product.menu_level_2] ? result[product.menu_level_2]++ : result[product.menu_level_2] = 1, result), {});
+    // const categoriesForFilter = Object.entries(calcProductsForCategory).sort((a, b) => b[1] - a[1]);
 
-    let calcProductsInCategory = sortedProductsAPI.reduce((result, obj) => {
+   const calcProductsForCategory = useMemo(() => sortedProductsAPI.reduce((result, obj) => {
         for (const [key, value] of Object.entries(obj)) {
             if (value === allProdMenuSelectedItem && key === 'category') {
                 result[obj.menu_level_2] ? result[obj.menu_level_2]++ : result[obj.menu_level_2] = 1
@@ -26,14 +26,14 @@ const ProductListFilter = () => {
                 result[obj.menu_level_3] ? result[obj.menu_level_3]++ : result[obj.menu_level_3] = 1
             }
         }
+        console.log('test');
         return result
-    }, {})
+    }, {}), [allProdMenuSelectedItem])
 
-    const categoriesForFilter = Object.entries(calcProductsInCategory).sort((a, b) => b[1] - a[1]);
-
-    console.log(allProdMenuSelectedItem);
-    console.log(calcProductsInCategory);
-
+    const categoriesForFilter = useMemo(() => Object.entries(calcProductsForCategory).sort((a, b) => {
+        console.log('test1');
+        return b[1] - a[1];
+    }), [calcProductsForCategory]);
 
     return (
         <div className={`${classes.side_shield_panel} ${classes.category_filter_shield}`}>

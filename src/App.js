@@ -14,7 +14,7 @@ function App() {
 
   const [productsAPI, setProductsAPI] = useState(API);
   const [sortedProductsAPI, setSortedProductsAPI] = useState([]);
-  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [isHeaderBottomVisible, setIsHeaderBottomVisible] = useState(true);
   const [sortMenuClassActive, setSortMenuClassActive] = useState(false)
   const [isVisibleAllProductsMenu, setIsVisibleAllProductsMenu] = useState(false);
   const [selected, setSelected] = useState('Оберіть сортування')
@@ -26,45 +26,42 @@ function App() {
     // console.log(productsAPI);
   }, [])
 
-  // const hide = (e) => {
-  //   setIsHeaderVisible(false);
-  //   setTimeout(() => setIsHeaderVisible(true), 1500);
-  //   console.log(isHeaderVisible);
-  // }
-
-  const hideHeaderMenu = () => {
-    let flag;
-    let visible1;
-    let visible2;
-    hide();
-
-    function hide() {
-      setIsHeaderVisible(false);
-      if (!flag) {
-        visible1 = setTimeout(display, 800);
-        clear();
-        flag = true;
-      } if (flag) {
-        visible2 = setTimeout(display, 800);
-        clear();
-        flag = false;
-      }
-    }
-
-    function clear() {
-      if (!flag) {
-        clearTimeout(visible2);
-      } if (flag) {
-        clearTimeout(visible1);
-      }
-    }
-
-    function display() {
-      setIsHeaderVisible(true)
-      // console.log(flag);
-      flag = false;
-    }
+  const renderAttempt = useRef(null);
+  const hideHeaderBottom = () => {
+    setIsHeaderBottomVisible(prev => prev = false);
+    clearTimeout(renderAttempt.current);
+    renderAttempt.current = setTimeout(() => setIsHeaderBottomVisible(true), 500);
+    console.log(isHeaderBottomVisible);
   }
+
+  // const isHeaderBottomHide = useRef(false)
+  // const renderAttempt1 = useRef(null);
+  // const renderAttempt2 = useRef(null)
+
+  // const hideHeaderBottom = () => {
+  //   console.log('test3')
+
+  //   setIsHeaderBottomVisible(prev => prev = false);
+
+  //   if (!isHeaderBottomHide.current) {
+  //     renderAttempt1.current = setTimeout(display, 500);
+  //     resetRender(renderAttempt2.current);
+  //     isHeaderBottomHide.current = false;
+  //   } else if (isHeaderBottomHide.current) {
+  //     renderAttempt2.current = setTimeout(display, 500);
+  //     resetRender(renderAttempt1.current);
+  //     isHeaderBottomHide.current = true;
+  //   }
+
+  //   function resetRender(renderAttempt) {
+  //     clearTimeout(renderAttempt);
+  //   }
+
+  //   function display() {
+  //     setIsHeaderBottomVisible(prev => prev = true)
+  //     isHeaderBottomHide.current = false;
+  //   }
+  // }
 
   const hideSortMenu = (e) => {
     e.stopPropagation();
@@ -72,10 +69,12 @@ function App() {
     if (e.target.closest('#sort_widget') === null && sortMenuClassActive) setSortMenuClassActive(false);
     // if(e.target.id !== '#sort_widget') setSortMenuClassActive(false);  
     // console.log(e.target.closest('#sort_widget'));
+    { console.log('test5') }
   }
 
   const changeSortMenuClass = (e) => {
     setSortMenuClassActive(e);
+    { console.log('test6') }
   }
 
   const layoutEl = useRef(null);
@@ -83,11 +82,13 @@ function App() {
     if (isPressedAllProductsBtn) {
       layoutEl.current.scrollIntoView();
       setIsVisibleAllProductsMenu(!isVisibleAllProductsMenu);
+      { console.log('test7') }
     }
   }
 
   const handlerHideAllProductsMenu = (e) => {
     if (e.target.closest('#allProductMenu') === null && isVisibleAllProductsMenu) setIsVisibleAllProductsMenu(false);
+    { console.log('test8') }
   }
 
   return (
@@ -101,7 +102,7 @@ function App() {
       }}>
       <div
         className='App'
-        onWheel={hideHeaderMenu}
+        onWheel={hideHeaderBottom}
       >
         <div
           className="layout"
@@ -110,7 +111,7 @@ function App() {
           onClick={handlerHideAllProductsMenu}
         >
           <Header
-            isHeaderVisible={isHeaderVisible}
+            isHeaderBottomVisible={isHeaderBottomVisible}
             isAllProductsMenuOpen={scrollToTop}
             isVisibleAllProductsMenu={isVisibleAllProductsMenu}
           />

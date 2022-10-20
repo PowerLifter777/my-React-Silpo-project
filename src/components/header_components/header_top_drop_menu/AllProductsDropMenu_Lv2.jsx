@@ -19,7 +19,7 @@ const AllProductsDropMenu_Lv2 = ({ list, path, name, id }) => {
         let iD = e.target.closest('li').id;
         setAllProdMenuWidgetEl_lv2(prevState =>
             // prevState.map((obj, i) => iD.slice(iD.indexOf('-') + 1) === `${i + 1}` || e.target.closest('li').id.startsWith(`${id}-${i+1}`) ? { ...obj, isSelected: true } : { ...obj, isSelected: false })
-            prevState.map((obj, i) => iD === `${id}-${i + 1}` || e.target.closest('li').id.startsWith(`${id}-${i + 1}-`) ? { ...obj, isSelected: true } : { ...obj, isSelected: false })
+            prevState.map((obj, i) => iD === `${id}-${i + 1}` || iD.startsWith(`${id}-${i + 1}-`) ? { ...obj, isSelected: true } : { ...obj, isSelected: false })
         )
     }
 

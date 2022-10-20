@@ -42,6 +42,7 @@ const ContentWrapper = ({ sortMenuClassActive, changeCls, getSortMethod, ...prop
                                 style={{ alignSelf: 'flex-start' }}
                             >
                                 <ProductListFilter />
+                                {/* {console.log('test3')} */}
                             </div>
                             :
                             <></>
