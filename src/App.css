@@ -48,6 +48,7 @@ body, .App {
   justify-content: center;
   opacity: 1;
   transition: all .5s;
+
 }
 
 .hide {

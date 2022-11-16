@@ -36,7 +36,6 @@ const UserInfo = () => {
                 >
                     <LocationSVG fill={locationColor} />
                     <span>
-                        {/* <b style={{fontFamily: 'ProximaNova_bold'}}>Доставка</b> */}
                         <b>Доставка</b>
                         <br />
                         <mark style={{ color: '#ff8522', background: 'transparent' }}>

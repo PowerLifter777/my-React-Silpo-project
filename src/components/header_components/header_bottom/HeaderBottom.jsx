@@ -30,14 +30,14 @@ const HeaderBottom = () => {
                     <img src={flag} alt="Ukraine flag" />
                 </li>
                 {navList.map(el =>
-                    <li key={el.id}><a href="">{el.name}</a></li>
+                    <li key={el.id}>
+                        <a href="">{el.name}</a>
+                    </li>
                 )}
             </ul>
             <ul className={classes.additional_pages}>
                 <li><a href="">
-                    <span>
-                        Поширені питання
-                    </span>
+                    <span>Поширені питання</span>
                 </a></li>
                 <li>
                     <a href="tel:0800 301 707" className={classes.hot_line_phone} aria-label='Телефон гарячої лінії: 0800 301 707'>

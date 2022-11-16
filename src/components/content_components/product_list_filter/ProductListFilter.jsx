@@ -18,7 +18,8 @@ const ProductListFilter = () => {
     // const calcProductsForCategory = sortedProductsAPI.reduce((result, product) => (result[product.menu_level_2] ? result[product.menu_level_2]++ : result[product.menu_level_2] = 1, result), {});
     // const categoriesForFilter = Object.entries(calcProductsForCategory).sort((a, b) => b[1] - a[1]);
 
-   const calcProductsForCategory = useMemo(() => sortedProductsAPI.reduce((result, obj) => {
+
+    const calcProductsForCategory = useMemo(() => sortedProductsAPI.reduce((result, obj) => {
         for (const [key, value] of Object.entries(obj)) {
             if (value === allProdMenuSelectedItem && key === 'category') {
                 result[obj.menu_level_2] ? result[obj.menu_level_2]++ : result[obj.menu_level_2] = 1
@@ -35,13 +36,17 @@ const ProductListFilter = () => {
         return b[1] - a[1];
     }), [calcProductsForCategory]);
 
+    // if (!categoriesForFilter.length) return
+
     return (
         <div className={`${classes.side_shield_panel} ${classes.category_filter_shield}`}>
-            {categoriesForFilter.length ?
+            {categoriesForFilter.length
+                ?
                 <article className={classes.filter_wrapper}>
                     <div
                         className={classes.filter_wrapper_title}
-                        onClick={() => !isFilterOpen ? setIsFilterOpen(true) : setIsFilterOpen(false)}
+                        // onClick={() => !isFilterOpen ? setIsFilterOpen(true) : setIsFilterOpen(false)}
+                        onClick={() => setIsFilterOpen(prev => !prev)}
                     >
                         {/* «Сільпо» Resto */}
                         {allProdMenuSelectedItem}

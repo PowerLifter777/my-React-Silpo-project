@@ -8,7 +8,7 @@ import { ReactComponent as SortMenuSVG } from '../../../images/sort_menu_icon.sv
 import sortProductsList from "../../../utilites/sortProductsList";
 
 
-const ProductListSort = ({ sortMenuClassActive, changeCls, ...props }) => {
+const ProductListSort = ({ sortMenuClassActive, toggleSortMenu, ...props }) => {
 
     const [widgetElements, setWidgetElements] = useState([
         { id: 1, name: 'Спочатку популярні', isSelected: false },
@@ -22,10 +22,6 @@ const ProductListSort = ({ sortMenuClassActive, changeCls, ...props }) => {
 
     const { sortedProductsAPI, setSortedProductsAPI, selected, setSelected } = useContext(AppContext);
 
-    const openSortMenu = () => {
-        sortMenuClassActive ? changeCls(false) : changeCls(true)
-    }
-
     const select = (e) => {
         widgetElements.map(widgetElement => {
             if (+e.target.id === widgetElement.id) {
@@ -33,17 +29,13 @@ const ProductListSort = ({ sortMenuClassActive, changeCls, ...props }) => {
                 setWidgetElements(prevState =>
                     prevState.map(obj => obj.id === +e.target.id ? { ...obj, isSelected: true } : { ...obj, isSelected: false })
                 );
-                // console.log(widgetElement.name);
-                // console.log(selected);
                 // sortMenuFunction(widgetElement.name);
                 setSortedProductsAPI(sortProductsList(sortedProductsAPI, widgetElement.name));
-                // console.log(sortedProductsAPI);
                 {console.log('test9')}
             }
         })
-        changeCls(false);
+        toggleSortMenu();
     }
-
 
     // useEffect(() => {
     //     if (selected === "Оберіть сортування") {
@@ -55,7 +47,7 @@ const ProductListSort = ({ sortMenuClassActive, changeCls, ...props }) => {
     return (
         <div className={classes.sort_menu} id="sort_widget">
             <div className={`${classes.sort_widget_wrapper} ${sortMenuClassActive ? classes.active : ''}`}>
-                <div className={classes.sort_widget_title} onClick={openSortMenu} >
+                <div className={classes.sort_widget_title} onClick={toggleSortMenu} >
                     <span>{selected}</span>
                     <i className={classes.icon}>
                         <SortMenuSVG />

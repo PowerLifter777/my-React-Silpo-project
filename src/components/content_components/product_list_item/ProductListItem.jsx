@@ -1,12 +1,12 @@
-import React, { Fragment, useState } from "react";
+import React from "react";
 
 import classes from './ProductListItem.module.scss';
 
-import { ReactComponent as StarHolderSVG } from '../../../images/star_holder.svg'
-import { ReactComponent as StarHolderZeroSVG } from '../../../images/star_holder_zero.svg'
+import { ReactComponent as StarHolderSVG } from '../../../images/star_holder.svg';
+import { ReactComponent as StarHolderZeroSVG } from '../../../images/star_holder_zero.svg';
 
 
-import default_img from '../../../images/product_img/default.png'
+import default_img from '../../../images/product_img/default.png';
 import ProductListItemControls from "../product_list_item_controls/ProductListItemControls";
 
 const ProductListItem = ({ product, ...props }) => {
@@ -18,11 +18,7 @@ const ProductListItem = ({ product, ...props }) => {
                 <div className={classes.product_list_item_header}></div>
                 <a className={classes.image_content_wrapper} href="resto">
                     <div className={classes.product_list_item__image}>
-                        {product.img
-                            ?
-                            <img src={product.img} alt={product.title} />
-                            :
-                            <img src={default_img} alt={product.title} />}
+                        <img src={product.img ? product.img : default_img} alt={product.title} />
                     </div>
                     <div className={classes.product_list_item__content}>
                         <div className={classes.product_title}>{product.title}</div>
@@ -41,11 +37,11 @@ const ProductListItem = ({ product, ...props }) => {
                                     <StarHolderZeroSVG />
                                 </i>
                             }
-                            {product.rating.votes
-                                ? <Fragment>
+                            {product.rating.votes ?
+                                <>
                                     <div className={classes.rating_count}>{product.rating.rate}</div>
                                     <div className={classes.rating_text}><span>{product.rating.votes} оцінка</span></div>
-                                </Fragment>
+                                </>
                                 :
                                 <div className={classes.rating_text_zero}><span>Оцініть першим</span></div>
                             }

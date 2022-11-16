@@ -1,30 +1,28 @@
-import { React, Fragment } from 'react';
-import { useState } from 'react';
+import { Fragment, React } from 'react';
 
 import classes from './Header.module.scss';
 
-import logo_icon from '../../../images/silpo_logo.svg'
+import logo_icon from '../../../images/silpo_logo.svg';
 
-import { ReactComponent as BasketSVG } from '../../../images/basket_icon.svg'
-import { ReactComponent as CategoriesSVG } from '../../../images/categories_icon.svg'
-import { ReactComponent as ChevronDownSVG } from '../../../images/chevron_down_icon.svg'
+import { ReactComponent as BasketSVG } from '../../../images/basket_icon.svg';
+import { ReactComponent as CategoriesSVG } from '../../../images/categories_icon.svg';
+import { ReactComponent as ChevronDownSVG } from '../../../images/chevron_down_icon.svg';
 
-import HeaderSearch from '../header_top_search/HeaderSearch';
-import UserInfo from '../header_top_userInfo/UserInfo';
 import HeaderBottom from '../header_bottom/HeaderBottom';
 import AllProductsDropMenu from '../header_top_drop_menu/AllProductsDropMenu';
+import HeaderSearch from '../header_top_search/HeaderSearch';
+import UserInfo from '../header_top_userInfo/UserInfo';
 
-
-const Header = ({ isHeaderBottomVisible, isAllProductsMenuOpen, isVisibleAllProductsMenu, ...props }) => {
-
-
-    const handleOpenProductsMenu = () => {
-        isAllProductsMenuOpen(true);
-    }
+const Header = ({ isHeaderVisible, toggleAllProductstMenu, isVisibleAllProductsMenu, ...props }) => {
 
     return (
         <Fragment>
-            <div className={`${classes.header} ${isHeaderBottomVisible ? classes.header_disabled_shadow : ''} ${isVisibleAllProductsMenu ? classes.scrollable_catalog : ''}`}>
+            <div className={`
+                ${classes.header} 
+                ${isHeaderVisible ? classes.header_disabled_shadow : ''} 
+                ${isVisibleAllProductsMenu ? classes.scrollable_catalog : ''}`
+            }
+            >
                 {isVisibleAllProductsMenu ?
                     <div className={classes.shadow_layer}></div>
                     :
@@ -36,16 +34,15 @@ const Header = ({ isHeaderBottomVisible, isAllProductsMenuOpen, isVisibleAllProd
                             <div className={classes.header_logo} title='Онлайн замовлення товарів з «Сільпо»' >
                                 <img alt='Logo' src={logo_icon} />
                             </div>
-                            {/* <div className={classes.all_products_btn} onClick={handleOpenProductsMenu}> */}
                             <div
                                 className={classes.all_products_btn}
-                                onClick={handleOpenProductsMenu}
+                                onClick={toggleAllProductstMenu}
                             >
                                 <CategoriesSVG />
                                 Всі товари
                                 <ChevronDownSVG />
                                 <AllProductsDropMenu
-                                    // isVisibleAllProductsMenu={isVisibleAllProductsMenu}
+                                // isVisibleAllProductsMenu={isVisibleAllProductsMenu}
                                 />
                             </div>
                             <HeaderSearch />
@@ -60,7 +57,7 @@ const Header = ({ isHeaderBottomVisible, isAllProductsMenuOpen, isVisibleAllProd
                         </div>
                     </div>
                 </div>
-                <div className={`header__bottom__wrapper ${!isHeaderBottomVisible ? 'hide' : ''}`}>
+                <div className={`header__bottom__wrapper ${!isHeaderVisible ? 'hide' : ''}`}>
                     <HeaderBottom />
                 </div>
             </div>

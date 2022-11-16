@@ -9,7 +9,7 @@ import PromoBanner from "../promo_banner/PromoBanner";
 import { AppContext } from "../../../context";
 
 
-const ContentWrapper = ({ sortMenuClassActive, changeCls, getSortMethod, ...props }) => {
+const ContentWrapper = ({ sortMenuClassActive, toggleSortMenu, getSortMethod, ...props }) => {
 
     const { allProdMenuSelectedItem } = useContext(AppContext)
 
@@ -20,17 +20,12 @@ const ContentWrapper = ({ sortMenuClassActive, changeCls, getSortMethod, ...prop
                 <div className={`${classes.category_page_wrapper} ${classes.page}`}>
                     <h1 className={classes.category_page_heading}>
                         {/* «Сільпо» Resto */}
-                        {allProdMenuSelectedItem
-                            ?
-                            allProdMenuSelectedItem
-                            :
-                            `«Сільпо»`
-                        }
+                        {allProdMenuSelectedItem ? allProdMenuSelectedItem : `«Сільпо»`}
                     </h1>
                     <div className={classes.category_page_header}>
                         <ProductListSort
                             sortMenuClassActive={sortMenuClassActive}
-                            changeCls={changeCls}
+                            toggleSortMenu={toggleSortMenu}
                             getSortMethod={getSortMethod}
                         />
                     </div>
@@ -50,7 +45,6 @@ const ContentWrapper = ({ sortMenuClassActive, changeCls, getSortMethod, ...prop
                         <div className={classes.product_list_wrapper}>
                             <ProductList />
                         </div>
-
                     </div>
                 </div>
             </div>
